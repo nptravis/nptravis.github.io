@@ -1,0 +1,19 @@
+---
+# front matter tells Jekyll to process Liquid
+my_number: 5
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>nic travis codes</title>
+	</head>
+	<body>
+		<h1>
+			{{ "hello world" | downcase }}
+		</h1>
+		<p>{{ page.my_number }}</p>
+	</body>
+</html>
