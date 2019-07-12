@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Rails with JS Frontend Project</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Rails with JS Frontend Project</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Rails with JS Frontend Project" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="jQuery to the rescue" />
+<meta property="og:description" content="jQuery to the rescue" />
+<link rel="canonical" href="http://localhost:4000/rails_with_js_frontend_project" />
+<meta property="og:url" content="http://localhost:4000/rails_with_js_frontend_project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-18T04:39:15+02:00" />
+<script type="application/ld+json">
+{"description":"jQuery to the rescue","@type":"BlogPosting","url":"http://localhost:4000/rails_with_js_frontend_project","headline":"Rails with JS Frontend Project","dateModified":"2018-09-18T04:39:15+02:00","datePublished":"2018-09-18T04:39:15+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/rails_with_js_frontend_project"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+	</head>
+	<body>
+		<h1>Rails with JS Frontend Project</h1>
+
+<p>
+	18 Sep 2018  
+</p>
+
+<h3 id="jquery-to-the-rescue">jQuery to the rescue</h3>
+
+<p>This project was super fun. I am now a full believer in the fluidity and grace of jQuery. Having to do all those xhr requests via XMLHttpRequest would have taken way longer, and been much more code. Here are a few things I grew to love about jQuery</p>
+<ol>
+  <li>grabbing attributes from a html element
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let $form = $('#myForm')
+$form.attr('action')
+$form.data('userId')
+</code></pre></div>    </div>
+    <p>-this helped me greatly when building ajax requests from forms, which brings me to number 2.</p>
+  </li>
+  <li>serializing form data
+this is so cool, you need one function to serialize the entire form:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$form.serialize()
+</code></pre></div>    </div>
+    <p>Amazing, it serializes it perfectly, and gets it prepared for sending.</p>
+  </li>
+  <li>showing and hiding elements on a page
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$form.hide()
+$form.show()
+</code></pre></div>    </div>
+    <p>that’s all it takes to update that elements style display attribute to none. Pretty sweet.</p>
+  </li>
+  <li>And of course, the ease of AJAX gets and posts.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$.get('/users', function(){
+	}).done(function(response){
+		console.log(response)
+	})
+
+$.ajax( {
+	      type: "POST",
+	      dataType: 'json',
+	      url: $form.attr( 'action' ),
+	      data: $form.serialize(),
+	      success: function( response ) {
+	        console.log(response)
+	      }
+	    } );
+</code></pre></div></div>
+
+<p>Great stuff. In my project I used jQuery a ton, it becomes very fluid and second nature very quickly, great syntax in my opinion. Seems very snappy, requests send and load very fast. Makes alot of sense to use these types of requests as often as possible to keep apps quick, sending and recieving only the data that they need instead of entire page refreshes.</p>
+
+<p>It changes my thoughts on app design. Be better to have as much on one page as possible, having all the interactivity using ajax gets and posts, and only redirecting/refreshing when necessary.</p>
+
+<p>That is, until I learn React…</p>
+
+<h3 id="active-model-serializer">Active Model Serializer</h3>
+
+<p>This project really opened my eyes to how serializing works. Basically, the internet is all strings flying around. No objects or variables are sent anywhere, they are all converted into strings before being sent. Now, I made many mistakes while understanding serialization, one was sending un-serialized json only to discover it was just one long string! No keys or values. The other was relying to much on to_json. It workd great for simple things, like serializing one model, with one association/method, but i never got the systax correct for adding methods and associations. So, i finally dug into Active Model Serializer, and it’s awesome.
+Here are things I love:</p>
+<ol>
+  <li>Remove unwanted attributes from models you don’t need to send:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class StudentSerializer &lt; ApplicationSerializer
+  attributes :id
+end
+</code></pre></div>    </div>
+    <p>That will only send ids, which was all I needed, saved alot of time in my request/response cycle.</p>
+  </li>
+  <li>Easliy attach associations just like you would with a model:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class CommentSerializer &lt; ApplicationSerializer
+ attributes :content, :id
+ belongs_to :user, serializer: UserSerializer
+ belongs_to :student, serializer: StudentSerializer
+end
+</code></pre></div>    </div>
+    <p>this adds the association, but as i referenced before, it is customized with it’s own serializer</p>
+  </li>
+  <li>Serialize an entire show view
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class TeacherSerializer &lt; ApplicationSerializer
+ attributes :email, :id, :lastfirst, :show
+ attributes :current_sections
+
+ has_many :sections
+ has_many :students, through: :sections
+
+ def show
+     TeachersController.render(:show, assigns: {teacher: object}, layout: false)
+ end
+
+ def current_sections
+     TeachersController.render(:current_sections, assigns: {teacher: object}, layout: false).squish
+ end
+</code></pre></div>    </div>
+    <p>the show method attached here is rendering the entire shotw.html.erb for the teacher model. Serialized the whole thing, and now I can plop it wherever I want, I dont think that is even possible with to_json.
+Big fan of this pattern.</p>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Learned a ton with this project. Really feel more comfortable with jQuery, serialization, and rails in general. Was alot of work, but alot of fun. Now on to React, onwards and upwards!</p>
+
+
+
+	</body>
+</html>

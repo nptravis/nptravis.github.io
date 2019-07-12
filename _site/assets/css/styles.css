@@ -1,2 +1,31 @@
 .current {
   color: green; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  section h1 {
+    font-size: 5em; }
+  section div.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+  section#home {
+    background-color: red; }
+  section#about {
+    background-color: blue; }
+  section#projects {
+    background-color: green; }
+  section#blog {
+    background-color: white; }
+  section#contact {
+    background-color: grey; }

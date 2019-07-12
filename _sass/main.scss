@@ -1,3 +1,48 @@
 .current {
 	color: green;
 }
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		font-size: 5em;
+	}
+
+	div.container {
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&#home {
+		background-color: red;
+	}
+
+	&#about {
+		background-color: blue;
+	}
+
+	&#projects {
+		background-color: green;
+	}
+
+	&#blog {
+		background-color: white;
+	}
+
+	&#contact {
+		background-color: grey;
+	}
+}

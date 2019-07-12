@@ -1,5 +1,6 @@
 ---
 # front matter tells Jekyll to process Liquid
+# hash marks are not processed, these are comments
 my_number: 5
 title: Home
 ---
@@ -11,9 +12,44 @@ title: Home
 		<title>nic travis codes</title>
 	</head>
 	<body>
-		<h1>
-			{{ "hello world" | downcase }}
-		</h1>
-		<p>{{ page.my_number }}</p>
+		<main>
+			<section id="home">
+				<div class="container">
+					<h1>
+						{{ "Hello. I am Nic Travis. I am a Full-Stack Web Developer. This is
+						my site." | downcase }}
+					</h1>
+				<div>
+			</section>
+			{% include navigation.html %}
+			<section id="about">
+					<div class="container">
+						<h1>
+							{{ "this is an about me section." | downcase }}
+						</h1>
+					</div>
+			</section>
+			<section id="projects">
+					<div class="container">
+						<h1>
+							{{ "this is projects section." | downcase }}
+						</h1>
+					</div>
+			</section>
+			<section id="blog">
+					<div class="container">
+						<h1>
+							{{ "this is blog section." | downcase }}
+						</h1>
+					</div>
+			</section>
+			<section id="contact">
+					<div class="container">
+						<h1>
+							{{ "this is contact me section." | downcase }}
+						</h1>
+					</div>
+			</section>
+		</main>
 	</body>
 </html>
