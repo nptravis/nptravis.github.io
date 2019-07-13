@@ -6,7 +6,13 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #262f38; }
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 5em; }
 
 img#myPicture {
   height: 100px;
@@ -15,14 +21,15 @@ img#myPicture {
 nav {
   display: flex;
   width: 100vw;
-  justify-content: flex-start;
-  flex-direction: row;
-  background-color: black;
+  background-color: #262f38;
   height: 50px;
   color: #fff;
-  border-bottom: 3px solid red; }
+  border-bottom: 3px solid red;
+  text-align: center; }
   nav a {
-    flex: 1; }
+    flex: 0 1 auto;
+    width: 100px;
+    line-height: 50px; }
     nav a:hover {
       cursor: pointer; }
     nav a.active {
@@ -45,9 +52,6 @@ section {
   height: 100vh;
   display: flex;
   overflow: hidden; }
-  section h1 {
-    font-size: 5em;
-    color: yellow; }
   section div.container {
     width: 80%;
     margin: 0 auto;
@@ -59,7 +63,8 @@ section {
     align-items: center;
     justify-content: center; }
   section#about {
-    background-color: #ddb5ba; }
+    background-color: #6f686d;
+    padding-top: 100px; }
   section#projects {
     background-color: #b3b492; }
   section#blog {
@@ -93,3 +98,12 @@ i#fourth-icon {
 
 .fade-in-text {
   opacity: 0; }
+
+.slide-in-left {
+  margin-left: -2000px; }
+
+.header-bar {
+  height: 4px;
+  background-color: #262f38;
+  width: 100px;
+  display: inline-block; }

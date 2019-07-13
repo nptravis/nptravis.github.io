@@ -1,7 +1,7 @@
 <nav id="navbar">
 	{% for item in site.data.navigation %}
 	<a id="{{ item.name }}">
-		{{ item.name }}
+		{{ item.name | upcase }}
 	</a>
 	{% endfor %}
 </nav>

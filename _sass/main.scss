@@ -6,6 +6,13 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	color: $black;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 5em;
 }
 
 img#myPicture {
@@ -16,15 +23,18 @@ img#myPicture {
 nav {
 	display: flex;
 	width: 100vw;
-	justify-content: flex-start;
-	flex-direction: row;
-	background-color: black;
+	// justify-content: flex-start;
+
+	background-color: $black;
 	height: 50px;
 	color: #fff;
 	border-bottom: 3px solid red;
+	text-align: center;
 
 	a {
-		flex: 1;
+		flex: 0 1 auto;
+		width: 100px;
+		line-height: 50px;
 
 		&:hover {
 			cursor: pointer;
@@ -58,11 +68,6 @@ section {
 	display: flex;
 	overflow: hidden;
 
-	h1 {
-		font-size: 5em;
-		color: yellow;
-	}
-
 	div.container {
 		width: 80%;
 		margin: 0 auto;
@@ -78,7 +83,8 @@ section {
 	}
 
 	&#about {
-		background-color: $color1;
+		background-color: $color5;
+		padding-top: 100px;
 	}
 
 	&#projects {
@@ -122,4 +128,15 @@ i#fourth-icon {
 
 .fade-in-text {
 	opacity: 0;
+}
+
+.slide-in-left {
+	margin-left: -2000px;
+}
+
+.header-bar {
+	height: 4px;
+	background-color: $black;
+	width: 100px;
+	display: inline-block;
 }
