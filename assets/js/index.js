@@ -16,6 +16,7 @@ $(document).ready(function() {
 
 		if (pos < navPos && lastPos > pos) {
 			$("nav").removeClass("fixed");
+			// flyOut();
 		}
 
 		if (pos > $("#home").offset().top) {
@@ -38,7 +39,6 @@ $(document).ready(function() {
 			$("#about").css({
 				marginTop: 0
 			});
-			flyOut();
 		}
 
 		if (pos > $("#projects").offset().top) {
@@ -123,9 +123,15 @@ $(document).ready(function() {
 		console.log("flying in!");
 		$(".slide-in-left").animate(
 			{
-				marginLeft: "0px"
+				marginLeft: "40%"
 			},
-			500
+			700
+		);
+		$(".slide-in-right").animate(
+			{
+				marginLeft: "40%"
+			},
+			700
 		);
 		$("#first-icon").animate(
 			{

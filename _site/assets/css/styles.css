@@ -37,16 +37,16 @@ nav {
 
 .fixed {
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 1; }
 
 div.flex {
   display: flex;
   flex-wrap: wrap; }
   div.flex div.flex-quad {
     flex: 1 1 49%;
-    min-width: 300px;
     min-height: 300px;
-    border: 1px solid black; }
+    position: relative; }
 
 section {
   height: 100vh;
@@ -64,7 +64,7 @@ section {
     justify-content: center; }
   section#about {
     background-color: #6f686d;
-    padding-top: 100px; }
+    padding-top: 200px; }
   section#projects {
     background-color: #b3b492; }
   section#blog {
@@ -79,6 +79,9 @@ button.big-button {
   font-size: 2em;
   width: 25vw;
   height: 5vh; }
+
+i {
+  flex: 1; }
 
 i#first-icon {
   margin-left: -1000px;
@@ -102,8 +105,21 @@ i#fourth-icon {
 .slide-in-left {
   margin-left: -2000px; }
 
+.slide-in-right {
+  margin-left: 2000px; }
+
 .header-bar {
   height: 4px;
   background-color: #262f38;
-  width: 100px;
-  display: inline-block; }
+  width: 20%; }
+
+div.icon-container {
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  overflow: visible;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  text-align: center;
+  background-color: blue;
+  width: 20%;
+  height: 35%; }
