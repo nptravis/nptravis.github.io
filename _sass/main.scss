@@ -1,6 +1,4 @@
-.current {
-	color: green;
-}
+@import "./palette.scss";
 
 html,
 body {
@@ -10,14 +8,59 @@ body {
 	padding: 0;
 }
 
+img#myPicture {
+	height: 100px;
+	width: 100px;
+}
+
+nav {
+	display: flex;
+	width: 100vw;
+	justify-content: flex-start;
+	flex-direction: row;
+	background-color: black;
+	height: 50px;
+	color: #fff;
+	border-bottom: 3px solid red;
+
+	a {
+		flex: 1;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.active {
+			color: blue;
+		}
+	}
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+}
+
+div.flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	div.flex-quad {
+		flex: 1 1 49%;
+		min-width: 300px;
+		min-height: 300px;
+		border: 1px solid black;
+	}
+}
+
 section {
 	height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	overflow: hidden;
 
 	h1 {
 		font-size: 5em;
+		color: yellow;
 	}
 
 	div.container {
@@ -27,22 +70,56 @@ section {
 	}
 
 	&#home {
-		background-color: red;
+		background-image: url("/assets/images/beach.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&#about {
-		background-color: blue;
+		background-color: $color1;
 	}
 
 	&#projects {
-		background-color: green;
+		background-color: $color2;
 	}
 
 	&#blog {
-		background-color: white;
+		background-color: $color3;
 	}
 
 	&#contact {
-		background-color: grey;
+		background-color: $color4;
 	}
+}
+
+button.big-button {
+	background-color: transparent;
+	border: 3px solid white;
+	color: grey;
+	font-size: 2em;
+	width: 25vw;
+	height: 5vh;
+}
+
+i#first-icon {
+	margin-left: -1000px;
+	opacity: 0;
+}
+i#second-icon {
+	margin-right: -1000px;
+	opacity: 0;
+}
+i#third-icon {
+	margin-left: -1000px;
+	opacity: 0;
+}
+i#fourth-icon {
+	margin-right: -1000px;
+	opacity: 0;
+}
+
+.fade-in-text {
+	opacity: 0;
 }

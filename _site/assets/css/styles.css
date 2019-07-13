@@ -1,6 +1,6 @@
-.current {
-  color: green; }
-
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
 html,
 body {
   height: 100%;
@@ -8,24 +8,88 @@ body {
   margin: 0;
   padding: 0; }
 
+img#myPicture {
+  height: 100px;
+  width: 100px; }
+
+nav {
+  display: flex;
+  width: 100vw;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: black;
+  height: 50px;
+  color: #fff;
+  border-bottom: 3px solid red; }
+  nav a {
+    flex: 1; }
+    nav a:hover {
+      cursor: pointer; }
+    nav a.active {
+      color: blue; }
+
+.fixed {
+  position: fixed;
+  top: 0; }
+
+div.flex {
+  display: flex;
+  flex-wrap: wrap; }
+  div.flex div.flex-quad {
+    flex: 1 1 49%;
+    min-width: 300px;
+    min-height: 300px;
+    border: 1px solid black; }
+
 section {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center; }
+  overflow: hidden; }
   section h1 {
-    font-size: 5em; }
+    font-size: 5em;
+    color: yellow; }
   section div.container {
     width: 80%;
     margin: 0 auto;
     text-align: center; }
   section#home {
-    background-color: red; }
+    background-image: url("/assets/images/beach.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center; }
   section#about {
-    background-color: blue; }
+    background-color: #ddb5ba; }
   section#projects {
-    background-color: green; }
+    background-color: #b3b492; }
   section#blog {
-    background-color: white; }
+    background-color: #f2eaea; }
   section#contact {
-    background-color: grey; }
+    background-color: #c78283; }
+
+button.big-button {
+  background-color: transparent;
+  border: 3px solid white;
+  color: grey;
+  font-size: 2em;
+  width: 25vw;
+  height: 5vh; }
+
+i#first-icon {
+  margin-left: -1000px;
+  opacity: 0; }
+
+i#second-icon {
+  margin-right: -1000px;
+  opacity: 0; }
+
+i#third-icon {
+  margin-left: -1000px;
+  opacity: 0; }
+
+i#fourth-icon {
+  margin-right: -1000px;
+  opacity: 0; }
+
+.fade-in-text {
+  opacity: 0; }

@@ -4,13 +4,16 @@
 		<meta charset="utf-8" />
 		<title>Home</title>
 		<link rel="stylesheet" href="/assets/css/styles.css" />
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<script src="https://kit.fontawesome.com/7c7973c6b2.js"></script>
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Home</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/","headline":"Home","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
@@ -26,31 +29,65 @@
 			<section id="home">
 				<div class="container">
 					<h1>
-						hello. i am nic travis. i am a full-stack web developer. this is
-						my site.
+						hello. i am nic travis. i am a full-stack web developer.
 					</h1>
+					<button class="big-button" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">See More</button>
 				<div>
 			</section>
-			<nav>
+			<nav id="navbar">
 	
-	  <a href="/" class="current">
-	    Home
-	  </a>
+	<a id="Home">
+		Home
+	</a>
 	
-	  <a href="/about.html" >
-	    About
-	  </a>
+	<a id="About">
+		About
+	</a>
 	
-	  <a href="/blog.html" >
-	    Blog
-	  </a>
+	<a id="Projects">
+		Projects
+	</a>
+	
+	<a id="Blog">
+		Blog
+	</a>
+	
+	<a id="Contact">
+		Contact
+	</a>
 	
 </nav>
+
 			<section id="about">
 					<div class="container">
 						<h1>
-							this is an about me section.
+							ABOUT
+							
 						</h1>
+						<hr/>
+						<div class='flex'>
+							<div class='flex-quad'>
+								<i id="first-icon" class="fas fa-tachometer-alt"></i>
+								<h2 class="fade-in-text">Fast</h2>
+								<p class="fade-in-text">I always develop with performance in mind.</p>
+							</div>
+							<div class='flex-quad'>
+								<i id="second-icon" class="fas fa-rocket"></i>
+								<h2 class="fade-in-text">Quality</h2>
+								<p class="fade-in-text">I focus on clean re-usable and robust code.</p>
+							</div>
+							<div class='flex-quad'><i id="third-icon" class="fas fa-lock"></i>
+								<h2 class="fade-in-text">Security</h2>
+								<p class="fade-in-text">Safety is always at the forfront of my mind when developing.</p>
+							</div>
+							<div class='flex-quad'><i id="fourth-icon" class="fas fa-brain"></i>
+									<h2 class="fade-in-text">Cutting Edge</h2>
+								<p class="fade-in-text">I am constatly learning, keeping up to date with changing trends in web development.</p>
+							</div>
+						</div>	
+						<p>coding is fun. </p>
+						<img id="myPicture" src="assets/images/me.jpeg"/>
+						
 					</div>
 			</section>
 			<section id="projects">
@@ -78,5 +115,11 @@
 	</body>
 </html>
 
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/index.js"></script>
 	</body>
 </html>
