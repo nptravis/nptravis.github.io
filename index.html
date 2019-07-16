@@ -15,6 +15,7 @@ title: Home
 		<main>
 			<section id="home">
 				<div class="container">
+
 					<h1>
 						{{ "Hello. I am Nic Travis. I am a Full-Stack Web Developer." | downcase }}
 					</h1>
@@ -23,12 +24,15 @@ title: Home
 			</section>
 			{% include navigation.html %}
 			<section id="about">
+				<!-- <button id="test">Test Element</button> -->
 					<div class="container">
-						<h1>
+						
+						<h1 class="slide-in-right">
 							{{ "About" |  upcase }}
 							
 						</h1>
-						<div class="header-bar slide-in-left"></div>
+							<div class="header-bar slide-in-left"></div>
+						
 						<div class='flex'>
 							<div class='flex-quad'>
 								<div class="icon-container slide-in-left">
@@ -53,30 +57,33 @@ title: Home
 									<h2 class="fade-in-text">Cutting Edge</h2>
 								<p class="fade-in-text">I am constatly learning, keeping up to date with changing trends in web development.</p>
 							</div>
-						</div>	
-						
-						<img id="myPicture" src="assets/images/me.jpeg"/>
-						
+							
+						</div>
+						<div class="flex-container">
+							<div>
+								<img id="myPicture" src="assets/images/me.jpeg"/>
+								<h2>Who am I?</h2>
+								<p>I am a driven full-stack dev with a passion for the creative process. </p>
+							</div>
+							{% include language-graph.html %}
+						</div>
+						<div id="github-repos"></div>
 					</div>
 			</section>
 			<section id="projects">
-					<div class="container">
-						<h1>
-							{{ "this is projects section." | downcase }}
-						</h1>
-					</div>
+					{% include projects.html %}
 			</section>
 			<section id="blog">
 					<div class="container">
 						<h1>
-							{{ "this is blog section." | downcase }}
+							{{ "this is the blog section." | downcase }}
 						</h1>
 					</div>
 			</section>
 			<section id="contact">
 					<div class="container">
 						<h1>
-							{{ "this is contact me section." | downcase }}
+							{{ "this is the contact me section." | downcase }}
 						</h1>
 					</div>
 			</section>

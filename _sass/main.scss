@@ -16,8 +16,17 @@ h1 {
 }
 
 img#myPicture {
-	height: 100px;
-	width: 100px;
+	clip-path: polygon(
+		50% 0%,
+		90% 20%,
+		100% 60%,
+		75% 100%,
+		25% 100%,
+		0% 60%,
+		10% 20%
+	);
+	width: 200px;
+	height: 200px;
 }
 
 nav {
@@ -28,7 +37,7 @@ nav {
 	background-color: $black;
 	height: 50px;
 	color: #fff;
-	border-bottom: 3px solid red;
+	border-bottom: 3px solid $light-blue;
 	text-align: center;
 
 	a {
@@ -46,6 +55,11 @@ nav {
 	}
 }
 
+// .slide-in-left {
+// 	height: 0;
+// 	width: 0;
+// }
+
 .fixed {
 	position: fixed;
 	top: 0;
@@ -57,16 +71,36 @@ div.flex {
 	flex-wrap: wrap;
 
 	div.flex-quad {
-		flex: 1 1 49%;
-		min-height: 300px;
-		position: relative;
+		flex: 1;
+		div.icon-container {
+			display: flex;
+			align-items: center;
+			z-index: 0;
+			margin: 0 auto;
+
+			overflow: visible;
+			clip-path: polygon(
+				50% 0%,
+				90% 20%,
+				100% 60%,
+				75% 100%,
+				25% 100%,
+				0% 60%,
+				10% 20%
+			);
+
+			text-align: center;
+			background-color: $aqua;
+			width: 100px;
+			height: 100px;
+		}
 	}
 }
 
 section {
-	height: 100vh;
-	display: flex;
-	overflow: hidden;
+	min-height: 100vh;
+	text-align: center;
+	// overflow: hidden;
 
 	div.container {
 		width: 80%;
@@ -84,7 +118,7 @@ section {
 
 	&#about {
 		background-color: $color5;
-		padding-top: 200px;
+		padding-top: 100px;
 	}
 
 	&#projects {
@@ -111,60 +145,26 @@ button.big-button {
 
 i {
 	flex: 1;
+	fill: #fff;
 }
 
-i#first-icon {
-	margin-left: -1000px;
-	opacity: 0;
-}
-i#second-icon {
-	margin-right: -1000px;
-	opacity: 0;
-}
-i#third-icon {
-	margin-left: -1000px;
-	opacity: 0;
-}
-i#fourth-icon {
-	margin-right: -1000px;
-	opacity: 0;
-}
-
-.fade-in-text {
-	opacity: 0;
-}
-
-.slide-in-left {
-	margin-left: -2000px;
-}
-
-.slide-in-right {
-	margin-left: 2000px;
-}
-
-.header-bar {
+div.header-bar {
+	margin: 0 auto;
 	height: 4px;
 	background-color: $black;
-	width: 20%;
+	width: 100px;
 }
 
-div.icon-container {
+div.flex-container {
 	display: flex;
-	align-items: center;
-	z-index: 0;
-	overflow: visible;
-	clip-path: polygon(
-		50% 0%,
-		90% 20%,
-		100% 60%,
-		75% 100%,
-		25% 100%,
-		0% 60%,
-		10% 20%
-	);
+	justify-content: space-between;
+	flex-direction: row;
 
-	text-align: center;
-	background-color: blue;
-	width: 20%;
-	height: 35%;
+	// div:nth-child(1) {
+	// 	border: 1px solid black;
+	// 	flex: 1;
+	// }
+	// div:nth-child(2) {
+	// 	flex: 1;
+	// }
 }

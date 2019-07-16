@@ -1,51 +1,101 @@
 $(document).ready(function() {
 	console.log("Dom Loaded");
 
+	// Variables and State /////////////////////////////////////////
 	var navPos = $("nav").position().top;
 	var lastPos = 0;
 	var lockTimer;
+	$(".slide-in-left").hide();
+	$(".slide-in-right").hide();
+	$(".fade-in-text").hide();
 
-	// event listeners ///////////////////////////////////////////////////////////////
+	// fetch data /////////////////////////////////////////////////
+
+	// fetch("https://api.github.com/users/nptravis/repos?sort=updated", {
+	// 	method: "get",
+	// 	headers: {
+	// 		Accept: "application/json",
+	// 		"Content-Type": "application/json"
+	// 	}
+	// })
+	// 	.then(response => response.json())
+	// 	.then(data => {
+	// 		$("#github-repos").append(
+	// 			data.map(repo => {
+	// 				return `<ul>
+	// 			<li>${repo.name}</li>
+	// 		</ul>`;
+	// 			})
+	// 		);
+	// 	})
+	// 	.catch(err => err);
+
+	// event listeners //////////////////////////////////////////////////////////////
+
+	$("#test").click(function() {
+		$(this).toggle("drop");
+	});
+
 	window.addEventListener("scroll", function(e) {
 		var pos = $(window).scrollTop();
 		var pos2 = pos + 50;
 		var scrollBottom = pos + $(window).height();
 
-		if (pos >= navPos + $("nav").height() && lastPos < pos) {
+		if (pos > navPos + $("nav").height() && lastPos < pos) {
+			if (!$("nav").hasClass("fixed")) {
+				$("nav").addClass("fixed");
+				growAnimation($("nav"));
+				$("#about").css({
+					marginTop: 50
+				});
+				flyIn();
+			}
 		}
 
 		if (pos < navPos && lastPos > pos) {
-			$("nav").removeClass("fixed");
-			// flyOut();
+			if ($("nav").hasClass("fixed")) {
+				$("nav").removeClass("fixed");
+				$("#about").css({
+					marginTop: 0
+				});
+				// flyOut();
+			}
+
+			// if ($(".slide-in-left").css("marginLeft") !== "-2000px") {
+			//
+			// 	console.log("Fly out");
+			// }
 		}
 
 		if (pos > $("#home").offset().top) {
 			highlight("#Home");
 		}
 
-		if (pos > $("nav").offset().top + $("nav").height()) {
-			$("nav").addClass("fixed");
-			growAnimation($("nav"));
-			$("#about").css({
-				marginTop: 50
-			});
-		}
-
 		if (pos > $("#about").offset().top - 50) {
 			highlight("#About");
-			flyIn();
-		} else {
-			$("nav").removeClass("fixed");
-			$("#about").css({
-				marginTop: 0
-			});
+			// if ($(".slide-in-left").css("marginLeft") === "-2000px") {
+			// 	console.log($(".slide-in-left").css("marginLeft"));
+			//
+			// }
 		}
 
-		if (pos > $("#projects").offset().top) {
+		if (pos > $(".flex-graph-container").offset().top - 200) {
+			if ($(".progress-bar").css("width") === "0px") {
+				graphIn();
+			}
+		}
+
+		if (pos < $("#about").offset().top + 100) {
+			if ($(".progress-bar").css("width") !== "0px") {
+				// graphOut();
+			}
+		}
+
+		if (pos >= $("#projects").offset().top) {
 			highlight("#Projects");
 		}
 
-		if (pos > $("#blog").offset().top) {
+		if (pos >= $("#blog").offset().top) {
 			highlight("#Blog");
 		}
 
@@ -80,6 +130,12 @@ $(document).ready(function() {
 		$(".slide-in-left").animate(
 			{
 				marginLeft: "-2000px"
+			},
+			500
+		);
+		$(".slide-in-right").animate(
+			{
+				marginLeft: "2000px"
 			},
 			500
 		);
@@ -121,52 +177,39 @@ $(document).ready(function() {
 
 	function flyIn() {
 		console.log("flying in!");
-		$(".slide-in-left").animate(
-			{
-				marginLeft: "40%"
-			},
-			700
-		);
-		$(".slide-in-right").animate(
-			{
-				marginLeft: "40%"
-			},
-			700
-		);
-		$("#first-icon").animate(
-			{
-				marginLeft: "0px",
-				opacity: "1"
-			},
-			700
-		);
-		$("#second-icon").animate(
-			{
-				marginRight: "0px",
-				opacity: "1"
-			},
-			700
-		);
-		$("#third-icon").animate(
-			{
-				marginLeft: "0px",
-				opacity: "1"
-			},
-			700
-		);
-		$("#fourth-icon").animate(
-			{
-				marginRight: "0px",
-				opacity: "1"
-			},
-			700
-		);
-		$(".fade-in-text").animate(
-			{
-				opacity: 1
-			},
-			1000
-		);
+		$(".slide-in-left").show("slide", { direction: "left" }, 1000);
+
+		$(".slide-in-right").show("slide", { direction: "right" }, 1000);
+
+		$(".fade-in-text").fadeIn("slow");
+	}
+
+	function graphIn() {
+		console.log("graph in");
+		// let originalWIdth = $(".progress-bar").css("min-width");
+		// debugger;
+		$(".progress-bar").each(function(index) {
+			$(this).animate(
+				{
+					width: $(this).data("progress")
+				},
+				700
+			);
+		});
+	}
+
+	function graphOut() {
+		console.log("graph out");
+		// let originalWIdth = $(".progress-bar").css("min-width");
+		// debugger;
+		$(".progress-bar").each(function(index) {
+			$(this).animate(
+				{
+					width: "0"
+				},
+				700
+			);
+		});
 	}
 
 	$("#About").click(function() {
@@ -188,4 +231,13 @@ $(document).ready(function() {
 	$("#Contact").click(function() {
 		document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 	});
+
+	$(".projects-container").hover(
+		function() {
+			console.log("mouse entered.");
+		},
+		function() {
+			console.log("mouse left.");
+		}
+	);
 });

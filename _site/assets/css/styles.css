@@ -15,8 +15,9 @@ h1 {
   font-size: 5em; }
 
 img#myPicture {
-  height: 100px;
-  width: 100px; }
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  width: 200px;
+  height: 200px; }
 
 nav {
   display: flex;
@@ -24,7 +25,7 @@ nav {
   background-color: #262f38;
   height: 50px;
   color: #fff;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid #04c2c9;
   text-align: center; }
   nav a {
     flex: 0 1 auto;
@@ -44,14 +45,22 @@ div.flex {
   display: flex;
   flex-wrap: wrap; }
   div.flex div.flex-quad {
-    flex: 1 1 49%;
-    min-height: 300px;
-    position: relative; }
+    flex: 1; }
+    div.flex div.flex-quad div.icon-container {
+      display: flex;
+      align-items: center;
+      z-index: 0;
+      margin: 0 auto;
+      overflow: visible;
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      text-align: center;
+      background-color: #00a1a7;
+      width: 100px;
+      height: 100px; }
 
 section {
-  height: 100vh;
-  display: flex;
-  overflow: hidden; }
+  min-height: 100vh;
+  text-align: center; }
   section div.container {
     width: 80%;
     margin: 0 auto;
@@ -64,13 +73,13 @@ section {
     justify-content: center; }
   section#about {
     background-color: #6f686d;
-    padding-top: 200px; }
+    padding-top: 100px; }
   section#projects {
-    background-color: #b3b492; }
+    background-color: #b3b493; }
   section#blog {
-    background-color: #f2eaea; }
+    background-color: #f1e9e9; }
   section#contact {
-    background-color: #c78283; }
+    background-color: #c88485; }
 
 button.big-button {
   background-color: transparent;
@@ -81,45 +90,78 @@ button.big-button {
   height: 5vh; }
 
 i {
-  flex: 1; }
+  flex: 1;
+  fill: #fff; }
 
-i#first-icon {
-  margin-left: -1000px;
-  opacity: 0; }
-
-i#second-icon {
-  margin-right: -1000px;
-  opacity: 0; }
-
-i#third-icon {
-  margin-left: -1000px;
-  opacity: 0; }
-
-i#fourth-icon {
-  margin-right: -1000px;
-  opacity: 0; }
-
-.fade-in-text {
-  opacity: 0; }
-
-.slide-in-left {
-  margin-left: -2000px; }
-
-.slide-in-right {
-  margin-left: 2000px; }
-
-.header-bar {
+div.header-bar {
+  margin: 0 auto;
   height: 4px;
   background-color: #262f38;
-  width: 20%; }
+  width: 100px; }
 
-div.icon-container {
+div.flex-container {
   display: flex;
-  align-items: center;
-  z-index: 0;
-  overflow: visible;
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  text-align: center;
-  background-color: blue;
-  width: 20%;
-  height: 35%; }
+  justify-content: space-between;
+  flex-direction: row; }
+
+@media screen and (max-width: 992px) {
+  div.flex-container {
+    flex-direction: column; } }
+div.flex-graph-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  div.flex-graph-container div.bar-container {
+    text-align: left;
+    flex: 1;
+    max-height: 30px;
+    min-height: 30px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row; }
+    div.flex-graph-container div.bar-container div.lang-name {
+      flex: 2;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      background-color: #04c2c9; }
+    div.flex-graph-container div.bar-container div.progress {
+      flex: 8;
+      background-color: grey; }
+      div.flex-graph-container div.bar-container div.progress div.progress-bar {
+        width: 0%;
+        height: 100%;
+        display: inline-block;
+        background-color: #00a1a7; }
+    div.flex-graph-container div.bar-container div.percentage {
+      text-align: right;
+      line-height: 30px;
+      flex: 1;
+      background-color: grey; }
+
+div.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto; }
+  div.projects-container div.project-box {
+    flex: 1;
+    position: relative; }
+    div.projects-container div.project-box h2.text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+    div.projects-container div.project-box img.card {
+      width: 80%;
+      height: auto; }
+    div.projects-container div.project-box div.button-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center; }
+    div.projects-container div.project-box:hover {
+      border: 1px solid black; }

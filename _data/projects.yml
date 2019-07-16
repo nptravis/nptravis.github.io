@@ -1,0 +1,13 @@
+- name: Comments Lab
+  url: commentslab.com
+  repo-url: https://github.com/nptravis/comments-lab-frontend
+  repo-url2: https://github.com/nptravis/comments-lab
+  image: comments-lab.jpg
+  title: A powerful tools for professional educators to ease the burden of writing report card comments.
+  decription: It provides an intutive interactive interface, utilizing many cutting edge technologies such as React, Redux, and Ruby on Rails backend API. Backend is deployed on Heroku, front end is deployed on Digital Ocean, Ubuntu 16.4.
+- name: PowerTools Plus
+  url: pwtools-plus.com
+  repo-url: https://github.com/nptravis/powerschool-api-navigator
+  image: pwtools-plus.jpg
+  title: A plugin for the PowerSchool Student Information System that extends the ability to create customzed student schedules for schools that require a more flexible scheduling interface.
+  description: Utilizes OpenId authentication methods to login in users directly from their PowerSchool Portal. 3 different authentication levels exists, admin, teacher, and student, all with completely seperate access rights and views. It pulls most of the data from the PowerSchool API, but I have also connected and MongoDB instance to store user accounts, custom scheduling data, and custom Content Support Sections.

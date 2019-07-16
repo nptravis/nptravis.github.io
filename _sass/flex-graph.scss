@@ -1,0 +1,40 @@
+div.flex-graph-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	div.bar-container {
+		text-align: left;
+		flex: 1;
+		max-height: 30px;
+		min-height: 30px;
+		margin: 5px 0;
+		display: flex;
+		flex-direction: row;
+
+		div.lang-name {
+			flex: 2;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			background-color: $light-blue;
+		}
+		div.progress {
+			flex: 8;
+			background-color: grey;
+			div.progress-bar {
+				width: 0%;
+				height: 100%;
+				display: inline-block;
+				background-color: $aqua;
+			}
+		}
+		div.percentage {
+			text-align: right;
+			line-height: 30px;
+			flex: 1;
+
+			background-color: grey;
+		}
+	}
+}
