@@ -154,7 +154,7 @@ div.projects-container {
       top: 0;
       left: 0;
       width: 100%; }
-    div.projects-container div.project-box img.card {
+    div.projects-container div.project-box img.project-image {
       width: 80%;
       height: auto; }
     div.projects-container div.project-box div.button-wrapper {

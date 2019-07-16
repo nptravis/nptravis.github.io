@@ -232,12 +232,16 @@ $(document).ready(function() {
 		document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 	});
 
-	$(".projects-container").hover(
+	$(".project-box").hover(
 		function() {
-			console.log("mouse entered.");
+			$(this)
+				.children(".project-image")
+				.css("opacity", ".1");
 		},
 		function() {
-			console.log("mouse left.");
+			$(this)
+				.children(".project-image")
+				.css("opacity", "1");
 		}
 	);
 });
