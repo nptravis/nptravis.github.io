@@ -162,14 +162,18 @@ div.projects-container {
   div.projects-container div.project-box {
     margin: 10px;
     flex: 1;
-    position: relative; }
+    position: relative;
+    min-width: 300px; }
     div.projects-container div.project-box.border {
       border: 4px solid #e31b6d; }
-    div.projects-container div.project-box h2.project-title {
+    div.projects-container div.project-box div.project-text-container {
       position: absolute;
+      margin: 0 auto;
       top: 0;
       left: 0;
-      width: 100%;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       opacity: 0; }
     div.projects-container div.project-box img.project-image {
       width: 100%;
@@ -181,8 +185,21 @@ div.projects-container {
       width: 100%;
       text-align: center;
       opacity: 0; }
-    div.projects-container div.project-box:hover {
-      border: 1px solid black; }
+
+div.carousel-container .slick-prev:before {
+  color: grey; }
+div.carousel-container .slick-next:before {
+  color: grey; }
+
+img.carousel-image {
+  width: 50vw; }
+
+div.modal {
+  text-align: center;
+  min-width: 80vw; }
+
+.slick-arrow {
+  color: black; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
@@ -209,5 +226,22 @@ div.contact-container div#home-button {
   border: 4px solid #e31b6d;
   width: 50px;
   background-color: grey;
-  height: 100px;
+  height: 50px;
   margin: 0 auto; }
+  div.contact-container div#home-button i {
+    width: 40px;
+    height: auto; }
+
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
+div.down-arrow-container {
+  margin: 0 auto;
+  color: #e31b6d;
+  background-color: transparent;
+  border: 3px solid black;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%; }
+  div.down-arrow-container i {
+    line-height: 70px; }

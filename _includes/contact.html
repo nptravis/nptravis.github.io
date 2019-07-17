@@ -1,7 +1,11 @@
 <div class="contact-container">
 	<h1>Contact</h1>
 	<div class="contact-form-container">
-		<form id="contact-form">
+		<form
+			id="contact-form"
+			method="POST"
+			action="https://formspree.io/nptravis@gmail.com"
+		>
 			<label>{{ "Name" | capitalize}}</label>
 			<input type="text" name="name" />
 			<label>{{ "Title" | capitalize}}</label>
@@ -11,5 +15,5 @@
 			<input type="submit" />
 		</form>
 	</div>
-	<div id="home-button"><h2>Top</h2></div>
+	<div id="home-button"><i class="fa-2x fas fa-chevron-up"></i></div>
 </div>

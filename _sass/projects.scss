@@ -12,17 +12,26 @@ div.projects-container {
 		margin: 10px;
 		flex: 1;
 		position: relative;
-
+		min-width: 300px;
 		&.border {
 			border: 4px solid $red;
 		}
 
-		h2.project-title {
+		div.project-text-container {
 			position: absolute;
+			margin: 0 auto;
 			top: 0;
 			left: 0;
-			width: 100%;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
 			opacity: 0;
+		}
+
+		h2.project-title {
+		}
+
+		span.small-text {
 		}
 
 		img.project-image {
@@ -40,9 +49,27 @@ div.projects-container {
 			button.button {
 			}
 		}
-
-		&:hover {
-			border: 1px solid black;
-		}
 	}
+}
+
+div.carousel-container {
+	.slick-prev:before {
+		color: grey;
+	}
+	.slick-next:before {
+		color: grey;
+	}
+}
+
+img.carousel-image {
+	width: 50vw;
+}
+
+div.modal {
+	text-align: center;
+	min-width: 80vw;
+}
+
+.slick-arrow {
+	color: black;
 }

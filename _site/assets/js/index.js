@@ -219,30 +219,40 @@ $(document).ready(function() {
 
 	$(".project-box").hover(
 		function() {
-			$(this).addClass("border");
 			$(this)
 				.children(".project-image")
 				.css("opacity", ".1");
 			$(this).children(".project-image");
 			$(this)
-				.children(".project-title")
-				.css("opacity", "1");
+				.children(".project-text-container")
+				.animate(
+					{
+						opacity: "1",
+						top: 20
+					},
+					300
+				);
 			$(this)
 				.children(".button-wrapper")
-				.css("opacity", "1");
+				.animate({ opacity: "1", bottom: 100 }, 300);
 			$(this).css("background-color", "#fff");
 		},
 		function() {
-			$(this).removeClass("border");
 			$(this)
 				.children(".project-image")
-				.css("opacity", "1");
+				.animate({ opacity: "1" }, 300);
 			$(this)
-				.children(".project-title")
-				.css("opacity", "0");
+				.children(".project-text-container")
+				.animate(
+					{
+						opacity: "0",
+						top: 0
+					},
+					300
+				);
 			$(this)
 				.children(".button-wrapper")
-				.css("opacity", "0");
+				.animate({ opacity: "0", bottom: 0 }, 300);
 			$(this).css("background-color", "transparent");
 		}
 	);
@@ -253,7 +263,24 @@ $(document).ready(function() {
 
 	$("#home-button").hover(
 		function() {
-			$(this).toggle("bounce", { times: 2 }, "slow");
+			$(this).effect(
+				"shake",
+				{ direction: "up", times: 2, distance: 10 },
+				1000
+			);
+		},
+		function() {
+			$(this).show();
+		}
+	);
+
+	$(".down-arrow-container").hover(
+		function() {
+			$(this).effect(
+				"shake",
+				{ direction: "down", times: 2, distance: 10 },
+				1000
+			);
 		},
 		function() {
 			$(this).show();
@@ -282,4 +309,15 @@ $(document).ready(function() {
 	// 		);
 	// 	}
 	// );
+
+	$(".carousel-container").slick({
+		dots: true,
+		infinite: false,
+		arrows: true,
+		speed: 300,
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
+		slidesToScroll: 1
+	});
 });

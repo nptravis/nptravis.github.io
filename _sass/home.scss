@@ -1,0 +1,15 @@
+@import "./palette.scss";
+
+div.down-arrow-container {
+	margin: 0 auto;
+	color: $red;
+	background-color: transparent;
+	border: 3px solid black;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+
+	i {
+		line-height: 70px;
+	}
+}

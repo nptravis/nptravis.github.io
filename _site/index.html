@@ -4,7 +4,36 @@
 		<meta charset="utf-8" />
 		<title>Home</title>
 		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+		/>
 		<script src="https://kit.fontawesome.com/7c7973c6b2.js"></script>
+		<!-- <link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/slick/slick-1.8.1/slick/slick.css"
+		/>
+		// Add the new slick-theme.css if you want the default styling
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/slick/slick-1.8.1/slick/slick-theme.css"
+		/>
+ -->
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+		/>
+		<!-- Add the slick-theme.css if you want default styling -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+		/>
+
 		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Home</title>
 <meta name="generator" content="Jekyll v3.8.6" />
@@ -28,12 +57,19 @@
 		<main>
 			<section id="home">
 				<div class="container">
+	<h1>
+		hello. i am nic travis. i am a full-stack web developer.
+	</h1>
+	<div
+		class="down-arrow-container"
+		onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});"
+	>
+		<i class="fa-2x fas fa-arrow-down"></i>
+	</div>
 
-					<h1>
-						hello. i am nic travis. i am a full-stack web developer.
-					</h1>
-					<button class="big-button" onClick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">See More</button>
-				<div>
+	<div></div>
+</div>
+
 			</section>
 			<nav id="navbar">
 	
@@ -61,47 +97,61 @@
 
 			<section id="about">
 				<!-- <button id="test">Test Element</button> -->
-					<div class="container">
-						
-						<h1 class="slide-in-right">
-							ABOUT
-							
-						</h1>
-							<div class="header-bar slide-in-left"></div>
-						
-						<div class='flex'>
-							<div class='flex-quad'>
-								<div class="icon-container slide-in-left">
-									<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
-								</div>
-								<h2 class="fade-in-text">Fast</h2>
-								<p class="fade-in-text">I always develop with performance in mind.</p>
+				<div class="container">
+					<h1 class="slide-in-right">
+						ABOUT
+					</h1>
+					<div class="header-bar slide-in-left"></div>
+
+					<div class="flex">
+						<div class="flex-quad">
+							<div class="icon-container slide-in-left">
+								<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
 							</div>
-							<div class='flex-quad'>
-								<div class="icon-container slide-in-right">
-									<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
-								</div>
-								<h2 class="fade-in-text">Quality</h2>
-								<p class="fade-in-text">I focus on clean re-usable and robust code.</p>
-							</div>
-							<div class='flex-quad'>
-								<div class="icon-container slide-in-left"><i id="third-icon" class="fa-3x fas fa-lock"></i></div>
-								<h2 class="fade-in-text">Security</h2>
-								<p class="fade-in-text">Safety is always at the forfront of my mind when developing.</p>
-							</div>
-							<div class='flex-quad'><div class="icon-container slide-in-right"><i id="fourth-icon" class="fa-3x fas fa-brain"></i></div>
-									<h2 class="fade-in-text">Cutting Edge</h2>
-								<p class="fade-in-text">I am constatly learning, keeping up to date with changing trends in web development.</p>
-							</div>
-							
+							<h2 class="fade-in-text">Fast</h2>
+							<p class="fade-in-text">
+								I always develop with performance in mind.
+							</p>
 						</div>
-						<div class="flex-container">
-							<div>
-								<img id="myPicture" src="assets/images/me.jpeg"/>
-								<h2>Who am I?</h2>
-								<p>I am a driven full-stack dev with a passion for the creative process. </p>
+						<div class="flex-quad">
+							<div class="icon-container slide-in-right">
+								<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
 							</div>
-							<div class="flex-graph-container">
+							<h2 class="fade-in-text">Quality</h2>
+							<p class="fade-in-text">
+								I focus on clean re-usable and robust code.
+							</p>
+						</div>
+						<div class="flex-quad">
+							<div class="icon-container slide-in-left">
+								<i id="third-icon" class="fa-3x fas fa-lock"></i>
+							</div>
+							<h2 class="fade-in-text">Security</h2>
+							<p class="fade-in-text">
+								Safety is always at the forfront of my mind when developing.
+							</p>
+						</div>
+						<div class="flex-quad">
+							<div class="icon-container slide-in-right">
+								<i id="fourth-icon" class="fa-3x fas fa-brain"></i>
+							</div>
+							<h2 class="fade-in-text">Cutting Edge</h2>
+							<p class="fade-in-text">
+								I am constatly learning, keeping up to date with changing trends
+								in web development.
+							</p>
+						</div>
+					</div>
+					<div class="flex-container">
+						<div>
+							<img id="myPicture" src="assets/images/me.jpeg" />
+							<h2>Who am I?</h2>
+							<p>
+								I am a driven full-stack dev with a passion for the creative
+								process.
+							</p>
+						</div>
+						<div class="flex-graph-container">
 	
 	<div class="bar-container">
 		<div class="lang-name">HTML</div>
@@ -185,37 +235,112 @@
 	
 </div>
 
-						</div>
-						<div id="github-repos"></div>
 					</div>
+					<div id="github-repos"></div>
+				</div>
 			</section>
 			<section id="projects">
-					<h1>Projects</h1>
+				<h1>Projects</h1>
 <div class="projects-container">
 	
 	<div class="project-box">
-		<h2 class="project-title">COMMENTS LAB</h2>
-		<span class="small-text">React, Redux, Ruby on Rails API, Postgres</span>
+		<div class="project-text-container">
+			<h2 class="project-title">COMMENTS LAB</h2>
+			<span class="small-text">React, Redux, Ruby on Rails API, Postgres</span>
+		</div>
 		<img class="project-image" src="assets/images/comments-lab.jpg" />
 		<div class="button-wrapper">
-			<button class="button fade-in-on-hover">Learn More</button>
+			<a href="#commentslab1" rel="modal:open">Learn More</a>
 		</div>
 	</div>
+
+	<!-- Modal HTML embedded directly into document -->
+	<div id="commentslab1" class="modal">
+		<h2>Comments Lab</h2>
+		<div class="carousel-container">
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/comments-lab1.jpg"
+				/>
+			</div>
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/comments-lab2.jpg"
+				/>
+			</div>
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/comments-lab3.jpg"
+				/>
+			</div>
+		</div>
+		<p>It provides an intutive interactive interface, utilizing many cutting edge technologies such as React, Redux, and Ruby on Rails backend API. Backend is deployed on Heroku, front end is deployed on Digital Ocean, Ubuntu 16.4.</p>
+		
+		<a href="https://commentslab.com" target="_blank" class="live-site-link">
+			Live Site
+		</a>
+		
+		<a href="#" rel="modal:close">Close</a>
+	</div>
+
+	<!-- Link to open the modal -->
+	<!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p> -->
 	
 	<div class="project-box">
-		<h2 class="project-title">POWERTOOLS PLUS</h2>
-		<span class="small-text">React, Express, MongoDB</span>
+		<div class="project-text-container">
+			<h2 class="project-title">POWERTOOLS PLUS</h2>
+			<span class="small-text">React, Express, MongoDB</span>
+		</div>
 		<img class="project-image" src="assets/images/pwtools-plus.jpg" />
 		<div class="button-wrapper">
-			<button class="button fade-in-on-hover">Learn More</button>
+			<a href="#powertools1" rel="modal:open">Learn More</a>
 		</div>
 	</div>
+
+	<!-- Modal HTML embedded directly into document -->
+	<div id="powertools1" class="modal">
+		<h2>PowerTools Plus</h2>
+		<div class="carousel-container">
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/pwtools-plus.jpg"
+				/>
+			</div>
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/pwtools-plus.jpg"
+				/>
+			</div>
+			<div>
+				<img
+					class="carousel-image"
+					src="assets/images/pwtools-plus.jpg"
+				/>
+			</div>
+		</div>
+		<p>Utilizes OpenId authentication methods to login in users directly from their PowerSchool Portal. 3 different authentication levels exists, admin, teacher, and student, all with completely seperate access rights and views. It pulls most of the data from the PowerSchool API, but I have also connected and MongoDB instance to store user accounts, custom scheduling data, and custom Content Support Sections.</p>
+		
+		<span
+			>Sorry, this application deals with sensitive data, please reach out to me
+			for a demo user account to access the site.</span
+		>
+		
+		<a href="#" rel="modal:close">Close</a>
+	</div>
+
+	<!-- Link to open the modal -->
+	<!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p> -->
 	
 </div>
 
 			</section>
 			<section id="blog">
-						<h1>Blog</h1>
+				<h1>Blog</h1>
 <div class="blog-container">
 	
 
@@ -306,10 +431,14 @@
 
 			</section>
 			<section id="contact">
-					<div class="contact-container">
+				<div class="contact-container">
 	<h1>Contact</h1>
 	<div class="contact-form-container">
-		<form id="contact-form">
+		<form
+			id="contact-form"
+			method="POST"
+			action="https://formspree.io/nptravis@gmail.com"
+		>
 			<label>Name</label>
 			<input type="text" name="name" />
 			<label>Title</label>
@@ -319,7 +448,7 @@
 			<input type="submit" />
 		</form>
 	</div>
-	<div id="home-button"><h2>Top</h2></div>
+	<div id="home-button"><i class="fa-2x fas fa-chevron-up"></i></div>
 </div>
 
 			</section>
@@ -333,6 +462,16 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="assets/js/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+		></script>
+		<!-- <script
+			type="text/javascript"
+			src="assets/slick/slick-1.8.1/slick/slick.min.js"
+		></script> -->
+
 		<script src="assets/js/index.js"></script>
 	</body>
 </html>
