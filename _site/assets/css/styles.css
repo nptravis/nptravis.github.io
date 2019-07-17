@@ -82,7 +82,8 @@ section {
     background-color: #f1e9e9;
     padding-top: 100px; }
   section#contact {
-    background-color: #c88485;
+    color: #fffff0;
+    background-color: #262f38;
     padding-top: 100px; }
 
 button.big-button {
@@ -222,15 +223,72 @@ div.blog-container {
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
 /* RGB */
-div.contact-container div#home-button {
-  border: 4px solid #e31b6d;
-  width: 50px;
-  background-color: grey;
-  height: 50px;
-  margin: 0 auto; }
-  div.contact-container div#home-button i {
-    width: 40px;
-    height: auto; }
+div.contact-container {
+  height: 100vh;
+  color: #fffff0;
+  position: relative; }
+  div.contact-container div.contact-form-container form#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto; }
+    div.contact-container div.contact-form-container form#contact-form input[type="text"],
+    div.contact-container div.contact-form-container form#contact-form textarea {
+      color: #fffff0;
+      flex: 1;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: #1b242f;
+      padding: 5px;
+      font-size: 1em; }
+    div.contact-container div.contact-form-container form#contact-form input[type="text"] {
+      min-height: 40px;
+      margin-bottom: 3px; }
+    div.contact-container div.contact-form-container form#contact-form textarea {
+      min-height: 200px;
+      margin-bottom: 3px; }
+    div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
+      background-color: transparent;
+      border: 3px solid #fffff0;
+      color: #fffff0;
+      height: 40px;
+      width: 33%;
+      font-size: 1em;
+      margin-left: 67%; }
+      div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
+        transition: background-color 1s ease, border-color 1s ease;
+        background-color: #04c2c9;
+        border-color: #04c2c9; }
+
+div.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 30px;
+  background-color: #1b242f; }
+  div.footer div#home-button {
+    border: 4px solid #e31b6d;
+    width: 50px;
+    background-color: grey;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: -60px; }
+    div.footer div#home-button i {
+      width: 40px;
+      height: auto; }
+  div.footer div.social-links {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    div.footer div.social-links div.social-icon-container a {
+      color: grey; }
+      div.footer div.social-links div.social-icon-container a:hover {
+        transition: color 1s ease;
+        color: #04c2c9;
+        cursor: pointer; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */

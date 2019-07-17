@@ -34,13 +34,15 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Home</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/","headline":"Home","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
@@ -437,16 +439,44 @@
 			method="POST"
 			action="https://formspree.io/nptravis@gmail.com"
 		>
-			<label>Name</label>
-			<input type="text" name="name" />
-			<label>Title</label>
-			<input type="text" name="title" />
-			<label>Message</label>
-			<textarea name="message"></textarea>
+			<input type="text" name="name" placeholder="Name" />
+
+			<input type="text" name="title" placeholder="Enter Email" />
+
+			<textarea name="message" placeholder="Your Message"></textarea>
+
 			<input type="submit" />
 		</form>
 	</div>
-	<div id="home-button"><i class="fa-2x fas fa-chevron-up"></i></div>
+
+	<div class="footer">
+		<div id="home-button"><i class="fa-2x fas fa-chevron-up"></i></div>
+		<div class="social-links">
+			<div class="social-icon-container">
+				<a href="https://twitter.com/nictravis" target="_blank"
+					><i class="fa-3x fab fa-twitter-square"></i
+				></a>
+			</div>
+			<div class="social-icon-container">
+				<a href="https://www.facebook.com/nic.travis" target="_blank"
+					><i class="fa-3x fab fa-facebook-square"></i
+				></a>
+			</div>
+			<div class="social-icon-container">
+				<a
+					href="https://www.linkedin.com/in/nicolas-travis-58996131/"
+					target="_blank"
+					><i class="fa-3x fab fa-linkedin"></i
+				></a>
+			</div>
+			<div class="social-icon-container">
+				<a href="https://github.com/nptravis" target="_blank"
+					><i class="fa-3x fab fa-github-square"></i
+				></a>
+			</div>
+		</div>
+		<p>Nic Travis &copy; 2019</p>
+	</div>
 </div>
 
 			</section>

@@ -287,6 +287,15 @@ $(document).ready(function() {
 		}
 	);
 
+	$(".social-icon-container").hover(
+		function() {
+			$(this).effect("bounce", { direction: "up" }, 200);
+		},
+		function() {
+			$(this).show();
+		}
+	);
+
 	// $(".bar-container").hover(
 	// 	function() {
 	// 		console.log("hover on");

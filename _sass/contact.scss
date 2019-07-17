@@ -1,20 +1,94 @@
 @import "./palette.scss";
 
 div.contact-container {
+	height: 100vh;
+	color: $white;
+	position: relative;
+
 	div.contact-form-container {
-		div#contact-form {
+		form#contact-form {
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			margin: 0 auto;
+			input[type="text"],
+			textarea {
+				color: $white;
+				flex: 1;
+				border: none;
+				padding: 0;
+				margin: 0;
+				background-color: $dark-black;
+				padding: 5px;
+				font-size: 1em;
+			}
+
+			input[type="text"] {
+				min-height: 40px;
+				margin-bottom: 3px;
+			}
+
+			textarea {
+				min-height: 200px;
+				margin-bottom: 3px;
+			}
+
+			input[type="submit"] {
+				background-color: transparent;
+				border: 3px solid $white;
+				color: $white;
+				height: 40px;
+				width: 33%;
+				font-size: 1em;
+				margin-left: 67%;
+
+				&:hover {
+					transition: background-color 1s ease, border-color 1s ease;
+					background-color: $light-blue;
+					border-color: $light-blue;
+				}
+			}
 		}
 	}
+}
+
+div.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 30px;
+	background-color: $dark-black;
+	// height: 75px;
+
 	div#home-button {
 		border: 4px solid $red;
 		width: 50px;
 		background-color: grey;
 		height: 50px;
 		margin: 0 auto;
+		margin-top: -60px;
 
 		i {
 			width: 40px;
 			height: auto;
+		}
+	}
+	div.social-links {
+		width: 40%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+
+		div.social-icon-container {
+			a {
+				color: grey;
+				&:hover {
+					transition: color 1s ease;
+					color: $light-blue;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 }
