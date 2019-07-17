@@ -1,9 +1,10 @@
 <h1>Projects</h1>
 <div class="projects-container">
-	{% for item in site.data.projects %}
+	{% for project in site.data.projects %}
 	<div class="project-box">
-		<h2 class="text fade-in-on-hover">{{ item.name | upcase }}</h2>
-		<img class="project-image" src="assets/images/{{ item.image }}" />
+		<h2 class="project-title">{{ project.name | upcase }}</h2>
+		<span class="small-text">{{ project.stack }}</span>
+		<img class="project-image" src="assets/images/{{ project.image }}" />
 		<div class="button-wrapper">
 			<button class="button fade-in-on-hover">Learn More</button>
 		</div>

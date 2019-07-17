@@ -114,6 +114,7 @@ section {
 		background-size: cover;
 		align-items: center;
 		justify-content: center;
+		padding-top: 100px;
 	}
 
 	&#about {
@@ -123,14 +124,17 @@ section {
 
 	&#projects {
 		background-color: $color2;
+		padding-top: 100px;
 	}
 
 	&#blog {
 		background-color: $color3;
+		padding-top: 100px;
 	}
 
 	&#contact {
 		background-color: $color4;
+		padding-top: 100px;
 	}
 }
 

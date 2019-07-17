@@ -1,0 +1,13 @@
+<h1>Blog</h1>
+<div class="blog-container">
+	{% for post in site.posts %}
+
+	<div class="post-container">
+		<img class="post-image" src="assets/images/{{ post.date | date: "%Y-%m-%d"
+		}}.jpg" />
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<p>{{ post.excerpt }}</p>
+	</div>
+
+	{% endfor %}
+</div>

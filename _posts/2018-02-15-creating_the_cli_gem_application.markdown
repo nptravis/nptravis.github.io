@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Creating the CLI Gem Application"
+title:      "Creating a CLI Gem Application"
 date:       2018-02-15 09:02:29 -0500
 permalink:  creating_the_cli_gem_application
 ---

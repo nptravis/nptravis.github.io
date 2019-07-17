@@ -67,16 +67,17 @@ $(document).ready(function() {
 			// }
 		}
 
-		if (pos > $("#home").offset().top) {
-			highlight("#Home");
-		}
+		// Navbar Highlighting
+		if (pos >= $("#home").offset().top) highlight("#Home");
+		if (pos >= $("#about").offset().top - 50) highlight("#About");
+		if (pos >= $("#projects").offset().top - 50) highlight("#Projects");
+		if (pos >= $("#blog").offset().top - 50) highlight("#Blog");
 
-		if (pos > $("#about").offset().top - 50) {
-			highlight("#About");
-			// if ($(".slide-in-left").css("marginLeft") === "-2000px") {
-			// 	console.log($(".slide-in-left").css("marginLeft"));
-			//
-			// }
+		if (
+			pos >= $("#contact").offset().top - 50 ||
+			pos + $(window).height() === $(document).height()
+		) {
+			highlight("#Contact");
 		}
 
 		if (pos > $(".flex-graph-container").offset().top - 200) {
@@ -89,21 +90,6 @@ $(document).ready(function() {
 			if ($(".progress-bar").css("width") !== "0px") {
 				// graphOut();
 			}
-		}
-
-		if (pos >= $("#projects").offset().top) {
-			highlight("#Projects");
-		}
-
-		if (pos >= $("#blog").offset().top) {
-			highlight("#Blog");
-		}
-
-		if (
-			pos > $("#contact").offset().top - 50 ||
-			pos + $(window).height() === $(document).height()
-		) {
-			highlight("#Contact");
 		}
 
 		lastPos = pos;
@@ -234,14 +220,44 @@ $(document).ready(function() {
 
 	$(".project-box").hover(
 		function() {
+			$(this).addClass("border");
 			$(this)
 				.children(".project-image")
 				.css("opacity", ".1");
+			$(this).children(".project-image");
+			$(this)
+				.children(".project-title")
+				.css("opacity", "1");
+			$(this)
+				.children(".button-wrapper")
+				.css("opacity", "1");
+			$(this).css("background-color", "#fff");
 		},
 		function() {
+			$(this).removeClass("border");
 			$(this)
 				.children(".project-image")
 				.css("opacity", "1");
+			$(this)
+				.children(".project-title")
+				.css("opacity", "0");
+			$(this)
+				.children(".button-wrapper")
+				.css("opacity", "0");
+			$(this).css("background-color", "transparent");
+		}
+	);
+
+	$("#home-button").click(function() {
+		document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+	});
+
+	$("#home-button").hover(
+		function() {
+			$(this).toggle("bounce", { times: 2 }, "slow");
+		},
+		function() {
+			$(this).show();
 		}
 	);
 });

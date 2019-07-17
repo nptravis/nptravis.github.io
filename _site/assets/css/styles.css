@@ -70,16 +70,20 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 100px; }
   section#about {
     background-color: #6f686d;
     padding-top: 100px; }
   section#projects {
-    background-color: #b3b493; }
+    background-color: #b3b493;
+    padding-top: 100px; }
   section#blog {
-    background-color: #f1e9e9; }
+    background-color: #f1e9e9;
+    padding-top: 100px; }
   section#contact {
-    background-color: #c88485; }
+    background-color: #c88485;
+    padding-top: 100px; }
 
 button.big-button {
   background-color: transparent;
@@ -106,6 +110,12 @@ div.flex-container {
 
 @media screen and (max-width: 992px) {
   div.flex-container {
+    flex-direction: column; }
+
+  div.projects-container {
+    flex-direction: column; }
+
+  div.blog-container {
     flex-direction: column; } }
 div.flex-graph-container {
   width: 100%;
@@ -139,6 +149,9 @@ div.flex-graph-container {
       flex: 1;
       background-color: grey; }
 
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
 div.projects-container {
   display: flex;
   flex-direction: row;
@@ -147,21 +160,54 @@ div.projects-container {
   width: 80%;
   margin: 0 auto; }
   div.projects-container div.project-box {
+    margin: 10px;
     flex: 1;
     position: relative; }
-    div.projects-container div.project-box h2.text {
+    div.projects-container div.project-box.border {
+      border: 4px solid #e31b6d; }
+    div.projects-container div.project-box h2.project-title {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%; }
+      width: 100%;
+      opacity: 0; }
     div.projects-container div.project-box img.project-image {
-      width: 80%;
+      width: 100%;
       height: auto; }
     div.projects-container div.project-box div.button-wrapper {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      opacity: 0; }
     div.projects-container div.project-box:hover {
       border: 1px solid black; }
+
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
+div.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto; }
+  div.blog-container div.post-container {
+    margin: 10px;
+    flex: 1;
+    min-width: 400px; }
+    div.blog-container div.post-container span.small-text {
+      font-size: 0.5em;
+      color: #e31b6d; }
+    div.blog-container div.post-container img.post-image {
+      width: 100%; }
+
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
+div.contact-container div#home-button {
+  border: 4px solid #e31b6d;
+  width: 50px;
+  background-color: grey;
+  height: 100px;
+  margin: 0 auto; }
