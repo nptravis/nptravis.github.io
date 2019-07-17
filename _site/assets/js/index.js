@@ -72,7 +72,6 @@ $(document).ready(function() {
 		if (pos >= $("#about").offset().top - 50) highlight("#About");
 		if (pos >= $("#projects").offset().top - 50) highlight("#Projects");
 		if (pos >= $("#blog").offset().top - 50) highlight("#Blog");
-
 		if (
 			pos >= $("#contact").offset().top - 50 ||
 			pos + $(window).height() === $(document).height()
@@ -260,4 +259,27 @@ $(document).ready(function() {
 			$(this).show();
 		}
 	);
+
+	// $(".bar-container").hover(
+	// 	function() {
+	// 		console.log("hover on");
+	// 		$(this).animate(
+	// 			{
+	// 				minHeight: "40px",
+	// 				maxHeight: "40px"
+	// 			},
+	// 			700
+	// 		);
+	// 	},
+	// 	function() {
+	// 		console.log("hover off");
+	// 		$(this).animate(
+	// 			{
+	// 				minHeight: "30px",
+	// 				maxHeight: "30px"
+	// 			},
+	// 			700
+	// 		);
+	// 	}
+	// );
 });
