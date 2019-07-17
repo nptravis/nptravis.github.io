@@ -46,6 +46,7 @@ div.contact-container {
 					transition: background-color 1s ease, border-color 1s ease;
 					background-color: $light-blue;
 					border-color: $light-blue;
+					cursor: pointer;
 				}
 			}
 		}
@@ -72,6 +73,10 @@ div.footer {
 		i {
 			width: 40px;
 			height: auto;
+		}
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 	div.social-links {

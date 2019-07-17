@@ -34,7 +34,7 @@ nav {
     nav a:hover {
       cursor: pointer; }
     nav a.active {
-      color: blue; }
+      color: #e31b6d; }
 
 .fixed {
   position: fixed;
@@ -259,7 +259,8 @@ div.contact-container {
       div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
         transition: background-color 1s ease, border-color 1s ease;
         background-color: #04c2c9;
-        border-color: #04c2c9; }
+        border-color: #04c2c9;
+        cursor: pointer; }
 
 div.footer {
   position: absolute;
@@ -278,6 +279,8 @@ div.footer {
     div.footer div#home-button i {
       width: 40px;
       height: auto; }
+    div.footer div#home-button:hover {
+      cursor: pointer; }
   div.footer div.social-links {
     width: 40%;
     margin: 0 auto;
@@ -301,5 +304,7 @@ div.down-arrow-container {
   width: 70px;
   height: 70px;
   border-radius: 100%; }
+  div.down-arrow-container:hover {
+    cursor: pointer; }
   div.down-arrow-container i {
     line-height: 70px; }

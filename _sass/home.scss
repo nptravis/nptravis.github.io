@@ -9,6 +9,10 @@ div.down-arrow-container {
 	height: 70px;
 	border-radius: 100%;
 
+	&:hover {
+		cursor: pointer;
+	}
+
 	i {
 		line-height: 70px;
 	}
