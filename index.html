@@ -18,65 +18,7 @@ title: Home
 			</section>
 			{% include navigation.html %}
 			<section id="about">
-				<!-- <button id="test">Test Element</button> -->
-				<div class="container">
-					<h1 class="slide-in-right">
-						{{ "About" | upcase }}
-					</h1>
-					<div class="header-bar slide-in-left"></div>
-
-					<div class="flex">
-						<div class="flex-quad">
-							<div class="icon-container slide-in-left">
-								<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
-							</div>
-							<h2 class="fade-in-text">Fast</h2>
-							<p class="fade-in-text">
-								I always develop with performance in mind.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-right">
-								<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
-							</div>
-							<h2 class="fade-in-text">Quality</h2>
-							<p class="fade-in-text">
-								I focus on clean re-usable and robust code.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-left">
-								<i id="third-icon" class="fa-3x fas fa-lock"></i>
-							</div>
-							<h2 class="fade-in-text">Security</h2>
-							<p class="fade-in-text">
-								Safety is always at the forfront of my mind when developing.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-right">
-								<i id="fourth-icon" class="fa-3x fas fa-brain"></i>
-							</div>
-							<h2 class="fade-in-text">Cutting Edge</h2>
-							<p class="fade-in-text">
-								I am constatly learning, keeping up to date with changing trends
-								in web development.
-							</p>
-						</div>
-					</div>
-					<div class="flex-container">
-						<div>
-							<img id="myPicture" src="assets/images/me.jpeg" />
-							<h2>Who am I?</h2>
-							<p>
-								I am a driven full-stack dev with a passion for the creative
-								process.
-							</p>
-						</div>
-						{% include language-graph.html %}
-					</div>
-					<div id="github-repos"></div>
-				</div>
+				{% include about.html %}
 			</section>
 			<section id="projects">
 				{% include projects.html %}

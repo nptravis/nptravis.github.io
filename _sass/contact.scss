@@ -97,3 +97,10 @@ div.footer {
 		}
 	}
 }
+
+p.signature {
+	color: grey;
+	span {
+		color: $red;
+	}
+}

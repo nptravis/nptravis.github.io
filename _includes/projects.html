@@ -7,14 +7,13 @@
 			<span class="small-text">{{ project.stack }}</span>
 		</div>
 		<img class="project-image" src="assets/images/{{ project.image }}" />
-		<div class="button-wrapper">
-			<a href="#{{ project.modal-id }}" rel="modal:open">Learn More</a>
-		</div>
+		<a class="button-wrapper" rel="modal:open" href="#{{ project.modal-id }}">
+			<span>Learn More</span>
+		</a>
 	</div>
 
 	<!-- Modal HTML embedded directly into document -->
 	<div id="{{ project.modal-id }}" class="modal">
-		<h2>{{ project.name }}</h2>
 		<div class="carousel-container">
 			<div>
 				<img
@@ -35,18 +34,21 @@
 				/>
 			</div>
 		</div>
+		<h2>{{ project.name }}</h2>
+		<span class="project-category">{{ project.category }}</span>
+		<hr />
 		<p>{{ project.description }}</p>
 		{% if project.url == 'restricted' %}
-		<span
-			>Sorry, this application deals with sensitive data, please reach out to me
-			for a demo user account to access the site.</span
-		>
+		<a href="{{ project.repo-url }}" target="_blank" class="button-wrapper">
+			<i class="fas fa-external-link-alt"></i>
+			<span>Visit Repo</span>
+		</a>
 		{% else %}
-		<a href="{{ project.url }}" target="_blank" class="live-site-link">
-			Live Site
+		<a href="{{ project.url }}" target="_blank" class="button-wrapper">
+			<i class="fas fa-external-link-alt"></i>
+			<span>Live Site</span>
 		</a>
 		{% endif %}
-		<a href="#" rel="modal:close">Close</a>
 	</div>
 
 	<!-- Link to open the modal -->

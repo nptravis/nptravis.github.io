@@ -228,14 +228,13 @@ $(document).ready(function() {
 				.animate(
 					{
 						opacity: "1",
-						top: 20
+						top: 40
 					},
 					300
 				);
 			$(this)
 				.children(".button-wrapper")
 				.animate({ opacity: "1", bottom: 100 }, 300);
-			$(this).css("background-color", "#fff");
 		},
 		function() {
 			$(this)
@@ -287,14 +286,14 @@ $(document).ready(function() {
 		}
 	);
 
-	$(".social-icon-container").hover(
-		function() {
-			$(this).effect("bounce", { direction: "up" }, 200);
-		},
-		function() {
-			$(this).show();
-		}
-	);
+	// $(".social-icon-container").hover(
+	// 	function() {
+	// 		$(this).effect("bounce", { direction: "up" }, 200);
+	// 	},
+	// 	function() {
+	// 		$(this).show();
+	// 	}
+	// );
 
 	// $(".bar-container").hover(
 	// 	function() {
@@ -321,7 +320,7 @@ $(document).ready(function() {
 
 	$(".carousel-container").slick({
 		dots: true,
-		infinite: false,
+		infinite: true,
 		arrows: true,
 		speed: 300,
 		slidesToShow: 1,

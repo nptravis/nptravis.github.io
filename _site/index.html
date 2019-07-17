@@ -55,8 +55,8 @@
 		<main>
 			<section id="home">
 				<div class="container">
-	<h1>
-		hello. i am nic travis. i am a full-stack web developer.
+	<h1 class="home-title">
+		hello. i'm <span>nic travis</span>. i'm a full-stack web developer.
 	</h1>
 	<div
 		class="down-arrow-container"
@@ -64,8 +64,6 @@
 	>
 		<i class="fa-2x fas fa-arrow-down"></i>
 	</div>
-
-	<div></div>
 </div>
 
 			</section>
@@ -94,62 +92,60 @@
 </nav>
 
 			<section id="about">
-				<!-- <button id="test">Test Element</button> -->
 				<div class="container">
-					<h1 class="slide-in-right">
-						ABOUT
-					</h1>
-					<div class="header-bar slide-in-left"></div>
+	<h1 class="slide-in-right">
+		ABOUT
+	</h1>
+	<div class="header-bar slide-in-left"></div>
 
-					<div class="flex">
-						<div class="flex-quad">
-							<div class="icon-container slide-in-left">
-								<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
-							</div>
-							<h2 class="fade-in-text">Fast</h2>
-							<p class="fade-in-text">
-								I always develop with performance in mind.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-right">
-								<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
-							</div>
-							<h2 class="fade-in-text">Quality</h2>
-							<p class="fade-in-text">
-								I focus on clean re-usable and robust code.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-left">
-								<i id="third-icon" class="fa-3x fas fa-lock"></i>
-							</div>
-							<h2 class="fade-in-text">Security</h2>
-							<p class="fade-in-text">
-								Safety is always at the forfront of my mind when developing.
-							</p>
-						</div>
-						<div class="flex-quad">
-							<div class="icon-container slide-in-right">
-								<i id="fourth-icon" class="fa-3x fas fa-brain"></i>
-							</div>
-							<h2 class="fade-in-text">Cutting Edge</h2>
-							<p class="fade-in-text">
-								I am constatly learning, keeping up to date with changing trends
-								in web development.
-							</p>
-						</div>
-					</div>
-					<div class="flex-container">
-						<div>
-							<img id="myPicture" src="assets/images/me.jpeg" />
-							<h2>Who am I?</h2>
-							<p>
-								I am a driven full-stack dev with a passion for the creative
-								process.
-							</p>
-						</div>
-						<div class="flex-graph-container">
+	<div class="flex">
+		<div class="flex-quad">
+			<div class="icon-container slide-in-left">
+				<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
+			</div>
+			<h2 class="fade-in-text">Fast</h2>
+			<p class="fade-in-text">
+				I always develop with performance in mind.
+			</p>
+		</div>
+		<div class="flex-quad">
+			<div class="icon-container slide-in-right">
+				<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
+			</div>
+			<h2 class="fade-in-text">Quality</h2>
+			<p class="fade-in-text">
+				I focus on clean re-usable and robust code.
+			</p>
+		</div>
+		<div class="flex-quad">
+			<div class="icon-container slide-in-left">
+				<i id="third-icon" class="fa-3x fas fa-lock"></i>
+			</div>
+			<h2 class="fade-in-text">Security</h2>
+			<p class="fade-in-text">
+				Safety is always at the forfront of my mind when developing.
+			</p>
+		</div>
+		<div class="flex-quad">
+			<div class="icon-container slide-in-right">
+				<i id="fourth-icon" class="fa-3x fas fa-brain"></i>
+			</div>
+			<h2 class="fade-in-text">Cutting Edge</h2>
+			<p class="fade-in-text">
+				I am constatly learning, keeping up to date with changing trends in web
+				development.
+			</p>
+		</div>
+	</div>
+	<div class="flex-container">
+		<div>
+			<img id="myPicture" src="assets/images/me.jpeg" />
+			<h2>Who am I?</h2>
+			<p>
+				I am a driven full-stack dev with a passion for the creative process.
+			</p>
+		</div>
+		<div class="flex-graph-container">
 	
 	<div class="bar-container">
 		<div class="lang-name">HTML</div>
@@ -233,9 +229,10 @@
 	
 </div>
 
-					</div>
-					<div id="github-repos"></div>
-				</div>
+	</div>
+	<div id="github-repos"></div>
+</div>
+
 			</section>
 			<section id="projects">
 				<h1>Projects</h1>
@@ -247,14 +244,13 @@
 			<span class="small-text">React, Redux, Ruby on Rails API, Postgres</span>
 		</div>
 		<img class="project-image" src="assets/images/comments-lab.jpg" />
-		<div class="button-wrapper">
-			<a href="#commentslab1" rel="modal:open">Learn More</a>
-		</div>
+		<a class="button-wrapper" rel="modal:open" href="#commentslab1">
+			<span>Learn More</span>
+		</a>
 	</div>
 
 	<!-- Modal HTML embedded directly into document -->
 	<div id="commentslab1" class="modal">
-		<h2>Comments Lab</h2>
 		<div class="carousel-container">
 			<div>
 				<img
@@ -275,13 +271,16 @@
 				/>
 			</div>
 		</div>
+		<h2>Comments Lab</h2>
+		<span class="project-category">Educational Saas Product</span>
+		<hr />
 		<p>It provides an intutive interactive interface, utilizing many cutting edge technologies such as React, Redux, and Ruby on Rails backend API. Backend is deployed on Heroku, front end is deployed on Digital Ocean, Ubuntu 16.4.</p>
 		
-		<a href="https://commentslab.com" target="_blank" class="live-site-link">
-			Live Site
+		<a href="https://commentslab.com" target="_blank" class="button-wrapper">
+			<i class="fas fa-external-link-alt"></i>
+			<span>Live Site</span>
 		</a>
 		
-		<a href="#" rel="modal:close">Close</a>
 	</div>
 
 	<!-- Link to open the modal -->
@@ -293,14 +292,13 @@
 			<span class="small-text">React, Express, MongoDB</span>
 		</div>
 		<img class="project-image" src="assets/images/pwtools-plus.jpg" />
-		<div class="button-wrapper">
-			<a href="#powertools1" rel="modal:open">Learn More</a>
-		</div>
+		<a class="button-wrapper" rel="modal:open" href="#powertools1">
+			<span>Learn More</span>
+		</a>
 	</div>
 
 	<!-- Modal HTML embedded directly into document -->
 	<div id="powertools1" class="modal">
-		<h2>PowerTools Plus</h2>
 		<div class="carousel-container">
 			<div>
 				<img
@@ -321,14 +319,16 @@
 				/>
 			</div>
 		</div>
+		<h2>PowerTools Plus</h2>
+		<span class="project-category">Scheduling Software</span>
+		<hr />
 		<p>Utilizes OpenId authentication methods to login in users directly from their PowerSchool Portal. 3 different authentication levels exists, admin, teacher, and student, all with completely seperate access rights and views. It pulls most of the data from the PowerSchool API, but I have also connected and MongoDB instance to store user accounts, custom scheduling data, and custom Content Support Sections.</p>
 		
-		<span
-			>Sorry, this application deals with sensitive data, please reach out to me
-			for a demo user account to access the site.</span
-		>
+		<a href="https://github.com/nptravis/powerschool-api-navigator" target="_blank" class="button-wrapper">
+			<i class="fas fa-external-link-alt"></i>
+			<span>Visit Repo</span>
+		</a>
 		
-		<a href="#" rel="modal:close">Close</a>
 	</div>
 
 	<!-- Link to open the modal -->
@@ -437,9 +437,9 @@
 			method="POST"
 			action="https://formspree.io/nptravis@gmail.com"
 		>
-			<input type="text" name="name" placeholder="Name" />
+			<input type="text" name="name" placeholder="Your Name" />
 
-			<input type="text" name="title" placeholder="Enter Email" />
+			<input type="text" name="title" placeholder="Your Email" />
 
 			<textarea name="message" placeholder="Your Message"></textarea>
 
@@ -473,7 +473,7 @@
 				></a>
 			</div>
 		</div>
-		<p>Nic Travis &copy; 2019</p>
+		<p class="signature">Nic Travis <span>&copy; 2019<span></p>
 	</div>
 </div>
 

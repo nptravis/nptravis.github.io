@@ -1,4 +1,5 @@
 @import "./palette.scss";
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Lato&display=swap");
 
 html,
 body {
@@ -9,24 +10,24 @@ body {
 	color: $black;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
 	padding: 0;
 	margin: 0;
-	font-size: 5em;
+
+	font-family: "Comfortaa", cursive;
 }
 
-img#myPicture {
-	clip-path: polygon(
-		50% 0%,
-		90% 20%,
-		100% 60%,
-		75% 100%,
-		25% 100%,
-		0% 60%,
-		10% 20%
-	);
-	width: 200px;
-	height: 200px;
+h1 {
+	font-size: 4em;
+}
+
+span,
+p,
+a {
+	font-family: "Lato", sans-serif;
 }
 
 nav {
@@ -66,37 +67,6 @@ nav {
 	z-index: 1;
 }
 
-div.flex {
-	display: flex;
-	flex-wrap: wrap;
-
-	div.flex-quad {
-		flex: 1;
-		div.icon-container {
-			display: flex;
-			align-items: center;
-			z-index: 0;
-			margin: 0 auto;
-
-			overflow: visible;
-			clip-path: polygon(
-				50% 0%,
-				90% 20%,
-				100% 60%,
-				75% 100%,
-				25% 100%,
-				0% 60%,
-				10% 20%
-			);
-
-			text-align: center;
-			background-color: $aqua;
-			width: 100px;
-			height: 100px;
-		}
-	}
-}
-
 section {
 	min-height: 100vh;
 	text-align: center;
@@ -118,17 +88,17 @@ section {
 	}
 
 	&#about {
-		background-color: $color5;
+		background-color: $white;
 		padding-top: 100px;
 	}
 
 	&#projects {
-		background-color: $color2;
+		background-color: $light-grey;
 		padding-top: 100px;
 	}
 
 	&#blog {
-		background-color: $color3;
+		background-color: $white;
 		padding-top: 100px;
 	}
 
@@ -158,18 +128,4 @@ div.header-bar {
 	height: 4px;
 	background-color: $black;
 	width: 100px;
-}
-
-div.flex-container {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-
-	// div:nth-child(1) {
-	// 	border: 1px solid black;
-	// 	flex: 1;
-	// }
-	// div:nth-child(2) {
-	// 	flex: 1;
-	// }
 }

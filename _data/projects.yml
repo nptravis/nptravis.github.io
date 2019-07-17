@@ -1,4 +1,5 @@
 - name: Comments Lab
+  category: Educational Saas Product
   stack: React, Redux, Ruby on Rails API, Postgres
   url: https://commentslab.com
   modal-id: commentslab1
@@ -11,6 +12,7 @@
   title: A powerful tools for professional educators to ease the burden of writing report card comments.
   description: It provides an intutive interactive interface, utilizing many cutting edge technologies such as React, Redux, and Ruby on Rails backend API. Backend is deployed on Heroku, front end is deployed on Digital Ocean, Ubuntu 16.4.
 - name: PowerTools Plus
+  category: Scheduling Software
   url: restricted
   stack: React, Express, MongoDB
   modal-id: powertools1
