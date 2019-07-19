@@ -29,6 +29,7 @@ a {
 nav {
   display: flex;
   width: 100vw;
+  justify-content: flex-start;
   background-color: #262f38;
   height: 50px;
   color: #fff;
@@ -37,7 +38,9 @@ nav {
   nav a {
     flex: 0 1 auto;
     width: 100px;
-    line-height: 50px; }
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none; }
     nav a:hover {
       cursor: pointer; }
     nav a.active {
@@ -56,7 +59,7 @@ section {
     margin: 0 auto;
     text-align: center; }
   section#home {
-    background-image: url("/assets/images/beach.jpg");
+    background-image: url("/assets/images/stars.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -94,15 +97,6 @@ div.header-bar {
   background-color: #262f38;
   width: 100px; }
 
-@media screen and (max-width: 992px) {
-  div.flex-container {
-    flex-direction: column; }
-
-  div.projects-container {
-    flex-direction: column; }
-
-  div.blog-container {
-    flex-direction: column; } }
 div.flex-graph-container {
   width: 100%;
   display: flex;
@@ -231,19 +225,70 @@ div.modal {
 /* HSL */
 /* RGB */
 div.blog-container {
-  display: flex;
-  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto; }
-  div.blog-container div.post-container {
+  div.blog-container div.blog-section-flex-container {
+    display: flex;
+    justify-content: center; }
+    div.blog-container div.blog-section-flex-container div.post-box-container {
+      flex: 0 0 auto;
+      border: 3px solid transparent;
+      margin: 5px;
+      width: 260px;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f7f7f7; }
+      div.blog-container div.blog-section-flex-container div.post-box-container a {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: #262f38; }
+        div.blog-container div.blog-section-flex-container div.post-box-container a img.post-image {
+          width: 100%;
+          height: 40%; }
+        div.blog-container div.blog-section-flex-container div.post-box-container a div.text-container {
+          text-align: left;
+          padding: 8px; }
+          div.blog-container div.blog-section-flex-container div.post-box-container a div.text-container span.post-date {
+            color: grey; }
+      div.blog-container div.blog-section-flex-container div.post-box-container:hover {
+        border: 3px solid #e31b6d; }
+  div.blog-container a.button-wrapper {
+    background-color: #e31b6d;
+    color: #fff;
+    padding: 10px;
+    float: right;
     margin: 10px;
-    flex: 1;
-    min-width: 400px; }
-    div.blog-container div.post-container span.small-text {
-      font-size: 0.5em;
-      color: #e31b6d; }
-    div.blog-container div.post-container img.post-image {
-      width: 100%; }
+    width: 100px; }
+    div.blog-container a.button-wrapper span {
+      color: #fff; }
+    div.blog-container a.button-wrapper:hover {
+      background-color: #fff;
+      color: #e31b6d;
+      transition: background-color 0.5s ease; }
+      div.blog-container a.button-wrapper:hover span,
+      div.blog-container a.button-wrapper:hover i {
+        color: #e31b6d;
+        transition: color 0.5s ease; }
+
+div#all-posts-container {
+  border: 1px solid black;
+  width: 80%;
+  margin: 20px auto; }
+  div#all-posts-container ul {
+    padding: 0;
+    margin: 0; }
+  div#all-posts-container li.post-li {
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    justify-content: flex-start; }
+    div#all-posts-container li.post-li div.date-div {
+      flex: 1; }
+    div#all-posts-container li.post-li div.text-div {
+      flex: 5; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
@@ -252,6 +297,8 @@ div.contact-container {
   height: 100vh;
   color: #fff;
   position: relative; }
+  div.contact-container p.small-text {
+    color: #04c2c9; }
   div.contact-container div.contact-form-container form#contact-form {
     display: flex;
     flex-direction: column;
@@ -297,11 +344,13 @@ div.footer {
   div.footer div#home-button {
     border: 4px solid #e31b6d;
     width: 50px;
-    background-color: grey;
+    background-color: #e31b6d;
+    border-radius: 100%;
     height: 50px;
     margin: 0 auto;
     margin-top: -60px; }
     div.footer div#home-button i {
+      line-height: 50px;
       width: 40px;
       height: auto; }
     div.footer div#home-button:hover {
@@ -333,7 +382,7 @@ div.container {
     position: absolute;
     bottom: 0;
     margin-bottom: 150px;
-    left: calc(50% - 70px);
+    left: calc(50% - 35px);
     color: #e31b6d;
     background-color: transparent;
     border: 3px solid #fff;
@@ -375,3 +424,305 @@ div.flex-container {
   display: flex;
   justify-content: space-between;
   flex-direction: row; }
+
+/* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
+/* HSL */
+/* RGB */
+div#post-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f7f7f7; }
+  div#post-container p.post-date {
+    color: #e31b6d; }
+  div#post-container div.post-content {
+    text-align: left; }
+  div#post-container img.post-image {
+    max-height: 400px; }
+
+div.highlight {
+  padding: 10px; }
+
+.highlight .hll {
+  background-color: #303030; }
+
+.highlight {
+  background: #151515;
+  color: #f5f5f5; }
+
+.highlight .c {
+  color: #505050; }
+
+/* Comment */
+.highlight .err {
+  color: #ac4142; }
+
+/* Error */
+.highlight .k {
+  color: #aa759f; }
+
+/* Keyword */
+.highlight .l {
+  color: #d28445; }
+
+/* Literal */
+.highlight .n {
+  color: #f5f5f5; }
+
+/* Name */
+.highlight .o {
+  color: #75b5aa; }
+
+/* Operator */
+.highlight .p {
+  color: #f5f5f5; }
+
+/* Punctuation */
+.highlight .cm {
+  color: #505050; }
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #505050; }
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #505050; }
+
+/* Comment.Single */
+.highlight .cs {
+  color: #505050; }
+
+/* Comment.Special */
+.highlight .gd {
+  color: #ac4142; }
+
+/* Generic.Deleted */
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gh {
+  color: #f5f5f5;
+  font-weight: bold; }
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #90a959; }
+
+/* Generic.Inserted */
+.highlight .gp {
+  color: #505050;
+  font-weight: bold; }
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #75b5aa;
+  font-weight: bold; }
+
+/* Generic.Subheading */
+.highlight .kc {
+  color: #aa759f; }
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #aa759f; }
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #75b5aa; }
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #aa759f; }
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #aa759f; }
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #f4bf75; }
+
+/* Keyword.Type */
+.highlight .ld {
+  color: #90a959; }
+
+/* Literal.Date */
+.highlight .m {
+  color: #d28445; }
+
+/* Literal.Number */
+.highlight .s {
+  color: #90a959; }
+
+/* Literal.String */
+.highlight .na {
+  color: #6a9fb5; }
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #f5f5f5; }
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #f4bf75; }
+
+/* Name.Class */
+.highlight .no {
+  color: #ac4142; }
+
+/* Name.Constant */
+.highlight .nd {
+  color: #75b5aa; }
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #f5f5f5; }
+
+/* Name.Entity */
+.highlight .ne {
+  color: #ac4142; }
+
+/* Name.Exception */
+.highlight .nf {
+  color: #6a9fb5; }
+
+/* Name.Function */
+.highlight .nl {
+  color: #f5f5f5; }
+
+/* Name.Label */
+.highlight .nn {
+  color: #f4bf75; }
+
+/* Name.Namespace */
+.highlight .nx {
+  color: #6a9fb5; }
+
+/* Name.Other */
+.highlight .py {
+  color: #f5f5f5; }
+
+/* Name.Property */
+.highlight .nt {
+  color: #75b5aa; }
+
+/* Name.Tag */
+.highlight .nv {
+  color: #ac4142; }
+
+/* Name.Variable */
+.highlight .ow {
+  color: #75b5aa; }
+
+/* Operator.Word */
+.highlight .w {
+  color: #f5f5f5; }
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #d28445; }
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #d28445; }
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #d28445; }
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #d28445; }
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #90a959; }
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #f5f5f5; }
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #505050; }
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #90a959; }
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #d28445; }
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #90a959; }
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #d28445; }
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #90a959; }
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #90a959; }
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #90a959; }
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #90a959; }
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #f5f5f5; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #ac4142; }
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #ac4142; }
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #ac4142; }
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #d28445; }
+
+/* Literal.Number.Integer.Long */
+@media screen and (max-width: 992px) {
+  div.flex-container {
+    flex-direction: column; }
+
+  div.projects-container {
+    flex-direction: column; } }
+@media screen and (max-width: 1200px) {
+  div.blog-container div.blog-section-flex-container {
+    flex-wrap: wrap; }
+    div.blog-container div.blog-section-flex-container div.post-box-container {
+      width: 300px;
+      margin: 20px; } }
+@media screen and (max-width: 865px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px; } }
+@media screen and (max-width: 500px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px;
+    width: 100%; } }

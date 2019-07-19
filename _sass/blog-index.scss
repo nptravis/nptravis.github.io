@@ -1,0 +1,34 @@
+div#all-posts-container {
+	border: 1px solid black;
+	width: 80%;
+	margin: 20px auto;
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li.post-li {
+		list-style: none;
+		margin: 10px;
+		display: flex;
+		border-radius: 10px;
+		background-color: $light-grey;
+		justify-content: flex-start;
+
+		div.date-div {
+			flex: 1;
+		}
+
+		// div.image-div {
+		// 	flex: 0 0 20%;
+		// 	img {
+		// 		width: 100px;
+		// 		height: 100px;
+		// 	}
+		// }
+
+		div.text-div {
+			flex: 5;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+<nav id="navbar">
+	{% for item in site.data.blog-navigation %}
+	<a href="{{ item.link }}" id="{{ item.name }}">
+		{{ item.name | upcase }}
+	</a>
+	{% endfor %}
+</nav>

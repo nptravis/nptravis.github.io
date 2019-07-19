@@ -2,13 +2,23 @@
 title: Blog
 ---
 
-<h1>Latest Posts</h1>
-
-<ul>
-	{% for post in site.posts %}
-	<li>
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<p>{{ post.excerpt }}</p>
-	</li>
-	{% endfor %}
-</ul>
+{% include blog-navigation.html %}
+<div id="all-posts-container">
+	<h1>All Posts</h1>
+	<ul>
+		{% for post in site.posts %}
+		<li class="post-li">
+			<div class="date-div">
+				<span class="post-li-date">{{ post.date | date_to_string}}</span>
+			</div>
+			<!-- <div class="image-div">
+				<img src="assets/images/{{ post.date | date: '%Y-%m-%d' }}.jpg" />
+			</div> -->
+			<div class="text-div">
+				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<!-- <p>{{ post.excerpt }}</p> -->
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

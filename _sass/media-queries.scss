@@ -8,6 +8,38 @@
 	}
 
 	div.blog-container {
-		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	div.blog-container {
+		div.blog-section-flex-container {
+			flex-wrap: wrap;
+			div.post-box-container {
+				width: 300px;
+				margin: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 865px) {
+	div.blog-container {
+		div.blog-section-flex-container {
+			div.post-box-container {
+				margin: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	div.blog-container {
+		div.blog-section-flex-container {
+			div.post-box-container {
+				margin: 10px;
+				width: 100%;
+			}
+		}
 	}
 }

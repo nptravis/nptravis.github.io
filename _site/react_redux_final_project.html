@@ -34,28 +34,50 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>React Redux Final Project</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="React Redux Final Project" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend." />
 <meta property="og:description" content="This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend." />
+<link rel="canonical" href="http://localhost:4000/react_redux_final_project" />
+<meta property="og:url" content="http://localhost:4000/react_redux_final_project" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-04T06:06:41+02:00" />
 <script type="application/ld+json">
-{"description":"This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.","@type":"BlogPosting","url":"/react_redux_final_project","headline":"React Redux Final Project","dateModified":"2018-10-04T06:06:41+02:00","datePublished":"2018-10-04T06:06:41+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/react_redux_final_project"},"@context":"https://schema.org"}</script>
+{"description":"This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.","@type":"BlogPosting","url":"http://localhost:4000/react_redux_final_project","headline":"React Redux Final Project","dateModified":"2018-10-04T06:06:41+02:00","datePublished":"2018-10-04T06:06:41+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/react_redux_final_project"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
 	<body>
-		<h1>React Redux Final Project</h1>
+		<nav id="navbar">
+	
+	<a href="/" id="Home">
+		HOME
+	</a>
+	
+	<a href="/blog.html" id="Blog Index">
+		BLOG INDEX
+	</a>
+	
+</nav>
 
-<p>
-	04 Oct 2018  
-</p>
+<div id="post-container">
+	<h1 class="post-title">REACT REDUX FINAL PROJECT</h1>
 
-<p>This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.</p>
+	<p class="post-date">
+		04 Oct 2018  
+	</p>
+	<img
+		class="post-image"
+		src="assets/images/2018-10-04.jpg"
+	/>
+	<p class="post-description">
+		
+	</p>
+	<div class="post-content">
+		<p>This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.</p>
 
 <h2 id="summary">Summary</h2>
 
@@ -75,7 +97,7 @@
 
 <p>So, I used my App.js as a master router, check it out:</p>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">BrowserRouter</span> <span class="k">as</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">BrowserRouter</span> <span class="k">as</span> <span class="nx">Router</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
 
 <span class="kd">class</span> <span class="nx">App</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
 
@@ -84,36 +106,36 @@
     <span class="kd">const</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">current_user</span><span class="p">;</span>
 
     <span class="kd">const</span> <span class="nx">userRoutes</span> <span class="o">=</span> <span class="p">(</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App-main-container"</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showHeader</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showUserHome</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s1">'/comment-builder'</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showBuilder</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/logout"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showLogout</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/comments"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showComments</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showFooter</span> <span class="si">}</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">)</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-main-container</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showHeader</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showUserHome</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">'</span><span class="s1">/comment-builder</span><span class="dl">'</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showBuilder</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/logout</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showLogout</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/comments</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showComments</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showFooter</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">)</span>
 
     <span class="kd">const</span> <span class="nx">guestRoutes</span> <span class="o">=</span> <span class="p">(</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App-main-container"</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showHeader</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showGuestHome</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/signup"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">SignupForm</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/login"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">LoginForm</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">exact=</span><span class="si">{</span><span class="kc">true</span><span class="si">}</span> <span class="na">path=</span><span class="s2">"/logout"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showLogout</span> <span class="si">}</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path=</span><span class="s2">"/"</span> <span class="na">component=</span><span class="si">{</span> <span class="nx">showFooter</span> <span class="si">}</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">)</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App-main-container</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showHeader</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showGuestHome</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/signup</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">SignupForm</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">LoginForm</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/logout</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showLogout</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showFooter</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">)</span>
 
     <span class="k">return</span> <span class="p">(</span>
-      <span class="p">&lt;</span><span class="nc">Router</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className=</span><span class="s2">"App"</span><span class="p">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Router</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">App</span><span class="dl">"</span><span class="o">&gt;</span>
       
-        <span class="si">{</span> <span class="nx">isAuthenticated</span> <span class="p">?</span> <span class="nx">userRoutes</span> <span class="p">:</span> <span class="nx">guestRoutes</span> <span class="si">}</span>
+        <span class="p">{</span> <span class="nx">isAuthenticated</span> <span class="p">?</span> <span class="nx">userRoutes</span> <span class="p">:</span> <span class="nx">guestRoutes</span> <span class="p">}</span>
        
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nc">Router</span><span class="p">&gt;</span>
-
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Router</span><span class="err">&gt;
+</span>
     <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -122,24 +144,28 @@
 
 <p>As you can see, I have guest routes, and user routes. Only the user Routes ( which are just component render-ers) get are available when isAuthenticated is true, via this code:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> { isAuthenticated ? userRoutes : guestRoutes }
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ <span class="p">{</span> <span class="nx">isAuthenticated</span> <span class="p">?</span> <span class="nx">userRoutes</span> <span class="p">:</span> <span class="nx">guestRoutes</span> <span class="p">}</span>
 </code></pre></div></div>
 
 <p>Now, if a Route’s has the attribute exact={true}, it will only render on it’s exact path, but if not will render as long as part of the path matches it’s path. So, used that feature to create a layout:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Route path="/" component={ showHeader } /&gt;
-&lt;Route path="/" component={ showFooter } /&gt;
-</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showHeader</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showFooter</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre></div></div>
 <p>The header and footer will always get rendered, because the root path is in every url.</p>
 
 <p>I built a bunch of functional components in this file that correspond to each route, like so:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Route exact={true} path="/" component={ showUserHome } /&gt;
-
-const showUserHome = () =&gt; (
-  &lt;main&gt;
-    &lt;h1&gt;Welcome, let's rock some comments!&lt;/h1&gt;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span> <span class="nx">showUserHome</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>
+<span class="kd">const</span> <span class="nx">showUserHome</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">main</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Welcome</span><span class="p">,</span> <span class="kd">let</span><span class="dl">'</span><span class="s1">s rock some comments!&lt;/h1&gt;
   &lt;/main&gt;
   )
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p>So, now I can have any route render any component just by changing the Route path and component.</p>
 
@@ -151,43 +177,46 @@ const showUserHome = () =&gt; (
 
 <p>I did a couple fetches from componentDidMount:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentDidMount(){
-		this.props.dispatch(fetchComments());
-	}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">componentDidMount</span><span class="p">(){</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">fetchComments</span><span class="p">());</span>
+	<span class="p">}</span>
 </code></pre></div></div>
 <p>sends an action to dispatch that does the fetch async, using Thunk, like so:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export function fetchComments() {
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">fetchComments</span><span class="p">()</span> <span class="p">{</span>
 
-  return function (dispatch) {
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span> <span class="p">{</span>
   	
-    dispatch({ type: 'LOADING_COMMENTS' });
+    <span class="nx">dispatch</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">LOADING_COMMENTS</span><span class="dl">'</span> <span class="p">});</span>
 
-    return fetch("http://localhost:3001/comment-partials")
-    .then(response =&gt; response.json())
-    .then(comments =&gt; 
+    <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:3001/comment-partials</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">comments</span> <span class="o">=&gt;</span> 
         
-      	dispatch({ type: 'FETCH_COMMENTS', payload: comments} )
+      	<span class="nx">dispatch</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">FETCH_COMMENTS</span><span class="dl">'</span><span class="p">,</span> <span class="na">payload</span><span class="p">:</span> <span class="nx">comments</span><span class="p">}</span> <span class="p">)</span>
 
-      	);
-  };
-}
+      	<span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
 
 </code></pre></div></div>
 
 <p>This is super useful, as the component is already rendered, the user gets to see stuff, and the fetch is happening quietly in the background. Great for a smooth UX.</p>
 
 <p>But, sometimes I wanted the fetch to get started earlier than that, so i used componentWillMount:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentWillMount(){
-		fetch(`http://localhost:3001/users/${this.props.userId}/comments`)
-		.then(response =&gt; response.json())
-		.then(response =&gt; {
-			console.log("THIS IS THE RESPONSE:", response)
-			this.setState({
-				comments: response
-			})
-		})
-	}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">componentWillMount</span><span class="p">(){</span>
+		<span class="nx">fetch</span><span class="p">(</span><span class="s2">`http://localhost:3001/users/</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">userId</span><span class="p">}</span><span class="s2">/comments`</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">THIS IS THE RESPONSE:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+				<span class="na">comments</span><span class="p">:</span> <span class="nx">response</span>
+			<span class="p">})</span>
+		<span class="p">})</span>
+	<span class="p">}</span>
 </code></pre></div></div>
 <p>I wanted this data before the component actually mounted, so I made a synchonous fetch request before it renders.</p>
 
@@ -205,10 +234,11 @@ const showUserHome = () =&gt; (
 <h3 id="arrow-functions">Arrow functions</h3>
 
 <p>These are indespensible in React. You can call a function without loosing your this binding, like so:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>handleDelete = event =&gt; {
-		event.stopPropagation()
-		this.props.deleteTab(event)
-	}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">handleDelete</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="nx">event</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">()</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">deleteTab</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
+	<span class="p">}</span>
 </code></pre></div></div>
 <p>Since we aren’t naming a new function, and just immediately invoking it, it doesn’t create a new scope, therefore your ‘this’ stays the same.</p>
 
@@ -216,16 +246,18 @@ const showUserHome = () =&gt; (
 
 <p>Again, indispensible in React. I used them a ton in redux when updating state, as we all know, can’t be mutated. Check it out:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>case "FETCH_COMMENTS":
-			const comments = action.payload.map(comment =&gt; comment);
-			let categories = comments.map(comment =&gt; comment.categories)
-			categories = [].concat(...categories)
-			let anotherArray = [...new Set(categories)]
-			return {...state, loading: false, comments: [...state.comments, ...comments], categories: [...state.categories, ...anotherArray]};
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">case</span> <span class="dl">"</span><span class="s2">FETCH_COMMENTS</span><span class="dl">"</span><span class="p">:</span>
+			<span class="kd">const</span> <span class="nx">comments</span> <span class="o">=</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">comment</span> <span class="o">=&gt;</span> <span class="nx">comment</span><span class="p">);</span>
+			<span class="kd">let</span> <span class="nx">categories</span> <span class="o">=</span> <span class="nx">comments</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">comment</span> <span class="o">=&gt;</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">categories</span><span class="p">)</span>
+			<span class="nx">categories</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(...</span><span class="nx">categories</span><span class="p">)</span>
+			<span class="kd">let</span> <span class="nx">anotherArray</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="nx">categories</span><span class="p">)]</span>
+			<span class="k">return</span> <span class="p">{...</span><span class="nx">state</span><span class="p">,</span> <span class="na">loading</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="na">comments</span><span class="p">:</span> <span class="p">[...</span><span class="nx">state</span><span class="p">.</span><span class="nx">comments</span><span class="p">,</span> <span class="p">...</span><span class="nx">comments</span><span class="p">],</span> <span class="na">categories</span><span class="p">:</span> <span class="p">[...</span><span class="nx">state</span><span class="p">.</span><span class="nx">categories</span><span class="p">,</span> <span class="p">...</span><span class="nx">anotherArray</span><span class="p">]};</span>
 </code></pre></div></div>
 <p>spread operator all over the place! Here is a cool one:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let anotherArray = [...new Set(categories)]
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">let</span> <span class="nx">anotherArray</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="nx">categories</span><span class="p">)]</span>
 </code></pre></div></div>
 <p>This, another ES6 addition, uses the Set object, which let’s you store ‘unique’ values of any type. It will filter your arrays for only unique values, finally!</p>
 
@@ -233,35 +265,38 @@ const showUserHome = () =&gt; (
 
 <p>Now, I just never use var. const and let are blocked scoped, which can save you from tons of bugs. This basically means, they can’t bleed into parent scopes.
 like so:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> if (true) {
-        let hello = "say Hello";
-        console.log(hello);//"say Hello"
-    }
-   console.log(hello) // hello is not defined
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">hello</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">say Hello</span><span class="dl">"</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">);</span><span class="c1">//"say Hello"</span>
+    <span class="p">}</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">)</span> <span class="c1">// hello is not defined</span>
 </code></pre></div></div>
 <p>vs var:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (true) {
-        var hello = "say Hello";
-        console.log(hello); // "say Hello"
-    }
-   console.log(hello) // "say Hello"
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">say Hello</span><span class="dl">"</span><span class="p">;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">);</span> <span class="c1">// "say Hello"</span>
+    <span class="p">}</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">)</span> <span class="c1">// "say Hello"</span>
 
 </code></pre></div></div>
 
 <p>Let also hoists differently than var:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello = "say hello";
-console.log(hello)
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">hello</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">say hello</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">)</span>
 
 
-let hello; // Error: hello is not defined
+<span class="kd">let</span> <span class="nx">hello</span><span class="p">;</span> <span class="c1">// Error: hello is not defined</span>
 </code></pre></div></div>
 <p>vs var:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello = "say hello";
-console.log(hello)
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">hello</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">say hello</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span><span class="p">)</span>
 
 
-var hello; // "say Hello"
+<span class="kd">var</span> <span class="nx">hello</span><span class="p">;</span> <span class="c1">// "say Hello"</span>
 </code></pre></div></div>
 <p>It also will not allow re-declaration of the same varible name, which can save alot of headaches if you forgot you already used that variable name before</p>
 
@@ -274,6 +309,8 @@ var hello; // "say Hello"
 <p>This project was super fun, and really made me realize how far I have come. I can now wire up an entire stack with Rails, or with a React front end. Pretty cool. I can’t wait to get out there and build build build! Thank you for reading!</p>
 
 
+	</div>
+</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.js"

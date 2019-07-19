@@ -10,7 +10,7 @@ The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI appli
 
 I started with this crucial link: <a href="http://bundler.io/v1.12/guides/creating_gem.html">right here</a>. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal: 
 
-```
+```bash
 bundle gem my_first_gem
 ```
 
@@ -18,7 +18,7 @@ Now get ready for magic time. CD to your newly created folder and check out the 
 
 I decided to create a app that scrapes LonelyPlanet for the top 10 travel destinations for 2018. I used the Nokogiri gem for the task. I initially had some trouble scraping their site, and learned a crucial lesson, *don’t try to scrape elements that are rendered via javascript or react!* The elements aren’t loaded until after the scrape is finished, so only returned nil. That only took me about 3 ½ hours of head scratching to figure out. Here is an example of one of my scrape methods:
 
-```
+```ruby
 def self.scrape
 		doc = Nokogiri::HTML(open("https://www.lonelyplanet.com/best-in-travel/countries"))
 		
@@ -39,7 +39,7 @@ I created Classes for Countries, Cities, Regions, and Best Value destinations. E
 
    The interface asks the user to choose a category, then a sub category, then returns a description and a link. I used another gem, colorize, to keep the interface color coded, a pretty cool gem for CLI apps. Here is what the CLI looks like, although color won't come through :(
 	 
-```
+```bash
 
 	 Top 10 Travel Destinations for 2018
 	-----------------------------------
@@ -79,7 +79,7 @@ I created Classes for Countries, Cities, Regions, and Best Value destinations. E
 
 	Or 'back'
 	You can type 'main menu' or 'exit' at anytime
-	```
+```
 
 	 Seemed simple enough when I started, but took me about 8 hours, haha. Don’t get me wrong, it was super fun. and really rewarding in the end when everything loaded and worked. I definitely gained a newfound respect for complex applications, and the immense time and effort it takes to create them. 
 

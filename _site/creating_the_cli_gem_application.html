@@ -34,104 +34,129 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Creating a CLI Gem Application</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Creating a CLI Gem Application" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real." />
 <meta property="og:description" content="The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real." />
+<link rel="canonical" href="http://localhost:4000/creating_the_cli_gem_application" />
+<meta property="og:url" content="http://localhost:4000/creating_the_cli_gem_application" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-16T15:02:29+01:00" />
 <script type="application/ld+json">
-{"description":"The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.","@type":"BlogPosting","url":"/creating_the_cli_gem_application","headline":"Creating a CLI Gem Application","dateModified":"2018-02-16T15:02:29+01:00","datePublished":"2018-02-16T15:02:29+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/creating_the_cli_gem_application"},"@context":"https://schema.org"}</script>
+{"description":"The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.","@type":"BlogPosting","url":"http://localhost:4000/creating_the_cli_gem_application","headline":"Creating a CLI Gem Application","dateModified":"2018-02-16T15:02:29+01:00","datePublished":"2018-02-16T15:02:29+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/creating_the_cli_gem_application"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
 	<body>
-		<h1>Creating a CLI Gem Application</h1>
+		<nav id="navbar">
+	
+	<a href="/" id="Home">
+		HOME
+	</a>
+	
+	<a href="/blog.html" id="Blog Index">
+		BLOG INDEX
+	</a>
+	
+</nav>
 
-<p>
-	16 Feb 2018  
-</p>
+<div id="post-container">
+	<h1 class="post-title">CREATING A CLI GEM APPLICATION</h1>
 
-<p>The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.</p>
+	<p class="post-date">
+		16 Feb 2018  
+	</p>
+	<img
+		class="post-image"
+		src="assets/images/2018-02-16.jpg"
+	/>
+	<p class="post-description">
+		
+	</p>
+	<div class="post-content">
+		<p>The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.</p>
 
 <p>I started with this crucial link: <a href="http://bundler.io/v1.12/guides/creating_gem.html">right here</a>. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle gem my_first_gem
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle gem my_first_gem
 </code></pre></div></div>
 
 <p>Now get ready for magic time. CD to your newly created folder and check out the goods. It creates an entire file structure for you, with a gemspec file, an rspec file, a license, version control, even a bin console environment! COOL!! Now all you have to do is…write your entire code for your project, no biggie.</p>
 
 <p>I decided to create a app that scrapes LonelyPlanet for the top 10 travel destinations for 2018. I used the Nokogiri gem for the task. I initially had some trouble scraping their site, and learned a crucial lesson, <em>don’t try to scrape elements that are rendered via javascript or react!</em> The elements aren’t loaded until after the scrape is finished, so only returned nil. That only took me about 3 ½ hours of head scratching to figure out. Here is an example of one of my scrape methods:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def self.scrape
-		doc = Nokogiri::HTML(open("https://www.lonelyplanet.com/best-in-travel/countries"))
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">scrape</span>
+		<span class="n">doc</span> <span class="o">=</span> <span class="no">Nokogiri</span><span class="o">::</span><span class="no">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">"https://www.lonelyplanet.com/best-in-travel/countries"</span><span class="p">))</span>
 		
-		i = 1
-		while i &lt;= 10
-			object = self.new
-			object.name = doc.css("##{i} h1").text.split(".")[1].strip
-			object.description = doc.css("##{i} p").first.text.strip
-			object.url = doc.css("##{i} a").attribute('href').value
-			@@all &lt;&lt; object
-			i+=1
-		end
-		@@all
-	end
+		<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+			<span class="n">object</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">new</span>
+			<span class="n">object</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="nf">css</span><span class="p">(</span><span class="s2">"#</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2"> h1"</span><span class="p">).</span><span class="nf">text</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nf">strip</span>
+			<span class="n">object</span><span class="p">.</span><span class="nf">description</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="nf">css</span><span class="p">(</span><span class="s2">"#</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2"> p"</span><span class="p">).</span><span class="nf">first</span><span class="p">.</span><span class="nf">text</span><span class="p">.</span><span class="nf">strip</span>
+			<span class="n">object</span><span class="p">.</span><span class="nf">url</span> <span class="o">=</span> <span class="n">doc</span><span class="p">.</span><span class="nf">css</span><span class="p">(</span><span class="s2">"#</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2"> a"</span><span class="p">).</span><span class="nf">attribute</span><span class="p">(</span><span class="s1">'href'</span><span class="p">).</span><span class="nf">value</span>
+			<span class="vc">@@all</span> <span class="o">&lt;&lt;</span> <span class="n">object</span>
+			<span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+		<span class="k">end</span>
+		<span class="vc">@@all</span>
+	<span class="k">end</span>
 </code></pre></div></div>
 
 <p>I created Classes for Countries, Cities, Regions, and Best Value destinations. Each Class would create 10 instances, which each had instance variables of a name, and a description. I initially wanted to scrape the entirety of the data as soon as the program loaded, but was taking too long (like 5-10 seconds of just frozen screen) so I decided to scrape the data as the user asked for it, seemed to be a bit smoother UX.</p>
 
 <p>The interface asks the user to choose a category, then a sub category, then returns a description and a link. I used another gem, colorize, to keep the interface color coded, a pretty cool gem for CLI apps. Here is what the CLI looks like, although color won’t come through :(</p>
 
-<p>```</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+	 Top 10 Travel Destinations <span class="k">for </span>2018
+	<span class="nt">-----------------------------------</span>
+	You can search by:
+	1. Top 10 Countries
+	2. Top 10 Cities
+	3. Top 10 Regions
+	4. Top 10 Best Value
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Top 10 Travel Destinations for 2018
------------------------------------
-You can search by:
-1. Top 10 Countries
-2. Top 10 Cities
-3. Top 10 Regions
-4. Top 10 Best Value
+	Please choose a number 1-4
+	You can <span class="nb">type</span> <span class="s1">'exit'</span> at anytime
+2
 
-Please choose a number 1-4
-You can type 'exit' at anytime 2
+	Top 10 Cities
+	<span class="nt">----------------</span>
+	1. Seville, Spain
+	2. Detroit, USA
+	3. Canberra, Australia
+	4. Hamburg, Germany
+	5. Kaohsiung, Taiwan
+	6. Antwerp, Belgium
+	7. Matera, Italy
+	8. San Juan, Puerto Rico
+	9. Guanajuato, Mexico
+	10. Oslo, Norway
 
-Top 10 Cities
-----------------
-1. Seville, Spain
-2. Detroit, USA
-3. Canberra, Australia
-4. Hamburg, Germany
-5. Kaohsiung, Taiwan
-6. Antwerp, Belgium
-7. Matera, Italy
-8. San Juan, Puerto Rico
-9. Guanajuato, Mexico
-10. Oslo, Norway
+	Please choose a number 1 - 10
+	Or <span class="s1">'back'</span>
+	You can <span class="nb">type</span> <span class="s1">'main menu'</span> or <span class="s1">'exit'</span> at anytime
+3
 
-Please choose a number 1 - 10
-Or 'back'
-You can type 'main menu' or 'exit' at anytime 3
+	Canberra, Australia
+	<span class="nt">---------------------------------------</span>
+	Criminally overlooked Canberra packs a big punch <span class="k">for </span>such a small city. National treasures are found round almost every corner and exciting new boutique precincts have emerged, bulging with gastronomic highlights and cultural must-dos. This is the first year that Canberra will host a Test cricket match at the picturesque Manuka Oval, and later <span class="k">in </span>2018 the Australian War Memorial will take centre stage as it hosts the 100th anniversary of the WWI Armistice. Significantly, Canberra is establishing a permanent Reconciliation Day into the state’s holiday calendar from 2018 onwards, to symbolise commitment to tolerance between Indigenous and non-Indigenous Australians.
+	<span class="nt">---------------------------------------</span>
+	<span class="k">for </span>more information visit: https://www.lonelyplanet.com/australia/australian-capital-territory/canberra
 
-Canberra, Australia
----------------------------------------
-Criminally overlooked Canberra packs a big punch for such a small city. National treasures are found round almost every corner and exciting new boutique precincts have emerged, bulging with gastronomic highlights and cultural must-dos. This is the first year that Canberra will host a Test cricket match at the picturesque Manuka Oval, and later in 2018 the Australian War Memorial will take centre stage as it hosts the 100th anniversary of the WWI Armistice. Significantly, Canberra is establishing a permanent Reconciliation Day into the state’s holiday calendar from 2018 onwards, to symbolise commitment to tolerance between Indigenous and non-Indigenous Australians.
----------------------------------------
-for more information visit: https://www.lonelyplanet.com/australia/australian-capital-territory/canberra
+	Or <span class="s1">'back'</span>
+	You can <span class="nb">type</span> <span class="s1">'main menu'</span> or <span class="s1">'exit'</span> at anytime
+</code></pre></div></div>
 
-Or 'back'
-You can type 'main menu' or 'exit' at anytime
-```
-
- Seemed simple enough when I started, but took me about 8 hours, haha. Don’t get me wrong, it was super fun. and really rewarding in the end when everything loaded and worked. I definitely gained a newfound respect for complex applications, and the immense time and effort it takes to create them. 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Seemed simple enough when I started, but took me about 8 hours, haha. Don’t get me wrong, it was super fun. and really rewarding in the end when everything loaded and worked. I definitely gained a newfound respect for complex applications, and the immense time and effort it takes to create them. 
 </code></pre></div></div>
 
 <p>Thanks for reading!</p>
 
 
+	</div>
+</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.js"

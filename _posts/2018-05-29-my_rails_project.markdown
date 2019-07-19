@@ -3,12 +3,14 @@ layout: post
 title:      "My Rails Project"
 date:       2018-05-29 12:44:11 +0000
 permalink:  my_rails_project
+excerpt_separator: <!--more-->
 ---
 
 
 ### Student Profile Pages
 
-I decided to make project that would interface with the popular educational software, PowerSchool, and add some special functionality that many schools ask for from the software. It basically displays student profiles, and acts as a dashboard for school administrators. It provides data visualizations for grades and behavior traits, and allow users to add comments as they review the students progress. I utilized a JavaScript chart library, Charts.js, in order to provide some nice dynamic and animated visual representations of data. 
+I decided to make project that would interface with the popular educational software, PowerSchool, and add some special functionality that many schools ask for from the software. It basically displays student profiles, and acts as a dashboard for school administrators.
+<!--more--> It provides data visualizations for grades and behavior traits, and allow users to add comments as they review the students progress. I utilized a JavaScript chart library, Charts.js, in order to provide some nice dynamic and animated visual representations of data. 
 
 I populated my database with real data provided by the school, that unfortunately I can not post any of the real data here, but you can get the idea how it would work. I seeded my database from a JSON file, but in the future hope to write and API for them to have their database serve up the data to a URL in real time, which will use my code written in my seed.rb file.
 

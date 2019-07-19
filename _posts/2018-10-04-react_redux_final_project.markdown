@@ -29,7 +29,7 @@ Took a bit to get my mind around it, but in react-router, a Route is just way to
 
 So, I used my App.js as a master router, check it out:
 
-```jsx
+```javascript
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -77,19 +77,23 @@ class App extends Component {
 
 As you can see, I have guest routes, and user routes. Only the user Routes ( which are just component render-ers) get are available when isAuthenticated is true, via this code:
 
-```
+```javascript
+
  { isAuthenticated ? userRoutes : guestRoutes }
 ```
 
 Now, if a Route's has the attribute exact={true}, it will only render on it's exact path, but if not will render as long as part of the path matches it's path. So, used that feature to create a layout:
-```
+
+```javascript
+
 <Route path="/" component={ showHeader } />
 <Route path="/" component={ showFooter } />
 ```
 The header and footer will always get rendered, because the root path is in every url.
 
 I built a bunch of functional components in this file that correspond to each route, like so:
-```
+```javascript
+
 <Route exact={true} path="/" component={ showUserHome } />
 
 const showUserHome = () => (
@@ -109,14 +113,16 @@ We learned about component lifecycles in the curriculum, and it really seems to 
 
 I did a couple fetches from componentDidMount:
 
-```
+```javascript
+
 componentDidMount(){
 		this.props.dispatch(fetchComments());
 	}
 ```
 sends an action to dispatch that does the fetch async, using Thunk, like so:
 
-```
+```javascript
+
 export function fetchComments() {
 
   return function (dispatch) {
@@ -138,7 +144,8 @@ export function fetchComments() {
 This is super useful, as the component is already rendered, the user gets to see stuff, and the fetch is happening quietly in the background. Great for a smooth UX. 
 
 But, sometimes I wanted the fetch to get started earlier than that, so i used componentWillMount:
-```
+```javascript
+
 componentWillMount(){
 		fetch(`http://localhost:3001/users/${this.props.userId}/comments`)
 		.then(response => response.json())
@@ -167,7 +174,8 @@ Javascript is really getting awesome. I love the new syntax. Here are my favorit
 ### Arrow functions
 
 These are indespensible in React. You can call a function without loosing your this binding, like so:
-```
+```javascript
+
 handleDelete = event => {
 		event.stopPropagation()
 		this.props.deleteTab(event)
@@ -179,7 +187,8 @@ Since we aren't naming a new function, and just immediately invoking it, it does
 
 Again, indispensible in React. I used them a ton in redux when updating state, as we all know, can't be mutated. Check it out:
 
-```
+```javascript
+
 case "FETCH_COMMENTS":
 			const comments = action.payload.map(comment => comment);
 			let categories = comments.map(comment => comment.categories)
@@ -189,7 +198,8 @@ case "FETCH_COMMENTS":
 ```
 spread operator all over the place! Here is a cool one:
 
-```
+```javascript
+
 let anotherArray = [...new Set(categories)]
 ```
 This, another ES6 addition, uses the Set object, which let's you store 'unique' values of any type. It will filter your arrays for only unique values, finally!
@@ -198,7 +208,8 @@ This, another ES6 addition, uses the Set object, which let's you store 'unique' 
 
 Now, I just never use var. const and let are blocked scoped, which can save you from tons of bugs. This basically means, they can't bleed into parent scopes.
 like so:
-```
+```javascript
+
  if (true) {
         let hello = "say Hello";
         console.log(hello);//"say Hello"
@@ -206,7 +217,8 @@ like so:
    console.log(hello) // hello is not defined
 ```
 vs var:
-```
+```javascript
+
 if (true) {
         var hello = "say Hello";
         console.log(hello); // "say Hello"
@@ -217,7 +229,8 @@ if (true) {
 
 Let also hoists differently than var:
 
-```
+```javascript
+
 hello = "say hello";
 console.log(hello)
 
@@ -225,7 +238,7 @@ console.log(hello)
 let hello; // Error: hello is not defined
 ```
 vs var:
-```
+```javascript
 hello = "say hello";
 console.log(hello)
 

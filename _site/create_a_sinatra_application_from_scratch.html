@@ -34,56 +34,80 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Create A Sinatra Application from Scratch</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Create A Sinatra Application from Scratch" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Just follow the steps!" />
 <meta property="og:description" content="Just follow the steps!" />
+<link rel="canonical" href="http://localhost:4000/create_a_sinatra_application_from_scratch" />
+<meta property="og:url" content="http://localhost:4000/create_a_sinatra_application_from_scratch" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-12T03:49:00+01:00" />
 <script type="application/ld+json">
-{"description":"Just follow the steps!","@type":"BlogPosting","url":"/create_a_sinatra_application_from_scratch","headline":"Create A Sinatra Application from Scratch","dateModified":"2018-03-12T03:49:00+01:00","datePublished":"2018-03-12T03:49:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/create_a_sinatra_application_from_scratch"},"@context":"https://schema.org"}</script>
+{"description":"Just follow the steps!","@type":"BlogPosting","url":"http://localhost:4000/create_a_sinatra_application_from_scratch","headline":"Create A Sinatra Application from Scratch","dateModified":"2018-03-12T03:49:00+01:00","datePublished":"2018-03-12T03:49:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/create_a_sinatra_application_from_scratch"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
 	<body>
-		<h1>Create A Sinatra Application from Scratch</h1>
+		<nav id="navbar">
+	
+	<a href="/" id="Home">
+		HOME
+	</a>
+	
+	<a href="/blog.html" id="Blog Index">
+		BLOG INDEX
+	</a>
+	
+</nav>
 
-<p>
-	12 Mar 2018  
-</p>
+<div id="post-container">
+	<h1 class="post-title">CREATE A SINATRA APPLICATION FROM SCRATCH</h1>
 
-<h2 id="just-follow-the-steps">Just follow the steps!</h2>
+	<p class="post-date">
+		12 Mar 2018  
+	</p>
+	<img
+		class="post-image"
+		src="assets/images/2018-03-12.jpg"
+	/>
+	<p class="post-description">
+		
+	</p>
+	<div class="post-content">
+		<h2 id="just-follow-the-steps">Just follow the steps!</h2>
 
 <p>1. In your terminal, cd to where you keep your projects, then create the main directory, then cd into it. In my example my main directory is named sinatra-project.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[code]$ mkdir sinatra-project
-[code]$ cd sinatra-project
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">
+</span><span class="gp">[code]$</span> <span class="nb">mkdir </span>sinatra-project
+<span class="gp">[code]$</span> <span class="nb">cd </span>sinatra-project
+<span class="go">
+</span></code></pre></div></div>
 
 <p>2. let’s make some directories:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[sinatra-project]$ mkdir app
-[sinatra-project]$ mkdir app/models
-[sinatra-project]$ mkdir app/views
-[sinatra-project]$ mkdir app/controller
-[sinatra-project]$ mkdir config
-[sinatra-project]$ mkdir db
-[sinatra-project]$ mkdir public
-[sinatra-project]$ mkdir spec
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>app
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>app/models
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>app/views
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>app/controller
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>config
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>db
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>public
+<span class="gp">[sinatra-project]$</span> <span class="nb">mkdir </span>spec
 </code></pre></div></div>
 
 <p>3. let’s make some files:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[sinatra-project]$ touch app/controllers/application_controller.rb
-[sinatra-project]$ touch app/views/layout.erb
-[sinatra-project]$ touch app/views/index.erb
-[sinatra-project]$ touch config/environment.rb
-[sinatra-project]$ touch public/style.css
-[sinatra-project]$ touch config.ru
-[sinatra-project]$ touch Gemfile
-[sinatra-project]$ touch Rakefile
-[sinatra-project]$ touch LICENSE.md
-[sinatra-project]$ echo "# An Awesome Sinatra Application" &gt;&gt; README.md
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>app/controllers/application_controller.rb
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>app/views/layout.erb
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>app/views/index.erb
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>config/environment.rb
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>public/style.css
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>config.ru
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>Gemfile
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>Rakefile
+<span class="gp">[sinatra-project]$</span> <span class="nb">touch </span>LICENSE.md
+<span class="gp">[sinatra-project]$</span> <span class="nb">echo</span> <span class="s2">"# An Awesome Sinatra Application"</span> <span class="o">&gt;&gt;</span> README.md
 </code></pre></div></div>
 
 <p>4. add version control</p>
@@ -93,97 +117,97 @@
   <li>Then follow here:</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">git init
 git add .
 git commit -m "First Commit"
-git remote add origin git@github.com:&lt;your-username&gt;/sinatra-project.git
-git push -u origin master
-</code></pre></div></div>
+</span><span class="gp">git remote add origin git@github.com:&lt;your-username&gt;</span>/sinatra-project.git
+<span class="go">git push -u origin master
+</span></code></pre></div></div>
 
 <p>5. Open up your project with your text editor of choice, mine is Sublime, so in terminal I simply type:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sublime .
-</code></pre></div></div>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sublime .
+</span></code></pre></div></div>
 
 <p>6. Let’s fill out some initial code, let’s start with Gemfile, here are the gems I used, scope them out on rubygems.org to get an idea of what they do:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source 'http://rubygems.org'
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s1">'http://rubygems.org'</span>
 
-gem 'sinatra'
-gem 'activerecord', :require =&gt; 'active_record'
-gem 'sinatra-activerecord', :require =&gt; 'sinatra/activerecord'
-gem 'rake'
-gem 'require_all'
-gem 'rack-flash3'
-gem 'sqlite3'
-gem 'thin'
-gem 'shotgun'
-gem 'pry'
-gem 'bcrypt'
-gem "tux"
+<span class="n">gem</span> <span class="s1">'sinatra'</span>
+<span class="n">gem</span> <span class="s1">'activerecord'</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">'active_record'</span>
+<span class="n">gem</span> <span class="s1">'sinatra-activerecord'</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">'sinatra/activerecord'</span>
+<span class="n">gem</span> <span class="s1">'rake'</span>
+<span class="n">gem</span> <span class="s1">'require_all'</span>
+<span class="n">gem</span> <span class="s1">'rack-flash3'</span>
+<span class="n">gem</span> <span class="s1">'sqlite3'</span>
+<span class="n">gem</span> <span class="s1">'thin'</span>
+<span class="n">gem</span> <span class="s1">'shotgun'</span>
+<span class="n">gem</span> <span class="s1">'pry'</span>
+<span class="n">gem</span> <span class="s1">'bcrypt'</span>
+<span class="n">gem</span> <span class="s2">"tux"</span>
 
-group :test do
-  gem 'rspec'
-  gem 'capybara'
-  gem 'rack-test'
-  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
-end
+<span class="n">group</span> <span class="ss">:test</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">'rspec'</span>
+  <span class="n">gem</span> <span class="s1">'capybara'</span>
+  <span class="n">gem</span> <span class="s1">'rack-test'</span>
+  <span class="n">gem</span> <span class="s1">'database_cleaner'</span><span class="p">,</span> <span class="ss">git: </span><span class="s1">'https://github.com/bmabey/database_cleaner.git'</span>
+<span class="k">end</span>
 </code></pre></div></div>
 <p>-make sure at this point to run bundle install</p>
 
 <p>7. Next, setup the environment.rb:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV['SINATRA_ENV'] ||= "development"
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">ENV</span><span class="p">[</span><span class="s1">'SINATRA_ENV'</span><span class="p">]</span> <span class="o">||=</span> <span class="s2">"development"</span>
 
-require 'bundler/setup'
-Bundler.require(:default, ENV['SINATRA_ENV'])
+<span class="nb">require</span> <span class="s1">'bundler/setup'</span>
+<span class="no">Bundler</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:default</span><span class="p">,</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'SINATRA_ENV'</span><span class="p">])</span>
 
-ActiveRecord::Base.establish_connection(
-  :adapter =&gt; "sqlite3",
-  :database =&gt; "db/#{ENV['SINATRA_ENV']}.sqlite"
-)
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">establish_connection</span><span class="p">(</span>
+  <span class="ss">:adapter</span> <span class="o">=&gt;</span> <span class="s2">"sqlite3"</span><span class="p">,</span>
+  <span class="ss">:database</span> <span class="o">=&gt;</span> <span class="s2">"db/</span><span class="si">#{</span><span class="no">ENV</span><span class="p">[</span><span class="s1">'SINATRA_ENV'</span><span class="p">]</span><span class="si">}</span><span class="s2">.sqlite"</span>
+<span class="p">)</span>
 
-require_all 'app'
+<span class="n">require_all</span> <span class="s1">'app'</span>
 
 </code></pre></div></div>
 <p>-This is setting Sinatra’s initial environment to development, we can change this once the app is ready for production. Next, requires all your gems and tells bundler your sinatra env is development. Next creates a connection to your sqlite database, and last requires all your files in your app directory.</p>
 
 <p>8. setup your config.ru:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require './config/environment'
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'./config/environment'</span>
 
-if ActiveRecord::Migrator.needs_migration?
-  raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
-end
+<span class="k">if</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migrator</span><span class="p">.</span><span class="nf">needs_migration?</span>
+  <span class="k">raise</span> <span class="s1">'Migrations are pending. Run `rake db:migrate` to resolve the issue.'</span>
+<span class="k">end</span>
 
-use Rack::MethodOverride
-run ApplicationController
+<span class="n">use</span> <span class="no">Rack</span><span class="o">::</span><span class="no">MethodOverride</span>
+<span class="n">run</span> <span class="no">ApplicationController</span>
 </code></pre></div></div>
 <p>-Here we are requiring our environment fil we just set up, raises a helpful warning is database migrations are pending, uses Rask Method Override middle ware for update and delete actions, and finally runs our application controller model.</p>
 
 <p>9. Next up, lets code out application_controller:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require './config/environment'
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'./config/environment'</span>
 
-class ApplicationController &lt; Sinatra::Base
+<span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
 
-  configure do
-    set :public_folder, 'public'
-    set :views, 'app/views'
-    enable :sessions
-  	set :session_secret, "secret"
-  end
+  <span class="n">configure</span> <span class="k">do</span>
+    <span class="n">set</span> <span class="ss">:public_folder</span><span class="p">,</span> <span class="s1">'public'</span>
+    <span class="n">set</span> <span class="ss">:views</span><span class="p">,</span> <span class="s1">'app/views'</span>
+    <span class="n">enable</span> <span class="ss">:sessions</span>
+  	<span class="n">set</span> <span class="ss">:session_secret</span><span class="p">,</span> <span class="s2">"secret"</span>
+  <span class="k">end</span>
 
-  get '/' do
-  	erb :index
-  end
+  <span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
+  	<span class="n">erb</span> <span class="ss">:index</span>
+  <span class="k">end</span>
 
-end
+<span class="k">end</span>
 </code></pre></div></div>
 <p>-First we require our environemnt and then set up some basic configuration, importantly enabling sessions for users, then adding a get route action that loads our index page</p>
 
 <p>10. Next, let’s get our layout and index pages up:</p>
 
 <p>here is the layout.erb:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
 	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
@@ -199,13 +223,13 @@ end
 <p>-Note the use of the url method to load my css file, then drop the yield command. Sinatra will automatically look for a layout file, then layout will dynamically insert all other erb files asked for right where the yeild command is placed. (So you could put navigation, header, footer etc. into the layout so it would be the same for every page)</p>
 
 <p>And here is index.erb:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="main-content"&gt;
-&lt;h1&gt;Welcome to the Home Page&lt;/h1&gt;
-&lt;div&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Welcome to the Home Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div&gt;</span>
 </code></pre></div></div>
 
 <p>11. Simple css styling just to make sure it is linked up correctly, drop this is style.css:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html, body {
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html, body {
 	width: 100%;
 	height: 100%;
 }
@@ -217,30 +241,32 @@ text-align: center;
 </code></pre></div></div>
 
 <p>12. Setup Rakefile, this is used to automate certain tasks, mostly I use it for database migrations:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV["SINATRA_ENV"] ||= "development"
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">ENV</span><span class="p">[</span><span class="s2">"SINATRA_ENV"</span><span class="p">]</span> <span class="o">||=</span> <span class="s2">"development"</span>
 
-require_relative './config/environment'
-require 'sinatra/activerecord/rake'
+<span class="nb">require_relative</span> <span class="s1">'./config/environment'</span>
+<span class="nb">require</span> <span class="s1">'sinatra/activerecord/rake'</span>
 
-# Type `rake -T` on your command line to see the available rake tasks.
+<span class="c1"># Type `rake -T` on your command line to see the available rake tasks.</span>
 </code></pre></div></div>
 
 <p>13. Check it out! Save all your files, then in the terminal start up the project by simply typing:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shotgun
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shotgun
 </code></pre></div></div>
 <p>-If everything is working, you will see something like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Listening on 127.0.0.1:9393
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Listening on 127.0.0.1:9393
 </code></pre></div></div>
 <p>-Visit that address in the browser and see your page! Now, you can roll with it however you like, shotgun server will automatically update so you can see changes without having to restart the server, you can shut down shotgun with a simple crtl+c.</p>
 
 <p>14. Lets make sure to git commit and push now, in your terminal:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -am "Created basic template for project"
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-am</span> <span class="s2">"Created basic template for project"</span>
 git push
 </code></pre></div></div>
 
 <p>Thanks for reading everyone, hope this helps to get your Sinatra projects up and running!!</p>
 
 
+	</div>
+</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.js"

@@ -1,0 +1,28 @@
+@import "./palette.scss";
+
+div#post-container {
+	width: 80%;
+	margin: 20px auto;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: $light-grey;
+
+	h1.post-title {
+	}
+
+	p.post-date {
+		color: $red;
+	}
+
+	div.post-content {
+		text-align: left;
+	}
+
+	img.post-image {
+		max-height: 400px;
+	}
+}
+div.highlight {
+	padding: 10px;
+}

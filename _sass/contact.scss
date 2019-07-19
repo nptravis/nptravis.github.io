@@ -5,6 +5,10 @@ div.contact-container {
 	color: $white;
 	position: relative;
 
+	p.small-text {
+		color: $light-blue;
+	}
+
 	div.contact-form-container {
 		form#contact-form {
 			display: flex;
@@ -65,12 +69,14 @@ div.footer {
 	div#home-button {
 		border: 4px solid $red;
 		width: 50px;
-		background-color: grey;
+		background-color: $red;
+		border-radius: 100%;
 		height: 50px;
 		margin: 0 auto;
 		margin-top: -60px;
 
 		i {
+			line-height: 50px;
 			width: 40px;
 			height: auto;
 		}

@@ -10,13 +10,15 @@ permalink:  create_a_sinatra_application_from_scratch
 ## Just follow the steps! 
 
 1\. In your terminal, cd to where you keep your projects, then create the main directory, then cd into it. In my example my main directory is named sinatra-project.
-```
+```console
+
 [code]$ mkdir sinatra-project
 [code]$ cd sinatra-project
+
 ```
 
 2\. let's make some directories:
-```
+```console
 [sinatra-project]$ mkdir app
 [sinatra-project]$ mkdir app/models
 [sinatra-project]$ mkdir app/views
@@ -28,7 +30,7 @@ permalink:  create_a_sinatra_application_from_scratch
 ```
 
 3\. let's make some files:
-```
+```console
 [sinatra-project]$ touch app/controllers/application_controller.rb
 [sinatra-project]$ touch app/views/layout.erb
 [sinatra-project]$ touch app/views/index.erb
@@ -47,7 +49,7 @@ permalink:  create_a_sinatra_application_from_scratch
 * First, have/create a github account, go to github.com/new and create your repository, initialize without a readme, as we already have that, and without gitignore or license, we already have license and can add gitignore later, I named my repository sinatra-project.
 * Then follow here:
 
-```
+```console
 git init
 git add .
 git commit -m "First Commit"
@@ -57,13 +59,13 @@ git push -u origin master
 
 5\. Open up your project with your text editor of choice, mine is Sublime, so in terminal I simply type:
 
-```
+```console
 sublime .
 ```
 
 6\. Let's fill out some initial code, let's start with Gemfile, here are the gems I used, scope them out on rubygems.org to get an idea of what they do:
 
-```
+```ruby
 source 'http://rubygems.org'
 
 gem 'sinatra'
@@ -90,7 +92,7 @@ end
 
 7\. Next, setup the environment.rb:
 
-```
+```ruby
 ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'
@@ -107,7 +109,7 @@ require_all 'app'
 -This is setting Sinatra's initial environment to development, we can change this once the app is ready for production. Next, requires all your gems and tells bundler your sinatra env is development. Next creates a connection to your sqlite database, and last requires all your files in your app directory.
 
 8\. setup your config.ru:
-```
+```ruby
 require './config/environment'
 
 if ActiveRecord::Migrator.needs_migration?
@@ -120,7 +122,7 @@ run ApplicationController
  -Here we are requiring our environment fil we just set up, raises a helpful warning is database migrations are pending, uses Rask Method Override middle ware for update and delete actions, and finally runs our application controller model. 
 
 9\. Next up, lets code out application_controller:
-```
+```ruby
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -143,7 +145,7 @@ end
 10\. Next, let's get our layout and index pages up:
 
 here is the layout.erb:
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,14 +162,14 @@ here is the layout.erb:
 -Note the use of the url method to load my css file, then drop the yield command. Sinatra will automatically look for a layout file, then layout will dynamically insert all other erb files asked for right where the yeild command is placed. (So you could put navigation, header, footer etc. into the layout so it would be the same for every page)
 
 And here is index.erb:
-```
+```html
 <div class="main-content">
 <h1>Welcome to the Home Page</h1>
 <div>
 ```
 
 11\. Simple css styling just to make sure it is linked up correctly, drop this is style.css:
-```
+```html
 html, body {
 	width: 100%;
 	height: 100%;
@@ -180,7 +182,7 @@ text-align: center;
 ```
 
 12\. Setup Rakefile, this is used to automate certain tasks, mostly I use it for database migrations:
-```
+```ruby
 ENV["SINATRA_ENV"] ||= "development"
 
 require_relative './config/environment'
@@ -190,17 +192,17 @@ require 'sinatra/activerecord/rake'
 ```
 
 13\. Check it out! Save all your files, then in the terminal start up the project by simply typing:
-```
+```bash
 shotgun
 ```
 -If everything is working, you will see something like this:
-```
+```bash
 Listening on 127.0.0.1:9393
 ```
 -Visit that address in the browser and see your page! Now, you can roll with it however you like, shotgun server will automatically update so you can see changes without having to restart the server, you can shut down shotgun with a simple crtl+c.
 
 14\. Lets make sure to git commit and push now, in your terminal:
-```
+```bash
 git commit -am "Created basic template for project"
 git push
 ```

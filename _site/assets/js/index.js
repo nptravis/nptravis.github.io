@@ -48,6 +48,12 @@ $(document).ready(function() {
 				$("#about").css({
 					marginTop: 50
 				});
+				$("#all-posts-container").css({
+					marginTop: 70
+				});
+				$("#post-container").css({
+					marginTop: 70
+				});
 				flyIn();
 			}
 		}
@@ -57,6 +63,12 @@ $(document).ready(function() {
 				$("nav").removeClass("fixed");
 				$("#about").css({
 					marginTop: 0
+				});
+				$("#all-posts-container").css({
+					marginTop: 20
+				});
+				$("#post-container").css({
+					marginTop: 20
 				});
 				// flyOut();
 			}
@@ -228,13 +240,13 @@ $(document).ready(function() {
 				.animate(
 					{
 						opacity: "1",
-						top: 40
+						top: "10%"
 					},
 					300
 				);
 			$(this)
 				.children(".button-wrapper")
-				.animate({ opacity: "1", bottom: 100 }, 300);
+				.animate({ opacity: "1", bottom: "30%" }, 300);
 		},
 		function() {
 			$(this)

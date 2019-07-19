@@ -3,10 +3,13 @@ layout: post
 title:      "The form_for helper"
 date:       2018-05-10 06:52:47 -0400
 permalink:  the_form_for_helper
+excerpt_separator: <!--more-->
 ---
 
 
-This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:
+This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources.<!--more--> It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. 
+
+So, first a little setup:
 
 Here is my model schema:
 ```ruby
@@ -33,7 +36,7 @@ def new
 end
 ```
 Ok, without further ado, our form_for:
-```
+```html
 <!-- app/views/users/new.html.erb-->
 
 <%= form_for @user do |f| %>
@@ -42,14 +45,14 @@ Ok, without further ado, our form_for:
 ```
 pry pops us into console, now what the heck is `f` :
 
-```
+```bash
 <pry> f.class
 <pry> ActionView::Helpers::FormBuilder
 ```
 
 Shows us the `f` is an `ActionView:Helpers::FormBuilder` object:
 Here are some methods it gives us access to:
-```
+```bash
 <pry> f.methods
  :fields_for,
  :text_field,
@@ -67,7 +70,7 @@ Here are some methods it gives us access to:
 ```
 There are a bunch, scope them [here](https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for).
 So, let's build a sign up form:
-```
+```html
 <%= form_for @user do |f| %>
 	<p>
 	<%= f.label :username %>
@@ -88,7 +91,7 @@ So, let's build a sign up form:
 <% end %>
 ```
 That generates this HTML:
-```
+```html
 <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="T36sH3iVwQCE2Frn2ERlOU8S62ev+zR6mRc9/cMT75fAvmOqGWqS+TrJ8uoRafb04YdaounpUJzXmu+eBV+pbg==">
 	<p>
 	<label for="user_Username">Username</label>
@@ -119,11 +122,11 @@ Holy crap, that is alot of HTML! Gives us some awesome freebies like:
 Here are a few of my favorite methods:
 
 checkboxes:
-```
+```html
 <%= f.check_box :status, :class => "toggle", :checked => true  %>
 ```
 collection of checkboxes:
-```
+```html
 <%= f.collection_check_boxes :id, User.all, :id, :username do |b| %>
 	  <p>
 	  <%= b.label class: "Whatever" %>
@@ -132,7 +135,7 @@ collection of checkboxes:
 	<% end %>
 ```
 dropdown menus:
-```
+```html
 <%= f.collection_check_boxes :id, User.all, :id, :username do |b| %>
 	  <p>
 	  <%= b.label class: "Whatever" %>
@@ -141,7 +144,7 @@ dropdown menus:
 	<% end %>
 ```
 ability to create nested resources for an entire different model:
-```
+```html
 <%= f.fields_for @post do |b| %>
 	<% b.text_area :content %>
 <% end %>
@@ -156,7 +159,7 @@ end
 ```
 
 Basically params will give you a double nested resource, which you can use to create a new user and a post in the same form:
-```
+```ruby
 params = {
 	:user => {
 		:username => "CooolUsername"

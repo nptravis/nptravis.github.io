@@ -34,28 +34,52 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>The form_for helper</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="The form_for helper" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:" />
-<meta property="og:description" content="This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:" />
+<meta name="description" content="This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources." />
+<meta property="og:description" content="This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources." />
+<link rel="canonical" href="http://localhost:4000/the_form_for_helper" />
+<meta property="og:url" content="http://localhost:4000/the_form_for_helper" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-10T12:52:47+02:00" />
 <script type="application/ld+json">
-{"description":"This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:","@type":"BlogPosting","url":"/the_form_for_helper","headline":"The form_for helper","dateModified":"2018-05-10T12:52:47+02:00","datePublished":"2018-05-10T12:52:47+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"/the_form_for_helper"},"@context":"https://schema.org"}</script>
+{"description":"This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources.","@type":"BlogPosting","url":"http://localhost:4000/the_form_for_helper","headline":"The form_for helper","dateModified":"2018-05-10T12:52:47+02:00","datePublished":"2018-05-10T12:52:47+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/the_form_for_helper"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
 	<body>
-		<h1>The form_for helper</h1>
+		<nav id="navbar">
+	
+	<a href="/" id="Home">
+		HOME
+	</a>
+	
+	<a href="/blog.html" id="Blog Index">
+		BLOG INDEX
+	</a>
+	
+</nav>
 
-<p>
-	10 May 2018  
-</p>
+<div id="post-container">
+	<h1 class="post-title">THE FORM_FOR HELPER</h1>
 
-<p>This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:</p>
+	<p class="post-date">
+		10 May 2018  
+	</p>
+	<img
+		class="post-image"
+		src="assets/images/2018-05-10.jpg"
+	/>
+	<p class="post-description">
+		
+	</p>
+	<div class="post-content">
+		<p>This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources.<!--more--> It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point.</p>
+
+<p>So, first a little setup:</p>
 
 <p>Here is my model schema:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">create_table</span> <span class="s2">"users"</span><span class="p">,</span> <span class="ss">force: :cascade</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
@@ -79,21 +103,21 @@
 <span class="k">end</span>
 </code></pre></div></div>
 <p>Ok, without further ado, our form_for:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- app/views/users/new.html.erb--&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- app/views/users/new.html.erb--&gt;</span>
 
-&lt;%= form_for @user do |f| %&gt;
-	&lt;% binding.pry %&gt;
-&lt;% end %&gt;
+<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">form_for</span> <span class="err">@</span><span class="na">user</span> <span class="na">do</span> <span class="err">|</span><span class="na">f</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%</span> <span class="na">binding</span><span class="err">.</span><span class="na">pry</span> <span class="err">%</span><span class="nt">&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>pry pops us into console, now what the heck is <code class="highlighter-rouge">f</code> :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pry&gt; f.class
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pry&gt; f.class
 &lt;pry&gt; ActionView::Helpers::FormBuilder
 </code></pre></div></div>
 
 <p>Shows us the <code class="highlighter-rouge">f</code> is an <code class="highlighter-rouge">ActionView:Helpers::FormBuilder</code> object:
 Here are some methods it gives us access to:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pry&gt; f.methods
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pry&gt; f.methods
  :fields_for,
  :text_field,
  :password_field,
@@ -110,45 +134,45 @@ Here are some methods it gives us access to:</p>
 </code></pre></div></div>
 <p>There are a bunch, scope them <a href="https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for">here</a>.
 So, let’s build a sign up form:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= form_for @user do |f| %&gt;
-	&lt;p&gt;
-	&lt;%= f.label :username %&gt;
-	&lt;%= f.text_field :username %&gt;
-	&lt;/p&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%=</span> <span class="na">form_for</span> <span class="err">@</span><span class="na">user</span> <span class="na">do</span> <span class="err">|</span><span class="na">f</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">label</span> <span class="na">:username</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">text_field</span> <span class="na">:username</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 
-	&lt;p&gt;
-	&lt;%= f.label :password %&gt;
-	&lt;%= f.password_field :password %&gt;
-	&lt;/p&gt;
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">label</span> <span class="na">:password</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">password_field</span> <span class="na">:password</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 	
-	&lt;p&gt;
-	&lt;%= f.label "Password Confirmation" %&gt;
-	&lt;%= f.password_field :password_confirmation %&gt;
-	&lt;/p&gt;
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">label</span> <span class="err">"</span><span class="na">Password</span> <span class="na">Confirmation</span><span class="err">"</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">password_field</span> <span class="na">:password_confirmation</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 	
-	&lt;%= f.submit "Sign Up"%&gt;
-&lt;% end %&gt;
+	<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">submit</span> <span class="err">"</span><span class="na">Sign</span> <span class="na">Up</span><span class="err">"%</span><span class="nt">&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>That generates this HTML:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"&gt;&lt;input name="utf8" type="hidden" value="✓"&gt;&lt;input type="hidden" name="authenticity_token" value="T36sH3iVwQCE2Frn2ERlOU8S62ev+zR6mRc9/cMT75fAvmOqGWqS+TrJ8uoRafb04YdaounpUJzXmu+eBV+pbg=="&gt;
-	&lt;p&gt;
-	&lt;label for="user_Username"&gt;Username&lt;/label&gt;
-	&lt;input type="text" name="user[username]" id="user_username" style="background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"&gt;
-	&lt;/p&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"new_user"</span> <span class="na">id=</span><span class="s">"new_user"</span> <span class="na">action=</span><span class="s">"/users"</span> <span class="na">accept-charset=</span><span class="s">"UTF-8"</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;&lt;input</span> <span class="na">name=</span><span class="s">"utf8"</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">value=</span><span class="s">"✓"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"authenticity_token"</span> <span class="na">value=</span><span class="s">"T36sH3iVwQCE2Frn2ERlOU8S62ev+zR6mRc9/cMT75fAvmOqGWqS+TrJ8uoRafb04YdaounpUJzXmu+eBV+pbg=="</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"user_Username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"user[username]"</span> <span class="na">id=</span><span class="s">"user_username"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 
-	&lt;p&gt;
-	&lt;label for="user_Password"&gt;Password&lt;/label&gt;
-	&lt;input type="password" name="user[password]" id="user_password" style="background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABKRJREFUWAnNl0tsVGUUxzvTTlslZUaCloZHY6BRFkp9sDBuqgINpaBp02dIDImwKDG6ICQ8jBYlhg0rxUBYEALTpulMgBlqOqHRDSikJkZdGG0CRqAGUuwDovQ1/s7NPTffnTu3zMxGvuT2vP7n8Z3vu+dOi4r+5xUoJH8sFquamZmpTqfTVeIfCARGQ6HQH83NzaP5xsu5gL6+vuVzc3NdJN1Kkhd8Ev1MMYni4uJjra2tt3wwLvUjCxgYGFg8Pj7+MV5dPOUub3/hX0zHIpFId0NDw6Q/jO4tZOzv76+Znp6+AOb5TBw7/YduWC2Hr4J/IhOD/GswGHy7vb39tyw2S+VbAC1/ZXZ29hKoiOE8RrIvaPE5WvyjoS8CX8sRvYPufYpZYtjGS0pKNoD/wdA5bNYCCLaMYMMEWq5IEn8ZDof3P6ql9pF9jp8cma6bFLGeIv5ShdISZUzKzqPIVnISp3l20caTJsaPtwvc3dPTIx06ziZkkyvY0FnoW5l+ng7guAWnpAI5w4MkP6yy0GQy+dTU1JToGm19sqKi4kBjY+PftmwRYn1ErEOq4+i2tLW1DagsNGgKNv+p6tj595nJxUbyOIF38AwipoSfnJyMqZ9SfD8jxlWV5+fnu5VX6iqgt7d3NcFeUiN0n8FbLEOoGkwdgY90dnbu7OjoeE94jG9wd1aZePRp5AOqw+9VMM+qLNRVABXKkLEWzn8S/FtbdAhnuVQE7LdVafBPq04pMYawO0OJ+6XHZkFcBQA0J1xKgyhlB0EChEWGX8RulsgjvOjEBu+5V+icWOSoFawuVwEordluG28oSCmXSs55SGSCHiXhmDzC25ghMHGbdwhJr6sAdpnyQl0FYIyoEX5CeYOuNHg/NhvGiUUxVgfV2VUAxjtqgPecp9oKoE4sNnbX9HcVgMH8nD5nAoWnKM/5ZmKyySRdq3pCmDncR4DxOwVC64eHh0OGLOcur1Vey46xUZ3IcVl5oa4OlJaWXgQwJwZyhUdGRjqE14VtSnk/mokhxnawiwUvsZmsX5u+rgKamprGMDoA5sKhRCLxpDowSpsJ8vpCj2AUPzg4uIiNfKIyNMkH6Z4hF3k+RgTYz6vVAEiKq2bsniZIC0nTtvMVMwBzoBT9tKkTHp8Ak1V8dTrOE+NgJs7VATESTH5WnVAgfHUqlXK6oHpJEI1G9zEZH/Du16leqHyS0UXBNKmeOMf5NvyislJPB8RAFz4g8IuwofLy8k319fUP1EEouw7L7mC3kUTO1nn3sb02MTFxFpsz87FfJuaH4pu5fF+reDz+DEfxkI44Q0ScSbyOpDGe1RqMBN08o+ha0L0JdeKi/6msrGwj98uZMeon1AGaSj+elr9LwK9IkO33n8cN7Hl2vp1N3PcYbUXOBbDz9bwV1/wCmXoS3+B128OPD/l2LLg8l9APXVlZKZfzfDY7ehlQv0PPQDez6zW5JJdYOXdAwHK2dGIv7GH4YtHJIvEOvvunLCHPPzl3QOLKTkl0hPbKaDUvlTU988xtwfMqQBPQ3m/4mf0yBVlDCSr/CRW0CipAMnGzb9XU1NSRvIX7kSgo++Pg9B8wltxxbHKPZgAAAABJRU5ErkJggg==&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"&gt;
-	&lt;/p&gt;
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"user_Password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"user[password]"</span> <span class="na">id=</span><span class="s">"user_password"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABKRJREFUWAnNl0tsVGUUxzvTTlslZUaCloZHY6BRFkp9sDBuqgINpaBp02dIDImwKDG6ICQ8jBYlhg0rxUBYEALTpulMgBlqOqHRDSikJkZdGG0CRqAGUuwDovQ1/s7NPTffnTu3zMxGvuT2vP7n8Z3vu+dOi4r+5xUoJH8sFquamZmpTqfTVeIfCARGQ6HQH83NzaP5xsu5gL6+vuVzc3NdJN1Kkhd8Ev1MMYni4uJjra2tt3wwLvUjCxgYGFg8Pj7+MV5dPOUub3/hX0zHIpFId0NDw6Q/jO4tZOzv76+Znp6+AOb5TBw7/YduWC2Hr4J/IhOD/GswGHy7vb39tyw2S+VbAC1/ZXZ29hKoiOE8RrIvaPE5WvyjoS8CX8sRvYPufYpZYtjGS0pKNoD/wdA5bNYCCLaMYMMEWq5IEn8ZDof3P6ql9pF9jp8cma6bFLGeIv5ShdISZUzKzqPIVnISp3l20caTJsaPtwvc3dPTIx06ziZkkyvY0FnoW5l+ng7guAWnpAI5w4MkP6yy0GQy+dTU1JToGm19sqKi4kBjY+PftmwRYn1ErEOq4+i2tLW1DagsNGgKNv+p6tj595nJxUbyOIF38AwipoSfnJyMqZ9SfD8jxlWV5+fnu5VX6iqgt7d3NcFeUiN0n8FbLEOoGkwdgY90dnbu7OjoeE94jG9wd1aZePRp5AOqw+9VMM+qLNRVABXKkLEWzn8S/FtbdAhnuVQE7LdVafBPq04pMYawO0OJ+6XHZkFcBQA0J1xKgyhlB0EChEWGX8RulsgjvOjEBu+5V+icWOSoFawuVwEordluG28oSCmXSs55SGSCHiXhmDzC25ghMHGbdwhJr6sAdpnyQl0FYIyoEX5CeYOuNHg/NhvGiUUxVgfV2VUAxjtqgPecp9oKoE4sNnbX9HcVgMH8nD5nAoWnKM/5ZmKyySRdq3pCmDncR4DxOwVC64eHh0OGLOcur1Vey46xUZ3IcVl5oa4OlJaWXgQwJwZyhUdGRjqE14VtSnk/mokhxnawiwUvsZmsX5u+rgKamprGMDoA5sKhRCLxpDowSpsJ8vpCj2AUPzg4uIiNfKIyNMkH6Z4hF3k+RgTYz6vVAEiKq2bsniZIC0nTtvMVMwBzoBT9tKkTHp8Ak1V8dTrOE+NgJs7VATESTH5WnVAgfHUqlXK6oHpJEI1G9zEZH/Du16leqHyS0UXBNKmeOMf5NvyislJPB8RAFz4g8IuwofLy8k319fUP1EEouw7L7mC3kUTO1nn3sb02MTFxFpsz87FfJuaH4pu5fF+reDz+DEfxkI44Q0ScSbyOpDGe1RqMBN08o+ha0L0JdeKi/6msrGwj98uZMeon1AGaSj+elr9LwK9IkO33n8cN7Hl2vp1N3PcYbUXOBbDz9bwV1/wCmXoS3+B128OPD/l2LLg8l9APXVlZKZfzfDY7ehlQv0PPQDez6zW5JJdYOXdAwHK2dGIv7GH4YtHJIvEOvvunLCHPPzl3QOLKTkl0hPbKaDUvlTU988xtwfMqQBPQ3m/4mf0yBVlDCSr/CRW0CipAMnGzb9XU1NSRvIX7kSgo++Pg9B8wltxxbHKPZgAAAABJRU5ErkJggg==&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 	
-	&lt;p&gt;
-	&lt;label for="user_Password Confirmation"&gt;Password confirmation&lt;/label&gt;
-	&lt;input type="password" name="user[password_confirmation]" id="user_password_confirmation" style="background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABKRJREFUWAnNl0tsVGUUxzvTTlslZUaCloZHY6BRFkp9sDBuqgINpaBp02dIDImwKDG6ICQ8jBYlhg0rxUBYEALTpulMgBlqOqHRDSikJkZdGG0CRqAGUuwDovQ1/s7NPTffnTu3zMxGvuT2vP7n8Z3vu+dOi4r+5xUoJH8sFquamZmpTqfTVeIfCARGQ6HQH83NzaP5xsu5gL6+vuVzc3NdJN1Kkhd8Ev1MMYni4uJjra2tt3wwLvUjCxgYGFg8Pj7+MV5dPOUub3/hX0zHIpFId0NDw6Q/jO4tZOzv76+Znp6+AOb5TBw7/YduWC2Hr4J/IhOD/GswGHy7vb39tyw2S+VbAC1/ZXZ29hKoiOE8RrIvaPE5WvyjoS8CX8sRvYPufYpZYtjGS0pKNoD/wdA5bNYCCLaMYMMEWq5IEn8ZDof3P6ql9pF9jp8cma6bFLGeIv5ShdISZUzKzqPIVnISp3l20caTJsaPtwvc3dPTIx06ziZkkyvY0FnoW5l+ng7guAWnpAI5w4MkP6yy0GQy+dTU1JToGm19sqKi4kBjY+PftmwRYn1ErEOq4+i2tLW1DagsNGgKNv+p6tj595nJxUbyOIF38AwipoSfnJyMqZ9SfD8jxlWV5+fnu5VX6iqgt7d3NcFeUiN0n8FbLEOoGkwdgY90dnbu7OjoeE94jG9wd1aZePRp5AOqw+9VMM+qLNRVABXKkLEWzn8S/FtbdAhnuVQE7LdVafBPq04pMYawO0OJ+6XHZkFcBQA0J1xKgyhlB0EChEWGX8RulsgjvOjEBu+5V+icWOSoFawuVwEordluG28oSCmXSs55SGSCHiXhmDzC25ghMHGbdwhJr6sAdpnyQl0FYIyoEX5CeYOuNHg/NhvGiUUxVgfV2VUAxjtqgPecp9oKoE4sNnbX9HcVgMH8nD5nAoWnKM/5ZmKyySRdq3pCmDncR4DxOwVC64eHh0OGLOcur1Vey46xUZ3IcVl5oa4OlJaWXgQwJwZyhUdGRjqE14VtSnk/mokhxnawiwUvsZmsX5u+rgKamprGMDoA5sKhRCLxpDowSpsJ8vpCj2AUPzg4uIiNfKIyNMkH6Z4hF3k+RgTYz6vVAEiKq2bsniZIC0nTtvMVMwBzoBT9tKkTHp8Ak1V8dTrOE+NgJs7VATESTH5WnVAgfHUqlXK6oHpJEI1G9zEZH/Du16leqHyS0UXBNKmeOMf5NvyislJPB8RAFz4g8IuwofLy8k319fUP1EEouw7L7mC3kUTO1nn3sb02MTFxFpsz87FfJuaH4pu5fF+reDz+DEfxkI44Q0ScSbyOpDGe1RqMBN08o+ha0L0JdeKi/6msrGwj98uZMeon1AGaSj+elr9LwK9IkO33n8cN7Hl2vp1N3PcYbUXOBbDz9bwV1/wCmXoS3+B128OPD/l2LLg8l9APXVlZKZfzfDY7ehlQv0PPQDez6zW5JJdYOXdAwHK2dGIv7GH4YtHJIvEOvvunLCHPPzl3QOLKTkl0hPbKaDUvlTU988xtwfMqQBPQ3m/4mf0yBVlDCSr/CRW0CipAMnGzb9XU1NSRvIX7kSgo++Pg9B8wltxxbHKPZgAAAABJRU5ErkJggg==&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"&gt;
-	&lt;/p&gt;
+	<span class="nt">&lt;p&gt;</span>
+	<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"user_Password Confirmation"</span><span class="nt">&gt;</span>Password confirmation<span class="nt">&lt;/label&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"user[password_confirmation]"</span> <span class="na">id=</span><span class="s">"user_password_confirmation"</span> <span class="na">style=</span><span class="s">"background-image: url(&amp;quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABKRJREFUWAnNl0tsVGUUxzvTTlslZUaCloZHY6BRFkp9sDBuqgINpaBp02dIDImwKDG6ICQ8jBYlhg0rxUBYEALTpulMgBlqOqHRDSikJkZdGG0CRqAGUuwDovQ1/s7NPTffnTu3zMxGvuT2vP7n8Z3vu+dOi4r+5xUoJH8sFquamZmpTqfTVeIfCARGQ6HQH83NzaP5xsu5gL6+vuVzc3NdJN1Kkhd8Ev1MMYni4uJjra2tt3wwLvUjCxgYGFg8Pj7+MV5dPOUub3/hX0zHIpFId0NDw6Q/jO4tZOzv76+Znp6+AOb5TBw7/YduWC2Hr4J/IhOD/GswGHy7vb39tyw2S+VbAC1/ZXZ29hKoiOE8RrIvaPE5WvyjoS8CX8sRvYPufYpZYtjGS0pKNoD/wdA5bNYCCLaMYMMEWq5IEn8ZDof3P6ql9pF9jp8cma6bFLGeIv5ShdISZUzKzqPIVnISp3l20caTJsaPtwvc3dPTIx06ziZkkyvY0FnoW5l+ng7guAWnpAI5w4MkP6yy0GQy+dTU1JToGm19sqKi4kBjY+PftmwRYn1ErEOq4+i2tLW1DagsNGgKNv+p6tj595nJxUbyOIF38AwipoSfnJyMqZ9SfD8jxlWV5+fnu5VX6iqgt7d3NcFeUiN0n8FbLEOoGkwdgY90dnbu7OjoeE94jG9wd1aZePRp5AOqw+9VMM+qLNRVABXKkLEWzn8S/FtbdAhnuVQE7LdVafBPq04pMYawO0OJ+6XHZkFcBQA0J1xKgyhlB0EChEWGX8RulsgjvOjEBu+5V+icWOSoFawuVwEordluG28oSCmXSs55SGSCHiXhmDzC25ghMHGbdwhJr6sAdpnyQl0FYIyoEX5CeYOuNHg/NhvGiUUxVgfV2VUAxjtqgPecp9oKoE4sNnbX9HcVgMH8nD5nAoWnKM/5ZmKyySRdq3pCmDncR4DxOwVC64eHh0OGLOcur1Vey46xUZ3IcVl5oa4OlJaWXgQwJwZyhUdGRjqE14VtSnk/mokhxnawiwUvsZmsX5u+rgKamprGMDoA5sKhRCLxpDowSpsJ8vpCj2AUPzg4uIiNfKIyNMkH6Z4hF3k+RgTYz6vVAEiKq2bsniZIC0nTtvMVMwBzoBT9tKkTHp8Ak1V8dTrOE+NgJs7VATESTH5WnVAgfHUqlXK6oHpJEI1G9zEZH/Du16leqHyS0UXBNKmeOMf5NvyislJPB8RAFz4g8IuwofLy8k319fUP1EEouw7L7mC3kUTO1nn3sb02MTFxFpsz87FfJuaH4pu5fF+reDz+DEfxkI44Q0ScSbyOpDGe1RqMBN08o+ha0L0JdeKi/6msrGwj98uZMeon1AGaSj+elr9LwK9IkO33n8cN7Hl2vp1N3PcYbUXOBbDz9bwV1/wCmXoS3+B128OPD/l2LLg8l9APXVlZKZfzfDY7ehlQv0PPQDez6zW5JJdYOXdAwHK2dGIv7GH4YtHJIvEOvvunLCHPPzl3QOLKTkl0hPbKaDUvlTU988xtwfMqQBPQ3m/4mf0yBVlDCSr/CRW0CipAMnGzb9XU1NSRvIX7kSgo++Pg9B8wltxxbHKPZgAAAABJRU5ErkJggg==&amp;quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/p&gt;</span>
 	
 
-	&lt;input type="submit" name="commit" value="Sign Up" data-disable-with="Sign Up"&gt;
-&lt;/form&gt;
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">name=</span><span class="s">"commit"</span> <span class="na">value=</span><span class="s">"Sign Up"</span> <span class="na">data-disable-with=</span><span class="s">"Sign Up"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
 </code></pre></div></div>
 <p>Holy crap, that is alot of HTML! Gives us some awesome freebies like:</p>
 <ul>
@@ -165,28 +189,28 @@ So, let’s build a sign up form:</p>
 <p>Here are a few of my favorite methods:</p>
 
 <p>checkboxes:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= f.check_box :status, :class =&gt; "toggle", :checked =&gt; true  %&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">check_box</span> <span class="na">:status</span><span class="err">,</span> <span class="na">:class =</span><span class="err">&gt; </span><span class="s">"toggle"</span><span class="err">,</span> <span class="na">:checked =</span><span class="err">&gt; </span><span class="s">true</span>  <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>collection of checkboxes:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= f.collection_check_boxes :id, User.all, :id, :username do |b| %&gt;
-	  &lt;p&gt;
-	  &lt;%= b.label class: "Whatever" %&gt;
-	  &lt;%= b.check_box %&gt;
-	  &lt;/p&gt;
-	&lt;% end %&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">collection_check_boxes</span> <span class="na">:id</span><span class="err">,</span> <span class="na">User</span><span class="err">.</span><span class="na">all</span><span class="err">,</span> <span class="na">:id</span><span class="err">,</span> <span class="na">:username</span> <span class="na">do</span> <span class="err">|</span><span class="na">b</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;p&gt;</span>
+	  <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">b</span><span class="err">.</span><span class="na">label</span> <span class="na">class:</span> <span class="err">"</span><span class="na">Whatever</span><span class="err">"</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">b</span><span class="err">.</span><span class="na">check_box</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>dropdown menus:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= f.collection_check_boxes :id, User.all, :id, :username do |b| %&gt;
-	  &lt;p&gt;
-	  &lt;%= b.label class: "Whatever" %&gt;
-	  &lt;%= b.check_box %&gt;
-	  &lt;/p&gt;
-	&lt;% end %&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">collection_check_boxes</span> <span class="na">:id</span><span class="err">,</span> <span class="na">User</span><span class="err">.</span><span class="na">all</span><span class="err">,</span> <span class="na">:id</span><span class="err">,</span> <span class="na">:username</span> <span class="na">do</span> <span class="err">|</span><span class="na">b</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;p&gt;</span>
+	  <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">b</span><span class="err">.</span><span class="na">label</span> <span class="na">class:</span> <span class="err">"</span><span class="na">Whatever</span><span class="err">"</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">b</span><span class="err">.</span><span class="na">check_box</span> <span class="err">%</span><span class="nt">&gt;</span>
+	  <span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>ability to create nested resources for an entire different model:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= f.fields_for @post do |b| %&gt;
-	&lt;% b.text_area :content %&gt;
-&lt;% end %&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%=</span> <span class="na">f</span><span class="err">.</span><span class="na">fields_for</span> <span class="err">@</span><span class="na">post</span> <span class="na">do</span> <span class="err">|</span><span class="na">b</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;</span><span class="err">%</span> <span class="na">b</span><span class="err">.</span><span class="na">text_area</span> <span class="na">:content</span> <span class="err">%</span><span class="nt">&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p>Will need to send an instance of that <code class="highlighter-rouge">@post</code> though:</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">new</span>
@@ -197,13 +221,13 @@ So, let’s build a sign up form:</p>
 </code></pre></div></div>
 
 <p>Basically params will give you a double nested resource, which you can use to create a new user and a post in the same form:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>params = {
-	:user =&gt; {
-		:username =&gt; "CooolUsername"
-		:password =&gt; "password"
-		:post =&gt; {:content =&gt; "what ever was entered into the text area above"}
-	}
-}
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="ss">:user</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="ss">:username</span> <span class="o">=&gt;</span> <span class="s2">"CooolUsername"</span>
+		<span class="ss">:password</span> <span class="o">=&gt;</span> <span class="s2">"password"</span>
+		<span class="ss">:post</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:content</span> <span class="o">=&gt;</span> <span class="s2">"what ever was entered into the text area above"</span><span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>It will also automatically know if your are creating a new object, via a post request, or updating an object, and will automagically make it a patch request. Cool!</p>
@@ -225,6 +249,8 @@ So, let’s build a sign up form:</p>
 
 <p>Thanks for reading!!</p>
 
+	</div>
+</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.js"

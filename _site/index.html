@@ -34,13 +34,15 @@
 			href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
 		/>
 
-		<link type="application/atom+xml" rel="alternate" href="/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Home</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/","headline":"Home","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
@@ -49,7 +51,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>nic travis codes</title>
+		<title>nic travis</title>
 	</head>
 	<body>
 		<main>
@@ -138,14 +140,14 @@
 		</div>
 	</div>
 	<div class="flex-container">
-		<div>
+		<div class="slide-in-left">
 			<img id="myPicture" src="assets/images/me.jpeg" />
 			<h2>Who am I?</h2>
 			<p>
 				I am a driven full-stack dev with a passion for the creative process.
 			</p>
 		</div>
-		<div class="flex-graph-container">
+		<div class="flex-graph-container slide-in-right">
 	
 	<div class="bar-container">
 		<div class="lang-name">HTML</div>
@@ -278,7 +280,7 @@
 		
 		<a href="https://commentslab.com" target="_blank" class="button-wrapper">
 			<i class="fas fa-external-link-alt"></i>
-			<span>Live Site</span>
+			<span>Visit Site</span>
 		</a>
 		
 	</div>
@@ -340,97 +342,77 @@
 			<section id="blog">
 				<h1>Blog</h1>
 <div class="blog-container">
-	
+	<div class="blog-section-flex-container">
+		
 
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-10-04.jpg" />
-		<h2><a href="/react_redux_final_project">React Redux Final Project</a></h2>
-		<p><p>This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’t wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.</p>
+		<div class="post-box-container">
+			<a href="/react_redux_final_project">
+				<img class="post-image" src="assets/images/2018-10-04.jpg" />
+				<div class="text-container">
+					<h3 class="post-title">React Redux Final Project</h3>
+					<hr />
+					<span class="post-date">04 Oct 2018</span>
+					<p class="post-excerpt"><p>This is my final blog post as student of Flatiron School! It’s been an incredible journey, learned a ton, and can’...</p>
+				</div>
+			</a>
+		</div>
 
-</p>
+		
+
+		<div class="post-box-container">
+			<a href="/rails_with_js_frontend_project">
+				<img class="post-image" src="assets/images/2018-09-18.jpg" />
+				<div class="text-container">
+					<h3 class="post-title">Rails & JS</h3>
+					<hr />
+					<span class="post-date">18 Sep 2018</span>
+					<p class="post-excerpt"><p>This project was super fun. I am now a full believer in the fluidity and grace of jQuery. Having to do all those x...</p>
+				</div>
+			</a>
+		</div>
+
+		
+
+		<div class="post-box-container">
+			<a href="/my_favorite_way_to_serialize_json_in_rails">
+				<img class="post-image" src="assets/images/2018-09-16.jpg" />
+				<div class="text-container">
+					<h3 class="post-title">JSON & Rails</h3>
+					<hr />
+					<span class="post-date">16 Sep 2018</span>
+					<p class="post-excerpt"><p>There are a few ways to do this: to_json, fast_jsonapi is a new one, but my favorite is action_model_serializer. W...</p>
+				</div>
+			</a>
+		</div>
+
+		
+
+		<div class="post-box-container">
+			<a href="/my_rails_project">
+				<img class="post-image" src="assets/images/2018-05-29.jpg" />
+				<div class="text-container">
+					<h3 class="post-title">My Rails Project</h3>
+					<hr />
+					<span class="post-date">29 May 2018</span>
+					<p class="post-excerpt"><h3 id="student-profile-pages">Student Profile Pages</h3>
+
+<p>I decided to make project that would interface with the...</p>
+				</div>
+			</a>
+		</div>
+
+		
 	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-09-18.jpg" />
-		<h2><a href="/rails_with_js_frontend_project">Rails with JS Frontend Project</a></h2>
-		<p><h3 id="jquery-to-the-rescue">jQuery to the rescue</h3>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-09-16.jpg" />
-		<h2><a href="/my_favorite_way_to_serialize_json_in_rails">My Favorite way to serialize JSON in Rails</a></h2>
-		<p><h2 id="action-model-serializer">Action Model Serializer</h2>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-05-29.jpg" />
-		<h2><a href="/my_rails_project">My Rails Project</a></h2>
-		<p><h3 id="student-profile-pages">Student Profile Pages</h3>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-05-10.jpg" />
-		<h2><a href="/the_form_for_helper">The form_for helper</a></h2>
-		<p><p>This is a great form building method, one of the many awesome ActionView::Helper objects. Ideal for interfacing with RESTful routes, and nested resources. It will wrap around an instance of a Model object, and give all kinds of useful methods for quickly generating otherwise lengthy HTML, and have all kinds of cool shortcuts since it is directly referencing a model. I will be using pry, a simple ruby gem that bounces into console at a given point. So, first a little setup:</p>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-03-12.jpg" />
-		<h2><a href="/create_a_sinatra_application_from_scratch">Create A Sinatra Application from Scratch</a></h2>
-		<p><h2 id="just-follow-the-steps">Just follow the steps!</h2>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-02-16.jpg" />
-		<h2><a href="/creating_the_cli_gem_application">Creating a CLI Gem Application</a></h2>
-		<p><p>The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.</p>
-
-</p>
-	</div>
-
-	
-
-	<div class="post-container">
-		<img class="post-image" src="assets/images/2018-02-15.jpg" />
-		<h2><a href="/why_i_am_becoming_a_web_developer">Why I am Becoming a Web Developer</a></h2>
-		<p><p>It’s pretty simple, I enjoy it. I enjoy the problem solving, the ability to build stuff, and the vibe of the communities that surround it. And coffee…I really enjoy coffee, so that helps.</p>
-
-<p>I worked as a professional musician in NYC for years. Played all over the area, did some touring, and thought to myself, what other skills could I hone during the day and while on the road? So, I started some coding tutorials online, initially HTML, CSS, and then some Javascript, Python, even a bit of C. I started to realize, I actually enjoy doing this. (My story is not that uncommon, a lot of people have found music and coding to utilize similar neurological skills…hmm, next blog post maybe?)</p>
-
-<p>I completed CS50, a free Intro to Computer Science course offered by Harvard, and was hooked, hungry for the next thing. I applied to Flatiron’s Online Web Development Program and was accepted. I have been in the program now for about 2 weeks, as of this post, and am excited for what lies ahead! Thanks for reading!</p>
-
-</p>
-	</div>
-
-	
+	<a href="/blog" class="button-wrapper">
+		<span>See More</span>
+	</a>
 </div>
 
 			</section>
 			<section id="contact">
 				<div class="contact-container">
 	<h1>Contact</h1>
+	<p class="small-text">Would you like to get in touch?</p>
 	<div class="contact-form-container">
 		<form
 			id="contact-form"
