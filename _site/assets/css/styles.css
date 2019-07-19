@@ -235,6 +235,7 @@ div.blog-container {
       border: 3px solid transparent;
       margin: 5px;
       width: 260px;
+      height: 300px;
       overflow: hidden;
       border-radius: 10px;
       background-color: #f7f7f7; }
@@ -251,14 +252,14 @@ div.blog-container {
           padding: 8px; }
           div.blog-container div.blog-section-flex-container div.post-box-container a div.text-container span.post-date {
             color: grey; }
-      div.blog-container div.blog-section-flex-container div.post-box-container:hover {
-        border: 3px solid #e31b6d; }
+      div.blog-container div.blog-section-flex-container div.post-box-container:hover a div.text-container h3 {
+        color: #00a1a7; }
   div.blog-container a.button-wrapper {
+    display: block;
+    margin: 5px auto;
     background-color: #e31b6d;
     color: #fff;
     padding: 10px;
-    float: right;
-    margin: 10px;
     width: 100px; }
     div.blog-container a.button-wrapper span {
       color: #fff; }
@@ -272,7 +273,6 @@ div.blog-container {
         transition: color 0.5s ease; }
 
 div#all-posts-container {
-  border: 1px solid black;
   width: 80%;
   margin: 20px auto; }
   div#all-posts-container ul {
@@ -432,7 +432,7 @@ div#post-container {
   width: 80%;
   margin: 20px auto;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background-color: #f7f7f7; }
   div#post-container p.post-date {

@@ -6,9 +6,6 @@ permalink:  my_rails_project
 excerpt_separator: <!--more-->
 ---
 
-
-### Student Profile Pages
-
 I decided to make project that would interface with the popular educational software, PowerSchool, and add some special functionality that many schools ask for from the software. It basically displays student profiles, and acts as a dashboard for school administrators.
 <!--more--> It provides data visualizations for grades and behavior traits, and allow users to add comments as they review the students progress. I utilized a JavaScript chart library, Charts.js, in order to provide some nice dynamic and animated visual representations of data. 
 

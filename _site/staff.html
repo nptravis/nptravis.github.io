@@ -53,7 +53,7 @@
 	
 </ul>
 
-		<script
+		<!-- <script
 			src="https://code.jquery.com/jquery-3.4.1.js"
 			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			crossorigin="anonymous"
@@ -63,12 +63,20 @@
 		<script
 			type="text/javascript"
 			src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
-		></script>
+		></script> -->
 		<!-- <script
 			type="text/javascript"
 			src="assets/slick/slick-1.8.1/slick/slick.min.js"
 		></script> -->
 
-		<script src="assets/js/index.js"></script>
+		<!-- <script src="assets/js/index.js"></script> -->
+		<script data-main="scripts/config" src="scripts/require.js"></script>
+		<script type="text/javascript">
+			require(["config"], function() {
+				require(['index'], function(){
+					console.log('all js loaded')
+				})
+			});
+		</script>
 	</body>
 </html>

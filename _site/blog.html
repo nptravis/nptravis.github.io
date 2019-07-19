@@ -60,7 +60,7 @@
 </nav>
 
 <div id="all-posts-container">
-	<h1>All Posts</h1>
+	<h1>All Blog Posts</h1>
 	<ul>
 		
 		<li class="post-li">
@@ -117,9 +117,7 @@
 			</div> -->
 			<div class="text-div">
 				<h2><a href="/my_rails_project">My Rails Project</a></h2>
-				<!-- <p><h3 id="student-profile-pages">Student Profile Pages</h3>
-
-<p>I decided to make project that would interface with the popular educational software, PowerSchool, and add some special functionality that many schools ask for from the software. It basically displays student profiles, and acts as a dashboard for school administrators.</p>
+				<!-- <p><p>I decided to make project that would interface with the popular educational software, PowerSchool, and add some special functionality that many schools ask for from the software. It basically displays student profiles, and acts as a dashboard for school administrators.</p>
 
 </p> -->
 			</div>
@@ -188,7 +186,7 @@
 	</ul>
 </div>
 
-		<script
+		<!-- <script
 			src="https://code.jquery.com/jquery-3.4.1.js"
 			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			crossorigin="anonymous"
@@ -198,12 +196,20 @@
 		<script
 			type="text/javascript"
 			src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
-		></script>
+		></script> -->
 		<!-- <script
 			type="text/javascript"
 			src="assets/slick/slick-1.8.1/slick/slick.min.js"
 		></script> -->
 
-		<script src="assets/js/index.js"></script>
+		<!-- <script src="assets/js/index.js"></script> -->
+		<script data-main="scripts/config" src="scripts/require.js"></script>
+		<script type="text/javascript">
+			require(["config"], function() {
+				require(['index'], function(){
+					console.log('all js loaded')
+				})
+			});
+		</script>
 	</body>
 </html>

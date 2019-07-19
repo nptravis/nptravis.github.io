@@ -13,6 +13,7 @@ div.blog-container {
 			border: 3px solid transparent;
 			margin: 5px;
 			width: 260px;
+			height: 300px;
 
 			overflow: hidden;
 
@@ -33,7 +34,7 @@ div.blog-container {
 				div.text-container {
 					text-align: left;
 					padding: 8px;
-					h2.post-title {
+					h3.post-title {
 					}
 
 					span.post-date {
@@ -44,17 +45,20 @@ div.blog-container {
 					}
 				}
 			}
+
 			&:hover {
-				border: 3px solid $red;
+				a div.text-container h3 {
+					color: $aqua;
+				}
 			}
 		}
 	}
 	a.button-wrapper {
+		display: block;
+		margin: 5px auto;
 		background-color: $red;
 		color: $white;
 		padding: 10px;
-		float: right;
-		margin: 10px;
 		width: 100px;
 
 		span {

@@ -1,59 +1,29 @@
-$(document).ready(function() {
+(function(){
+
+define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], function($, $ui, modal, slick, scrollAnimations){
+
 	console.log("Dom Loaded");
 
 	// Variables and State /////////////////////////////////////////
+	
+	// $(".slide-in-left").hide();
+	// $(".slide-in-right").hide();
+	// $(".fade-in-text").hide();
+
 	var navPos = $("nav").position().top;
-	var lastPos = 0;
-	var lockTimer;
-	$(".slide-in-left").hide();
-	$(".slide-in-right").hide();
-	$(".fade-in-text").hide();
-
-	// fetch data /////////////////////////////////////////////////
-
-	// fetch("https://api.github.com/users/nptravis/repos?sort=updated", {
-	// 	method: "get",
-	// 	headers: {
-	// 		Accept: "application/json",
-	// 		"Content-Type": "application/json"
-	// 	}
-	// })
-	// 	.then(response => response.json())
-	// 	.then(data => {
-	// 		$("#github-repos").append(
-	// 			data.map(repo => {
-	// 				return `<ul>
-	// 			<li>${repo.name}</li>
-	// 		</ul>`;
-	// 			})
-	// 		);
-	// 	})
-	// 	.catch(err => err);
-
-	// event listeners //////////////////////////////////////////////////////////////
-
-	$("#test").click(function() {
-		$(this).toggle("drop");
-	});
-
-	window.addEventListener("scroll", function(e) {
+		var lastPos = 0;
+		var lockTimer;
+		
+		window.addEventListener("scroll", function(e) {
 		var pos = $(window).scrollTop();
 		var pos2 = pos + 50;
 		var scrollBottom = pos + $(window).height();
 
 		if (pos > navPos + $("nav").height() && lastPos < pos) {
 			if (!$("nav").hasClass("fixed")) {
-				$("nav").addClass("fixed");
-				growAnimation($("nav"));
-				$("#about").css({
-					marginTop: 50
-				});
-				$("#all-posts-container").css({
-					marginTop: 70
-				});
-				$("#post-container").css({
-					marginTop: 70
-				});
+				scrollAnimations.navFixAndGrow()
+				
+				
 				flyIn();
 			}
 		}
@@ -106,20 +76,37 @@ $(document).ready(function() {
 		lastPos = pos;
 	});
 
+	// fetch data /////////////////////////////////////////////////
+
+	// fetch("https://api.github.com/users/nptravis/repos?sort=updated", {
+	// 	method: "get",
+	// 	headers: {
+	// 		Accept: "application/json",
+	// 		"Content-Type": "application/json"
+	// 	}
+	// })
+	// 	.then(response => response.json())
+	// 	.then(data => {
+	// 		$("#github-repos").append(
+	// 			data.map(repo => {
+	// 				return `<ul>
+	// 			<li>${repo.name}</li>
+	// 		</ul>`;
+	// 			})
+	// 		);
+	// 	})
+	// 	.catch(err => err);
+
+	// event listeners //////////////////////////////////////////////////////////////
+
+	$("#test").click(function() {
+		$(this).toggle("drop");
+	});
+
+	
 	function highlight(idName) {
 		$("nav a.active").removeClass("active");
 		$(idName).addClass("active");
-	}
-
-	function growAnimation($element) {
-		console.log("grow!");
-		$element.height(0);
-		$element.animate(
-			{
-				height: 50
-			},
-			700
-		);
 	}
 
 	function flyOut() {
@@ -298,6 +285,27 @@ $(document).ready(function() {
 		}
 	);
 
+	$(".post-box-container").hover(
+		function() {
+			$(this)
+				.siblings()
+				.animate(
+					{
+						opacity: 0.2
+					},
+					200
+				);
+		},
+		function() {
+			$(this)
+				.parent()
+				.children()
+				.css({
+					opacity: 1
+				});
+		}
+	);
+
 	// $(".social-icon-container").hover(
 	// 	function() {
 	// 		$(this).effect("bounce", { direction: "up" }, 200);
@@ -341,3 +349,4 @@ $(document).ready(function() {
 		slidesToScroll: 1
 	});
 });
+})();
