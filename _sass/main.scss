@@ -73,16 +73,11 @@ nav {
 }
 
 section {
-	min-height: 100vh;
+	
 	text-align: center;
-	padding-top: 30vh;
+	padding-top: 10vh;
+	padding-bottom: 5vh;
 	// overflow: hidden;
-
-	div.container {
-		width: 80%;
-		margin: 0 auto;
-		text-align: center;
-	}
 
 	&#home {
 		background-image: url("/assets/images/stars.jpg");
@@ -130,7 +125,7 @@ i {
 }
 
 div.header-bar {
-	margin: 0 auto;
+	margin: 10px auto 40px auto;
 	height: 4px;
 	background-color: $black;
 	width: 100px;

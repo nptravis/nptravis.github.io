@@ -5,6 +5,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	var isMobile;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
    isMobile = true;
+   $('#isMobile').append("<h1>This is a mobile device.</h1>")
  }
 
 	console.log("Dom Loaded");
@@ -61,11 +62,14 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		// END Navbar highlighting /////////////////////////////////
 
 		// BEGIN Scroll Animations /////////////////////////////////////
-		if(pos >= $("#about").offset().top){
+		if(pos >= $("#about").offset().top - $("#about").offset().top/3 ){
 			if($("#about-header").is(':hidden')){
 				scrollAnimations.slideInHeader($("#about-header"), $('#about-header-bar'))
-				scrollAnimations.showIcons($(".icon-container"),$(".icon-text") )
 			}
+		}
+
+		if(pos >= $("#about").offset().top - $("#about").offset().top/6){
+			scrollAnimations.showIcons($(".icon-container"), $('.icon-text'))
 		}
 
 		if(pos >= $("#about").offset().top + 150 && $("#my-picture-container").css('opacity') == 0){
@@ -75,30 +79,30 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 			
 		}
 
-		if(pos >= $("#projects").offset().top - navHeight){
+		if(pos >= $("#projects").offset().top - $("#about").offset().top/3){
 			if($("#project-header").is(':hidden')){
 				scrollAnimations.slideInHeader($("#project-header"), $('#project-header-bar'))
 				
 			}
 		}
 
-		if(pos >= $("#projects").offset().top + 150 && $(".project-box").css('opacity') == 0){
+		if(pos >= $("#projects").offset().top - $("#about").offset().top/6 && $(".project-box").css('opacity') == 0){
 				scrollAnimations.showProjects($('.project-box'))
 		}
 
-		if(pos >= $("#blog").offset().top - navHeight){
+		if(pos >= $("#blog").offset().top - $("#about").offset().top/3){
 			if($("#blog-header").is(':hidden')){
 				scrollAnimations.slideInHeader($("#blog-header"), $('#blog-header-bar'))
 			
 			}
 		}
 
-		if(pos >= $("#blog").offset().top + 150 && $(".post-box-container").css('opacity') == 0){
+		if(pos >= $("#blog").offset().top - $("#about").offset().top/6 && $(".post-box-container").css('opacity') == 0){
 			scrollAnimations.showBlogPosts($('.post-box-container'))
 		}
 
 
-		if(pos >= $("#contact").offset().top - navHeight){
+		if(pos >= $("#contact").offset().top - $("#about").offset().top/3){
 			if($("#contact-header").is(':hidden')){
 				scrollAnimations.slideInHeader($("#contact-header"), $('#contact-header-bar'))
 				scrollAnimations.growAndShrink($('.contact-form-container'))
@@ -125,24 +129,6 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 
 	// fetch data /////////////////////////////////////////////////
 
-	// fetch("https://api.github.com/users/nptravis/repos?sort=updated", {
-	// 	method: "get",
-	// 	headers: {
-	// 		Accept: "application/json",
-	// 		"Content-Type": "application/json"
-	// 	}
-	// })
-	// 	.then(response => response.json())
-	// 	.then(data => {
-	// 		$("#github-repos").append(
-	// 			data.map(repo => {
-	// 				return `<ul>
-	// 			<li>${repo.name}</li>
-	// 		</ul>`;
-	// 			})
-	// 		);
-	// 	})
-	// 	.catch(err => err);
 
 	// navbar listeners //////////////////////////////////////////////////////////
 
@@ -235,26 +221,26 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		}
 	);
 
-	$(".post-box-container").hover(
-		function() {
-			$(this)
-				.siblings()
-				.animate(
-					{
-						opacity: 0.2
-					},
-					200
-				);
-		},
-		function() {
-			$(this)
-				.parent()
-				.children()
-				.css({
-					opacity: 1
-				});
-		}
-	);
+	// $(".post-box-container").hover(
+	// 	function() {
+	// 		$(this)
+	// 			.siblings()
+	// 			.animate(
+	// 				{
+	// 					opacity: 0.2
+	// 				},
+	// 				200
+	// 			);
+	// 	},
+	// 	function() {
+	// 		$(this)
+	// 			.parent()
+	// 			.children()
+	// 			.css({
+	// 				opacity: 1
+	// 			});
+	// 	}
+	// );
 
 	// $(".social-icon-container").hover(
 	// 	function() {

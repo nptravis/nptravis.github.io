@@ -58,13 +58,9 @@ nav {
   z-index: 1; }
 
 section {
-  min-height: 100vh;
   text-align: center;
-  padding-top: 30vh; }
-  section div.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center; }
+  padding-top: 10vh;
+  padding-bottom: 5vh; }
   section#home {
     background-image: url("/assets/images/stars.jpg");
     background-repeat: no-repeat;
@@ -94,7 +90,7 @@ i {
   fill: #fff; }
 
 div.header-bar {
-  margin: 0 auto;
+  margin: 10px auto 40px auto;
   height: 4px;
   background-color: #262f38;
   width: 100px; }
@@ -124,6 +120,11 @@ div.header-bar {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
     opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -146,15 +147,20 @@ div.header-bar {
     transform: translateY(0); } }
 @keyframes growAndShrink {
   0% {
-    transform: scale(0.5); }
+    transform: scale(0.5);
+    opacity: 0; }
   25% {
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    opacity: 1; }
   50% {
-    transform: scale(0.75); }
+    transform: scale(0.75);
+    opacity: .25; }
   75% {
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    opacity: .75; }
   100% {
-    transform: scale(1); } }
+    transform: scale(1);
+    opacity: 1; } }
 .animated.flip-in-x {
   animation: flipInX 0.75s cubic-bezier(0.4, 0, 1, 1) both; }
 
@@ -369,49 +375,48 @@ div#all-posts-container {
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
 /* RGB */
-div#contact-header-bar {
-  color: #fff; }
-
 div.contact-container {
   height: 100vh;
   color: #fff;
   position: relative; }
   div.contact-container p.small-text {
     color: #04c2c9; }
-  div.contact-container div.contact-form-container form#contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    margin: 0 auto; }
-    div.contact-container div.contact-form-container form#contact-form input[type="text"],
-    div.contact-container div.contact-form-container form#contact-form textarea {
-      color: #fff;
-      flex: 1;
-      border: none;
-      padding: 0;
-      margin: 0;
-      background-color: #1b242f;
-      padding: 5px;
-      font-size: 1em; }
-    div.contact-container div.contact-form-container form#contact-form input[type="text"] {
-      min-height: 40px;
-      margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form#contact-form textarea {
-      min-height: 200px;
-      margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
-      background-color: transparent;
-      border: 3px solid #fff;
-      color: #fff;
-      height: 40px;
-      width: 33%;
-      font-size: 1em;
-      margin-left: 67%; }
-      div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
-        transition: background-color 1s ease, border-color 1s ease;
-        background-color: #04c2c9;
-        border-color: #04c2c9;
-        cursor: pointer; }
+  div.contact-container div.contact-form-container {
+    opacity: 0; }
+    div.contact-container div.contact-form-container form#contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin: 0 auto; }
+      div.contact-container div.contact-form-container form#contact-form input[type="text"],
+      div.contact-container div.contact-form-container form#contact-form textarea {
+        color: #fff;
+        flex: 1;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: #1b242f;
+        padding: 5px;
+        font-size: 1em; }
+      div.contact-container div.contact-form-container form#contact-form input[type="text"] {
+        min-height: 40px;
+        margin-bottom: 3px; }
+      div.contact-container div.contact-form-container form#contact-form textarea {
+        min-height: 200px;
+        margin-bottom: 3px; }
+      div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
+        background-color: transparent;
+        border: 3px solid #fff;
+        color: #fff;
+        height: 40px;
+        width: 33%;
+        font-size: 1em;
+        margin-left: 67%; }
+        div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
+          transition: background-color 1s ease, border-color 1s ease;
+          background-color: #04c2c9;
+          border-color: #04c2c9;
+          cursor: pointer; }
 
 div.footer {
   position: absolute;
@@ -481,6 +486,12 @@ img#myPicture {
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
   width: 200px;
   height: 200px; }
+
+div.about-container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center; }
 
 div.flex {
   display: flex;

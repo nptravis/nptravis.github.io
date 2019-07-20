@@ -1,8 +1,5 @@
 @import "./palette.scss";
 
-div#contact-header-bar {
-	color: $white;
-}
 div.contact-container {
 	height: 100vh;
 	color: $white;
@@ -13,6 +10,7 @@ div.contact-container {
 	}
 
 	div.contact-form-container {
+		opacity: 0;
 		form#contact-form {
 			display: flex;
 			flex-direction: column;

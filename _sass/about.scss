@@ -12,6 +12,13 @@ img#myPicture {
 	height: 200px;
 }
 
+div.about-container {
+	height: 100%;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
 div.flex {
 	display: flex;
 	flex-wrap: wrap;
