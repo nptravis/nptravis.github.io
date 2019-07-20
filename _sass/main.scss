@@ -73,11 +73,10 @@ nav {
 }
 
 section {
-	
+	height: 100vh;
+	width: 100%;
 	text-align: center;
-	padding-top: 10vh;
-	padding-bottom: 5vh;
-	// overflow: hidden;
+	overflow: hidden;
 
 	&#home {
 		background-image: url("/assets/images/stars.jpg");
@@ -85,7 +84,6 @@ section {
 		background-size: cover;
 		align-items: center;
 		justify-content: center;
-		
 	}
 
 	&#about {

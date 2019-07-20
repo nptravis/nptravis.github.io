@@ -58,9 +58,10 @@ nav {
   z-index: 1; }
 
 section {
+  height: 100vh;
+  width: 100%;
   text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 5vh; }
+  overflow: hidden; }
   section#home {
     background-image: url("/assets/images/stars.jpg");
     background-repeat: no-repeat;
@@ -334,8 +335,10 @@ div.blog-container {
           padding: 8px; }
           div.blog-container div.blog-section-flex-container div.post-box-container a div.text-container span.post-date {
             color: grey; }
-      div.blog-container div.blog-section-flex-container div.post-box-container:hover a div.text-container h3 {
-        color: #00a1a7; }
+      div.blog-container div.blog-section-flex-container div.post-box-container:hover {
+        border: 3px solid #00a1a7; }
+        div.blog-container div.blog-section-flex-container div.post-box-container:hover a div.text-container h3 {
+          color: #00a1a7; }
   div.blog-container a.button-wrapper {
     display: block;
     margin: 5px auto;
@@ -459,28 +462,30 @@ p.signature {
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
 /* RGB */
-div.container {
-  position: relative;
-  height: calc(100vh - 100px); }
-  div.container div.down-arrow-container {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 150px;
-    left: calc(50% - 35px);
+div.home-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; }
+  div.home-container div.home-title {
+    margin-top: 100%;
+    line-height: 70px;
+    color: #f7f7f7; }
+    div.home-container div.home-title span {
+      color: #e31b6d; }
+  div.home-container div.down-arrow-container {
+    margin: 0 auto;
     color: #e31b6d;
     background-color: transparent;
     border: 3px solid #fff;
     width: 70px;
     height: 70px;
     border-radius: 100%; }
-    div.container div.down-arrow-container:hover {
+    div.home-container div.down-arrow-container:hover {
       cursor: pointer; }
-    div.container div.down-arrow-container i {
+    div.home-container div.down-arrow-container i {
       line-height: 70px; }
-  div.container h1.home-title {
-    color: #f7f7f7; }
-    div.container h1.home-title span {
-      color: #e31b6d; }
 
 img#myPicture {
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
@@ -819,6 +824,10 @@ div.highlight {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px; } }
 @media screen and (max-width: 500px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px;
+    width: 100%; } }
+@media screen and (max-width: 350px) {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px;
     width: 100%; } }

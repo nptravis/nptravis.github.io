@@ -5,7 +5,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	var isMobile;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
    isMobile = true;
-   $('#isMobile').append(`<h1>Is this a mobile device? ${isMobile}</h1>`)
+
  }
 
 	console.log("Dom Loaded");
@@ -19,7 +19,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		window.addEventListener("scroll", function(e) {
 			var pos = $(window).scrollTop();
 			var navHeight = $("nav").height();
-			var pos2 = pos + 50;
+			var addToPosition = $("#about").offset().top;
 			var scrollBottom = pos + $(window).height();
 
 			// Navbar Positioning ///////////////////////////////////
@@ -57,47 +57,47 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 			// END Navbar highlighting /////////////////////////////////
 
 			// BEGIN Scroll Animations /////////////////////////////////////
-			if(pos >= $("#about").offset().top - $("#about").offset().top/3 ){
+			if(pos >= $("#about").offset().top - addToPosition/3 ){
 				if($("#about-header").is(':hidden')){
 					scrollAnimations.slideInHeader($("#about-header"), $('#about-header-bar'))
 				}
 			}
 
-			if(pos >= $("#about").offset().top - $("#about").offset().top/6){
+			if(pos >= $("#about").offset().top - addToPosition/6){
 				scrollAnimations.showIcons($(".icon-container"), $('.icon-text'))
 			}
 
-			if(pos >= $("#about").offset().top + 150 && $("#my-picture-container").css('opacity') == 0){
+			if(pos >= addToPosition + 150 && $("#my-picture-container").css('opacity') == 0){
 
 					scrollAnimations.showPictureAndGraph($("#my-picture-container"), $('#flex-graph-container'))
 					scrollAnimations.growGraph($('.progress-bar'))
 				
 			}
 
-			if(pos >= $("#projects").offset().top - $("#about").offset().top/3){
+			if(pos >= $("#projects").offset().top - addToPosition/3){
 				if($("#project-header").is(':hidden')){
 					scrollAnimations.slideInHeader($("#project-header"), $('#project-header-bar'))
 					
 				}
 			}
 
-			if(pos >= $("#projects").offset().top - $("#about").offset().top/6 && $(".project-box").css('opacity') == 0){
+			if(pos >= $("#projects").offset().top - addToPosition/6 && $(".project-box").css('opacity') == 0){
 					scrollAnimations.showProjects($('.project-box'))
 			}
 
-			if(pos >= $("#blog").offset().top - $("#about").offset().top/3){
+			if(pos >= $("#blog").offset().top - addToPosition/3){
 				if($("#blog-header").is(':hidden')){
 					scrollAnimations.slideInHeader($("#blog-header"), $('#blog-header-bar'))
 				
 				}
 			}
 
-			if(pos >= $("#blog").offset().top - $("#about").offset().top/6 && $(".post-box-container").css('opacity') == 0){
+			if(pos >= $("#blog").offset().top - addToPosition/6 && $(".post-box-container").css('opacity') == 0){
 				scrollAnimations.showBlogPosts($('.post-box-container'))
 			}
 
 
-			if(pos >= $("#contact").offset().top - $("#about").offset().top/3){
+			if(pos >= $("#contact").offset().top - addToPosition/3){
 				if($("#contact-header").is(':hidden')){
 					scrollAnimations.slideInHeader($("#contact-header"), $('#contact-header-bar'))
 					scrollAnimations.growAndShrink($('.contact-form-container'))
