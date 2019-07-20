@@ -1,6 +1,7 @@
 requirejs.config({
 	baseUrl: '../assets/js',
 	paths: {
+		carousel: "carousel",
 		jquerymodal: ["//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min"],
 		jqueryui: "lib/jqueryui.min",
 		jquery: "lib/jquery",

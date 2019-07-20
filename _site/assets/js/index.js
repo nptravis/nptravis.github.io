@@ -1,6 +1,8 @@
 (function(){
 
-define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], function($, $ui, modal, slick, scrollAnimations){
+define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], function($, $ui, modal, scrollAnimations, slick){
+
+	console.log('we ar here')
 
 	var isMobile;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -20,6 +22,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	$(window).scroll(function(e) {
 		var pos = $(window).scrollTop();
 		var navHeight = $("nav").height();
+		var windowHeight = $(window).height() + navHeight;
 		var addToPosition = $("#about").offset().top;
 		var scrollBottom = pos + $(window).height();
 
@@ -63,7 +66,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 
 		// BEGIN Scroll Animations /////////////////////////////////////
 		if(!isMobile){
-			if(pos >= $("#about").offset().top - addToPosition/3 ){
+			if(pos >= $("#about").offset().top - windowHeight/1.5 ){
 				if($("#about-header").css('opacity') == 0){
 					scrollAnimations.slideInHeader($("#about-header"), $('#about-header-bar'))
 				}
@@ -71,13 +74,13 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		}
 
 		if(!isMobile){
-			if(pos >= $("#about").offset().top - addToPosition/6){
+			if(pos >= $("#about").offset().top - windowHeight/2){
 				scrollAnimations.showIcons($(".icon-container"), $('.icon-text'))
 			}
 		}
 
 		if(!isMobile){
-			if(pos >= addToPosition + 150 && $("#my-picture-container").css('opacity') == 0){
+			if(pos >= windowHeight/1.5 + 150 && $("#my-picture-container").css('opacity') == 0){
 
 					scrollAnimations.showPictureAndGraph($("#my-picture-container"), $('#flex-graph-container'))
 					scrollAnimations.growGraph($('.progress-bar'))
@@ -92,8 +95,8 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		}
 
 		if(!isMobile){
-			if(pos >= $("#projects").offset().top - addToPosition/3){
-				if($("#project-header").css('opacity') === 0){
+			if(pos >= $("#projects").offset().top - windowHeight/1.5){
+				if(!$("#project-header").hasClass('slide-in-left')){
 					scrollAnimations.slideInHeader($("#project-header"), $('#project-header-bar'))
 					
 				}
@@ -101,23 +104,23 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		}
 
 		if(!isMobile){
-			if(pos >= $("#projects").offset().top - addToPosition/6 && $(".project-box").css('opacity') == 0){
+			if(pos >= $("#projects").offset().top - windowHeight/3 && $(".project-box").css('opacity') == 0){
 					scrollAnimations.showProjects($('.project-box'))
 			}
 
-			if(pos >= $("#blog").offset().top - addToPosition/3){
+			if(pos >= $("#blog").offset().top - windowHeight/1.5){
 				if($("#blog-header").css('opacity') == 0){
 					scrollAnimations.slideInHeader($("#blog-header"), $('#blog-header-bar'))
 				
 				}
 			}
 
-			if(pos >= $("#blog").offset().top - addToPosition/6 && $(".post-box-container").css('opacity') == 0){
+			if(pos >= $("#blog").offset().top - windowHeight/3 && $(".post-box-container").css('opacity') == 0){
 				scrollAnimations.showBlogPosts($('.post-box-container'))
 			}
 
 
-			if(pos >= $("#contact").offset().top - addToPosition/3){
+			if(pos >= $("#contact").offset().top - windowHeight/1.5){
 				if($("#contact-header").css('opacity') == 0){
 					scrollAnimations.slideInHeader($("#contact-header"), $('#contact-header-bar'))
 					scrollAnimations.growAndShrink($('.contact-form-container'))
@@ -129,12 +132,8 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 
 		lastPos = pos;
 	});
-		// END Scrolling
 
-	// fetch data /////////////////////////////////////////////////
-
-
-	// navbar listeners //////////////////////////////////////////////////////////
+	// navbar listeners ////////////////////////////////////////////////////
 
 	$("#About").click(function() {
 		document.getElementById("about").scrollIntoView({ behavior: "smooth" });
@@ -225,68 +224,18 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 		}
 	);
 
-	// $(".post-box-container").hover(
-	// 	function() {
-	// 		$(this)
-	// 			.siblings()
-	// 			.animate(
-	// 				{
-	// 					opacity: 0.2
-	// 				},
-	// 				200
-	// 			);
-	// 	},
-	// 	function() {
-	// 		$(this)
-	// 			.parent()
-	// 			.children()
-	// 			.css({
-	// 				opacity: 1
-	// 			});
-	// 	}
-	// );
-
-	// $(".social-icon-container").hover(
-	// 	function() {
-	// 		$(this).effect("bounce", { direction: "up" }, 200);
-	// 	},
-	// 	function() {
-	// 		$(this).show();
-	// 	}
-	// );
-
-	// $(".bar-container").hover(
-	// 	function() {
-	// 		console.log("hover on");
-	// 		$(this).animate(
-	// 			{
-	// 				minHeight: "40px",
-	// 				maxHeight: "40px"
-	// 			},
-	// 			700
-	// 		);
-	// 	},
-	// 	function() {
-	// 		console.log("hover off");
-	// 		$(this).animate(
-	// 			{
-	// 				minHeight: "30px",
-	// 				maxHeight: "30px"
-	// 			},
-	// 			700
-	// 		);
-	// 	}
-	// );
 
 	$(".carousel-container").slick({
-		dots: true,
-		infinite: true,
-		arrows: true,
-		speed: 300,
-		slidesToShow: 1,
-		centerMode: true,
-		variableWidth: true,
-		slidesToScroll: 1
+			dots: true,
+			infinite: true,
+			arrows: true,
+			speed: 300,
+			slidesToShow: 1,
+			centerMode: true,
+			variableWidth: true,
+			slidesToScroll: 1
 	});
+
+
 });
 })();

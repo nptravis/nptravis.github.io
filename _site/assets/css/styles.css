@@ -62,7 +62,7 @@ section {
   width: 100%;
   text-align: center;
   overflow: hidden;
-  margin-top: 10vh; }
+  padding-top: 10vh; }
   section#home {
     background-color: #262f38;
     align-items: center;
@@ -207,7 +207,7 @@ div#flex-graph-container {
       text-align: right;
       line-height: 30px;
       flex: 1;
-      background-color: grey; }
+      background-color: #f7f7f7; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
