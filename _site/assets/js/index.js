@@ -5,17 +5,10 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	var isMobile;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
    isMobile = true;
-   $('#isMobile').append("<h1>This is a mobile device.</h1>")
+   $('#isMobile').append(`<h1>Is this a mobile device? ${isMobile}</h1>`)
  }
 
 	console.log("Dom Loaded");
-
-	// Variables and State /////////////////////////////////////////
-	
-	// $(".slide-in-left").hide();
-	// $(".slide-in-right").hide();
-	// $(".fade-in-text").hide();
-
 	
 	// Scrolling ///////////////////////////////////////////////
 	if(!isMobile){
