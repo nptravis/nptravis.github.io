@@ -58,10 +58,13 @@ nav {
 	}
 }
 
-// .slide-in-left {
-// 	height: 0;
-// 	width: 0;
-// }
+.hidden {
+	visibility: hidden;
+}
+
+.not-displayed {
+	display: none;
+}
 
 .fixed {
 	position: fixed;
@@ -72,6 +75,7 @@ nav {
 section {
 	min-height: 100vh;
 	text-align: center;
+	padding-top: 30vh;
 	// overflow: hidden;
 
 	div.container {
@@ -86,28 +90,28 @@ section {
 		background-size: cover;
 		align-items: center;
 		justify-content: center;
-		padding-top: 100px;
+		
 	}
 
 	&#about {
 		background-color: $white;
-		padding-top: 100px;
+		
 	}
 
 	&#projects {
 		background-color: $light-grey;
-		padding-top: 100px;
+		
 	}
 
 	&#blog {
 		background-color: $white;
-		padding-top: 100px;
+		
 	}
 
 	&#contact {
 		color: $white;
 		background-color: $black;
-		padding-top: 100px;
+		
 	}
 }
 
@@ -130,4 +134,8 @@ div.header-bar {
 	height: 4px;
 	background-color: $black;
 	width: 100px;
+
+	&#contact-header-bar{
+		background-color: $white;
+	}
 }

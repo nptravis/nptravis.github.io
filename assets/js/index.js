@@ -2,6 +2,11 @@
 
 define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], function($, $ui, modal, slick, scrollAnimations){
 
+	var isMobile;
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+   isMobile = true;
+ }
+
 	console.log("Dom Loaded");
 
 	// Variables and State /////////////////////////////////////////
@@ -11,67 +16,109 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	// $(".fade-in-text").hide();
 
 	var navPos = $("nav").position().top;
-		var lastPos = 0;
-		var lockTimer;
+	var lastPos = 0;
+	var lockTimer;
+	// Scrolling ///////////////////////////////////////////////
 		
-		window.addEventListener("scroll", function(e) {
+	window.addEventListener("scroll", function(e) {
 		var pos = $(window).scrollTop();
+		var navHeight = $("nav").height();
 		var pos2 = pos + 50;
 		var scrollBottom = pos + $(window).height();
 
-		if (pos > navPos + $("nav").height() && lastPos < pos) {
+		// Navbar Positioning ///////////////////////////////////
+		if (pos > navPos + navHeight && lastPos < pos) {
 			if (!$("nav").hasClass("fixed")) {
 				scrollAnimations.navFixAndGrow()
-				
-				
-				flyIn();
 			}
 		}
 
 		if (pos < navPos && lastPos > pos) {
 			if ($("nav").hasClass("fixed")) {
-				$("nav").removeClass("fixed");
-				$("#about").css({
-					marginTop: 0
-				});
-				$("#all-posts-container").css({
-					marginTop: 20
-				});
-				$("#post-container").css({
-					marginTop: 20
-				});
-				// flyOut();
+				scrollAnimations.navUnFix()
 			}
-
-			// if ($(".slide-in-left").css("marginLeft") !== "-2000px") {
-			//
-			// 	console.log("Fly out");
-			// }
 		}
 
-		// Navbar Highlighting
-		if (pos >= $("#home").offset().top) highlight("#Home");
-		if (pos >= $("#about").offset().top - 50) highlight("#About");
-		if (pos >= $("#projects").offset().top - 50) highlight("#Projects");
-		if (pos >= $("#blog").offset().top - 50) highlight("#Blog");
+		// BEGIN Navbar Highlighting //////////////////////////
+		if (pos >= $("#home").offset().top) {
+			scrollAnimations.highlight("#Home");
+		}
+		if (pos >= $("#about").offset().top - 50) {
+			scrollAnimations.highlight("#About");
+		}
+		if (pos >= $("#projects").offset().top - 50) {
+			scrollAnimations.highlight("#Projects");
+		}
+		if (pos >= $("#blog").offset().top - 50) {
+			scrollAnimations.highlight("#Blog");
+		}
 		if (
 			pos >= $("#contact").offset().top - 50 ||
 			pos + $(window).height() === $(document).height()
 		) {
-			highlight("#Contact");
+			scrollAnimations.highlight("#Contact");
 		}
+		// END Navbar highlighting /////////////////////////////////
 
-		if (pos > $(".flex-graph-container").offset().top - 200) {
-			if ($(".progress-bar").css("width") === "0px") {
-				graphIn();
+		// BEGIN Scroll Animations /////////////////////////////////////
+		if(pos >= $("#about").offset().top){
+			if($("#about-header").is(':hidden')){
+				scrollAnimations.slideInHeader($("#about-header"), $('#about-header-bar'))
+				scrollAnimations.showIcons($(".icon-container"),$(".icon-text") )
 			}
 		}
 
-		if (pos < $("#about").offset().top + 100) {
-			if ($(".progress-bar").css("width") !== "0px") {
-				// graphOut();
+		if(pos >= $("#about").offset().top + 150 && $("#my-picture-container").css('opacity') == 0){
+
+				scrollAnimations.showPictureAndGraph($("#my-picture-container"), $('#flex-graph-container'))
+				scrollAnimations.growGraph($('.progress-bar'))
+			
+		}
+
+		if(pos >= $("#projects").offset().top - navHeight){
+			if($("#project-header").is(':hidden')){
+				scrollAnimations.slideInHeader($("#project-header"), $('#project-header-bar'))
+				
 			}
 		}
+
+		if(pos >= $("#projects").offset().top + 150 && $(".project-box").css('opacity') == 0){
+				scrollAnimations.showProjects($('.project-box'))
+		}
+
+		if(pos >= $("#blog").offset().top - navHeight){
+			if($("#blog-header").is(':hidden')){
+				scrollAnimations.slideInHeader($("#blog-header"), $('#blog-header-bar'))
+			
+			}
+		}
+
+		if(pos >= $("#blog").offset().top + 150 && $(".post-box-container").css('opacity') == 0){
+			scrollAnimations.showBlogPosts($('.post-box-container'))
+		}
+
+
+		if(pos >= $("#contact").offset().top - navHeight){
+			if($("#contact-header").is(':hidden')){
+				scrollAnimations.slideInHeader($("#contact-header"), $('#contact-header-bar'))
+				scrollAnimations.growAndShrink($('.contact-form-container'))
+			}
+		}
+
+		// END Scroll Animations /////////////////////////////////
+
+
+		// if (pos > $(".flex-graph-container").offset().top - 200) {
+		// 	if ($(".progress-bar").css("width") === "0px") {
+		// 		graphIn();
+		// 	}
+		// }
+
+		// if (pos < $("#about").offset().top + 100) {
+		// 	if ($(".progress-bar").css("width") !== "0px") {
+		// 		// graphOut();
+		// 	}
+		// }
 
 		lastPos = pos;
 	});
@@ -97,104 +144,7 @@ define(["jquery", "jqueryui", "jquerymodal", "slick", 'scrollAnimations'], funct
 	// 	})
 	// 	.catch(err => err);
 
-	// event listeners //////////////////////////////////////////////////////////////
-
-	$("#test").click(function() {
-		$(this).toggle("drop");
-	});
-
-	
-	function highlight(idName) {
-		$("nav a.active").removeClass("active");
-		$(idName).addClass("active");
-	}
-
-	function flyOut() {
-		console.log("flying out!");
-		$(".slide-in-left").animate(
-			{
-				marginLeft: "-2000px"
-			},
-			500
-		);
-		$(".slide-in-right").animate(
-			{
-				marginLeft: "2000px"
-			},
-			500
-		);
-		$("#first-icon").animate(
-			{
-				marginLeft: "-2000px",
-				opacity: "0"
-			},
-			700
-		);
-		$("#second-icon").animate(
-			{
-				marginRight: "-2000px",
-				opacity: "0"
-			},
-			700
-		);
-		$("#third-icon").animate(
-			{
-				marginLeft: "-2000px",
-				opacity: "0"
-			},
-			700
-		);
-		$("#fourth-icon").animate(
-			{
-				marginRight: "-2000px",
-				opacity: "0"
-			},
-			700
-		);
-		$(".fade-in-text").animate(
-			{
-				opacity: 0
-			},
-			1000
-		);
-	}
-
-	function flyIn() {
-		console.log("flying in!");
-		$(".slide-in-left").show("slide", { direction: "left" }, 1000);
-
-		$(".slide-in-right").show("slide", { direction: "right" }, 1000);
-
-		$(".fade-in-text").fadeIn("slow");
-	}
-
-	function graphIn() {
-		console.log("graph in");
-		// let originalWIdth = $(".progress-bar").css("min-width");
-		// debugger;
-		$(".progress-bar").each(function(index) {
-			$(this).animate(
-				{
-					width: $(this).data("progress")
-				},
-				700
-			);
-		});
-	}
-
-	function graphOut() {
-		console.log("graph out");
-		// let originalWIdth = $(".progress-bar").css("min-width");
-		// debugger;
-		$(".progress-bar").each(function(index) {
-			$(this).animate(
-				{
-					width: "0"
-				},
-				700
-			);
-		});
-	}
+	// navbar listeners //////////////////////////////////////////////////////////
 
 	$("#About").click(function() {
 		document.getElementById("about").scrollIntoView({ behavior: "smooth" });

@@ -1,7 +1,8 @@
-<h1>Projects</h1>
+<h1 id="project-header" class="not-displayed">Projects</h1>
+<div id="project-header-bar" class="header-bar not-displayed"></div>
 <div class="projects-container">
 	{% for project in site.data.projects %}
-	<div class="project-box">
+	<div class="project-box" style="animation-delay: {{ forloop.index | divided_by: 5.0 }}s">
 		<div class="project-text-container">
 			<h2 class="project-title">{{ project.name | upcase }}</h2>
 			<span class="small-text">{{ project.stack }}</span>

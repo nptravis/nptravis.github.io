@@ -2,8 +2,9 @@ requirejs.config({
 	baseUrl: '../assets/js',
 	paths: {
 		jquerymodal: ["//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min"],
-		jqueryui: "jqueryui.min",
-		jquery: "jquery",
+		jqueryui: "lib/jqueryui.min",
+		jquery: "lib/jquery",
+		jqueryflip: 'lib/jqueryflip',
 		index: "index",
 		main: "main",
 		slick: '../slick/slick-1.8.1/slick/slick',

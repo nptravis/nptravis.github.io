@@ -95,59 +95,59 @@
 
 			<section id="about">
 				<div class="container">
-	<h1 class="slide-in-right">
+	<h1 id="about-header" class="not-displayed">
 		ABOUT
 	</h1>
-	<div class="header-bar slide-in-left"></div>
+	<div id="about-header-bar" class="header-bar not-displayed"></div>
 
 	<div class="flex">
 		<div class="flex-quad">
-			<div class="icon-container slide-in-left">
+			<div class="icon-container" style="animation-delay: .1s">
 				<i id="first-icon" class="fa-3x fas fa-tachometer-alt"></i>
 			</div>
-			<h2 class="fade-in-text">Fast</h2>
-			<p class="fade-in-text">
+			<h2 class="icon-text">Fast</h2>
+			<p class="icon-text">
 				I always develop with performance in mind.
 			</p>
 		</div>
 		<div class="flex-quad">
-			<div class="icon-container slide-in-right">
+			<div class="icon-container" style="animation-delay: .3s">
 				<i id="second-icon" class=" fa-3x fas fa-rocket"></i>
 			</div>
-			<h2 class="fade-in-text">Quality</h2>
-			<p class="fade-in-text">
+			<h2 class="icon-text">Quality</h2>
+			<p class="icon-text">
 				I focus on clean re-usable and robust code.
 			</p>
 		</div>
 		<div class="flex-quad">
-			<div class="icon-container slide-in-left">
+			<div class="icon-container" style="animation-delay: .5s">
 				<i id="third-icon" class="fa-3x fas fa-lock"></i>
 			</div>
-			<h2 class="fade-in-text">Security</h2>
-			<p class="fade-in-text">
+			<h2 class="icon-text">Security</h2>
+			<p class="icon-text">
 				Safety is always at the forfront of my mind when developing.
 			</p>
 		</div>
 		<div class="flex-quad">
-			<div class="icon-container slide-in-right">
+			<div class="icon-container" style="animation-delay: .7s">
 				<i id="fourth-icon" class="fa-3x fas fa-brain"></i>
 			</div>
-			<h2 class="fade-in-text">Cutting Edge</h2>
-			<p class="fade-in-text">
-				I am constatly learning, keeping up to date with changing trends in web
+			<h2 class="icon-text">Cutting Edge</h2>
+			<p class="icon-text">
+				I am constantly learning, keeping up to date with changing trends in web
 				development.
 			</p>
 		</div>
 	</div>
 	<div class="flex-container">
-		<div class="slide-in-left">
+		<div id="my-picture-container">
 			<img id="myPicture" src="assets/images/me.jpeg" />
 			<h2>Who am I?</h2>
 			<p>
 				I am a driven full-stack dev with a passion for the creative process.
 			</p>
 		</div>
-		<div class="flex-graph-container slide-in-right">
+		<div id="flex-graph-container">
 	
 	<div class="bar-container">
 		<div class="lang-name">HTML</div>
@@ -237,10 +237,11 @@
 
 			</section>
 			<section id="projects">
-				<h1>Projects</h1>
+				<h1 id="project-header" class="not-displayed">Projects</h1>
+<div id="project-header-bar" class="header-bar not-displayed"></div>
 <div class="projects-container">
 	
-	<div class="project-box">
+	<div class="project-box" style="animation-delay: 0.2s">
 		<div class="project-text-container">
 			<h2 class="project-title">COMMENTS LAB</h2>
 			<span class="small-text">React, Redux, Ruby on Rails API, Postgres</span>
@@ -288,7 +289,7 @@
 	<!-- Link to open the modal -->
 	<!-- <p><a href="#ex1" rel="modal:open">Open Modal</a></p> -->
 	
-	<div class="project-box">
+	<div class="project-box" style="animation-delay: 0.4s">
 		<div class="project-text-container">
 			<h2 class="project-title">POWERTOOLS PLUS</h2>
 			<span class="small-text">React, Express, MongoDB</span>
@@ -340,12 +341,13 @@
 
 			</section>
 			<section id="blog">
-				<h1>Blog</h1>
+				<h1 id="blog-header" class="not-displayed">Blog</h1>
+<div id="blog-header-bar" class="header-bar not-displayed"></div>
 <div class="blog-container">
 	<div class="blog-section-flex-container">
 		
 
-		<div class="post-box-container">
+		<div class="post-box-container" style="animation-delay: 0.2s">
 			<a href="/react_redux_final_project">
 				<img class="post-image" src="assets/images/2018-10-04.jpg" />
 				<div class="text-container">
@@ -359,7 +361,7 @@
 
 		
 
-		<div class="post-box-container">
+		<div class="post-box-container" style="animation-delay: 0.4s">
 			<a href="/rails_with_js_frontend_project">
 				<img class="post-image" src="assets/images/2018-09-18.jpg" />
 				<div class="text-container">
@@ -373,7 +375,7 @@
 
 		
 
-		<div class="post-box-container">
+		<div class="post-box-container" style="animation-delay: 0.6s">
 			<a href="/my_favorite_way_to_serialize_json_in_rails">
 				<img class="post-image" src="assets/images/2018-09-16.jpg" />
 				<div class="text-container">
@@ -387,7 +389,7 @@
 
 		
 
-		<div class="post-box-container">
+		<div class="post-box-container" style="animation-delay: 0.8s">
 			<a href="/my_rails_project">
 				<img class="post-image" src="assets/images/2018-05-29.jpg" />
 				<div class="text-container">
@@ -409,7 +411,8 @@
 			</section>
 			<section id="contact">
 				<div class="contact-container">
-	<h1>Contact</h1>
+<h1 id="contact-header" class="not-displayed">Contact</h1>
+<div id="contact-header-bar" class="header-bar not-displayed"></div>
 	<p class="small-text">Would you like to get in touch?</p>
 	<div class="contact-form-container">
 		<form
