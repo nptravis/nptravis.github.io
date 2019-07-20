@@ -47,7 +47,7 @@ nav {
       color: #e31b6d; }
 
 .hidden {
-  visibility: hidden; }
+  opacity: 0; }
 
 .not-displayed {
   display: none; }
@@ -58,16 +58,16 @@ nav {
   z-index: 1; }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 10vh; }
   section#home {
-    background-image: url("/assets/images/stars.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #262f38;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 0; }
   section#about {
     background-color: #fff; }
   section#projects {
@@ -178,7 +178,6 @@ div.header-bar {
   animation: growAndShrink 1.5s ease both; }
 
 div#flex-graph-container {
-  opacity: 0;
   width: 100%;
   display: flex;
   flex-direction: column; }
@@ -221,7 +220,6 @@ div.projects-container {
   width: 80%;
   margin: 0 auto; }
   div.projects-container div.project-box {
-    opacity: 0;
     margin: 10px;
     flex: 1;
     position: relative;
@@ -313,7 +311,6 @@ div.blog-container {
     display: flex;
     justify-content: center; }
     div.blog-container div.blog-section-flex-container div.post-box-container {
-      opacity: 0;
       flex: 0 0 auto;
       border: 3px solid transparent;
       margin: 5px;
@@ -384,42 +381,40 @@ div.contact-container {
   position: relative; }
   div.contact-container p.small-text {
     color: #04c2c9; }
-  div.contact-container div.contact-form-container {
-    opacity: 0; }
-    div.contact-container div.contact-form-container form#contact-form {
-      display: flex;
-      flex-direction: column;
-      width: 40%;
-      margin: 0 auto; }
-      div.contact-container div.contact-form-container form#contact-form input[type="text"],
-      div.contact-container div.contact-form-container form#contact-form textarea {
-        color: #fff;
-        flex: 1;
-        border: none;
-        padding: 0;
-        margin: 0;
-        background-color: #1b242f;
-        padding: 5px;
-        font-size: 1em; }
-      div.contact-container div.contact-form-container form#contact-form input[type="text"] {
-        min-height: 40px;
-        margin-bottom: 3px; }
-      div.contact-container div.contact-form-container form#contact-form textarea {
-        min-height: 200px;
-        margin-bottom: 3px; }
-      div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
-        background-color: transparent;
-        border: 3px solid #fff;
-        color: #fff;
-        height: 40px;
-        width: 33%;
-        font-size: 1em;
-        margin-left: 67%; }
-        div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
-          transition: background-color 1s ease, border-color 1s ease;
-          background-color: #04c2c9;
-          border-color: #04c2c9;
-          cursor: pointer; }
+  div.contact-container div.contact-form-container form#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto; }
+    div.contact-container div.contact-form-container form#contact-form input[type="text"],
+    div.contact-container div.contact-form-container form#contact-form textarea {
+      color: #fff;
+      flex: 1;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: #1b242f;
+      padding: 5px;
+      font-size: 1em; }
+    div.contact-container div.contact-form-container form#contact-form input[type="text"] {
+      min-height: 40px;
+      margin-bottom: 3px; }
+    div.contact-container div.contact-form-container form#contact-form textarea {
+      min-height: 200px;
+      margin-bottom: 3px; }
+    div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
+      background-color: transparent;
+      border: 3px solid #fff;
+      color: #fff;
+      height: 40px;
+      width: 33%;
+      font-size: 1em;
+      margin-left: 67%; }
+      div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
+        transition: background-color 1s ease, border-color 1s ease;
+        background-color: #04c2c9;
+        border-color: #04c2c9;
+        cursor: pointer; }
 
 div.footer {
   position: absolute;
@@ -464,13 +459,14 @@ p.signature {
 /* RGB */
 div.home-container {
   width: 80%;
-  height: 100%;
   margin: 0 auto;
+  height: 100%;
   text-align: center;
   overflow: hidden; }
   div.home-container div.home-title {
-    margin-top: 100%;
+    margin-top: calc(50vh - 140px);
     line-height: 70px;
+    min-height: 140px;
     color: #f7f7f7; }
     div.home-container div.home-title span {
       color: #e31b6d; }
@@ -481,6 +477,7 @@ div.home-container {
     border: 3px solid #fff;
     width: 70px;
     height: 70px;
+    margin-top: 25%;
     border-radius: 100%; }
     div.home-container div.down-arrow-container:hover {
       cursor: pointer; }
@@ -504,7 +501,6 @@ div.flex {
   div.flex div.flex-quad {
     flex: 1; }
     div.flex div.flex-quad div.icon-container {
-      opacity: 0;
       display: flex;
       align-items: center;
       z-index: 0;
@@ -515,16 +511,11 @@ div.flex {
       background-color: #00a1a7;
       width: 100px;
       height: 100px; }
-    div.flex div.flex-quad .icon-text {
-      opacity: 0; }
 
 div.flex-container {
   display: flex;
   justify-content: space-between;
   flex-direction: row; }
-
-div#my-picture-container {
-  opacity: 0; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */

@@ -32,8 +32,8 @@
 				},
 				700
 			);
-			$("#about").css({
-					marginTop: 50
+			$('.about-container').css({
+				marginTop: 50
 			});
 			$("#all-posts-container").css({
 				marginTop: 70
@@ -45,15 +45,15 @@
 
 		scrollAnimations.navUnFix = function(){
 			$("nav").removeClass("fixed");
-				$("#about").css({
-					marginTop: 0
-				});
-				$("#all-posts-container").css({
-					marginTop: 20
-				});
-				$("#post-container").css({
-					marginTop: 20
-				});
+			$('.about-container').css({
+				marginTop: 0
+			});
+			$("#all-posts-container").css({
+				marginTop: 20
+			});
+			$("#post-container").css({
+				marginTop: 20
+			});
 		}
 
 		scrollAnimations.showBlogPosts = function($posts){
@@ -77,8 +77,8 @@
 		}
 
 		scrollAnimations.slideInHeader = function($text, $underline){
-			$text.show("slide", { direction: "right" }, 1000);
-			$underline.show("slide", { direction: "left" }, 1000);
+			$text.addClass('slide-in-left')
+			$underline.addClass('slide-in-right')
 		}
 
 		return scrollAnimations;

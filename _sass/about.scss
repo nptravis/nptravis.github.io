@@ -26,7 +26,6 @@ div.flex {
 	div.flex-quad {
 		flex: 1;
 		div.icon-container {
-			opacity: 0;
 			display: flex;
 			align-items: center;
 			z-index: 0;
@@ -50,7 +49,6 @@ div.flex {
 
 		}
 		.icon-text {
-			opacity: 0;
 		}
 	}
 }
@@ -69,8 +67,5 @@ div.flex-container {
 	// }
 }
 
-div#my-picture-container {
-	opacity: 0;
-}
 
 

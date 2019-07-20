@@ -2,14 +2,15 @@
 
 div.home-container {
 	width: 80%;
-	height: 100%;
 	margin: 0 auto;
+	height: 100%;
 	text-align: center;
 	overflow: hidden;
 
 	div.home-title {
-		margin-top: 100%;
+		margin-top: calc(50vh - 140px);
 		line-height: 70px;
+		min-height: 140px;
 		color: $light-grey;
 
 		span {
@@ -18,13 +19,13 @@ div.home-container {
 	}
 
 	div.down-arrow-container {
-	
 		margin: 0 auto;
 		color: $red;
 		background-color: transparent;
 		border: 3px solid $white;
 		width: 70px;
 		height: 70px;
+		margin-top: 25%;
 		
 		border-radius: 100%;
 		

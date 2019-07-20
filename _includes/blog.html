@@ -1,10 +1,11 @@
-<h1 id="blog-header" class="not-displayed">Blog</h1>
-<div id="blog-header-bar" class="header-bar not-displayed"></div>
 <div class="blog-container">
+	<h1 id="blog-header" class="hidden">Blog</h1>
+	<div id="blog-header-bar" class="header-bar hidden"></div>
+
 	<div class="blog-section-flex-container">
 		{% for post in site.posts limit:4 %}
 
-		<div class="post-box-container" style="animation-delay: {{forloop.index | divided_by: 5.0}}s">
+		<div class="post-box-container hidden" style="animation-delay: {{forloop.index | divided_by: 5.0}}s">
 			<a href="{{ post.url }}">
 				<img class="post-image" src="assets/images/{{ post.date | date:
 				"%Y-%m-%d" }}.jpg" />
