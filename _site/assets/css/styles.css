@@ -80,6 +80,9 @@ section {
     color: #fff;
     background-color: #262f38; }
 
+.blue-text {
+  color: #04c2c9; }
+
 button.big-button {
   background-color: transparent;
   border: 3px solid white;
@@ -501,12 +504,13 @@ div.flex {
   display: flex;
   flex-wrap: wrap; }
   div.flex div.flex-quad {
-    flex: 1; }
+    flex: 1;
+    padding: 5px; }
     div.flex div.flex-quad div.icon-container {
       display: flex;
       align-items: center;
       z-index: 0;
-      margin: 0 auto;
+      margin: 10px auto;
       overflow: visible;
       clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
       text-align: center;
@@ -517,7 +521,14 @@ div.flex {
 div.flex-container {
   display: flex;
   justify-content: space-between;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 100%; }
+  div.flex-container div#my-picture-container {
+    padding: 5px;
+    flex: 1;
+    min-width: 30%; }
+  div.flex-container div.flex-graph-container {
+    flex: 1; }
 
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */

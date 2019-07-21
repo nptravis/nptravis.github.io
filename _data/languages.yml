@@ -1,20 +1,18 @@
 - name: HTML
-  progress: 70%
+  progress: 80%
 - name: CSS
-  progress: 60%
-- name: Javascript
-  progress: 80%
-- name: Ruby/Rails
   progress: 70%
+- name: Javascript
+  progress: 90%
+- name: Ruby/Rails
+  progress: 75%
 - name: Node.js
-  progress: 80%
-- name: Express.js
-  progress: 60%
+  progress: 65%
 - name: React
   progress: 85%
 - name: MongoDB
-  progress: 50%
+  progress: 60%
 - name: Postgres
-  progress: 80%
+  progress: 70%
 - name: Git
-  progress: 80%
+  progress: 75%

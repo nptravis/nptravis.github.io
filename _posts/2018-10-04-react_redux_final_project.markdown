@@ -1,12 +1,11 @@
 ---
 layout: post
-title:      "React Redux Final Project"
+title:      "React/Redux & Rails API"
 date:       2018-10-04 04:06:41 +0000
 permalink:  react_redux_final_project
 ---
 
-
-This is my final blog post as student of Flatiron School! It's been an incredible journey, learned a ton, and can't wait for the next step. This will be a presentation of my final portfolio project, a React-Redux app built on top of a rails backend.
+This is a walkthrough of an app I built using a React/Redux front-end that is pulling data from a Rails API. The frontend is deployed on Digital Ocean, Ubuntu 16.4, and the Rails API is on Heroku. 
 
 ## Summary
 
