@@ -30,6 +30,10 @@ a {
 	font-family: "Lato", sans-serif;
 }
 
+code {
+	overflow: auto;
+}
+
 nav {
 	display: flex;
 	width: 100vw;
@@ -73,7 +77,7 @@ nav {
 }
 
 section {
-	min-height: 100vh;
+	min-height: 90vh;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
@@ -87,7 +91,6 @@ section {
 		background-color: $black;
 		align-items: center;
 		justify-content: center;
-		margin-top: 0;
 	}
 
 	&#about {

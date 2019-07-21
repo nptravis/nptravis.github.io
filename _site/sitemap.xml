@@ -33,6 +33,10 @@
 <lastmod>2018-10-04T06:06:41+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/jekyll_with_require</loc>
+<lastmod>2019-07-21T11:48:41+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about.html</loc>
 </url>
 <url>
@@ -40,12 +44,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/staff.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/assets/slick/slick-1.8.1/</loc>
-<lastmod>2017-10-03T10:49:28+02:00</lastmod>
 </url>
 </urlset>

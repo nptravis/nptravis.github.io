@@ -26,6 +26,9 @@ p,
 a {
   font-family: "Lato", sans-serif; }
 
+code {
+  overflow: auto; }
+
 nav {
   display: flex;
   width: 100vw;
@@ -58,7 +61,7 @@ nav {
   z-index: 1; }
 
 section {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   text-align: center;
   overflow: hidden;
@@ -66,8 +69,7 @@ section {
   section#home {
     background-color: #262f38;
     align-items: center;
-    justify-content: center;
-    margin-top: 0; }
+    justify-content: center; }
   section#about {
     background-color: #fff; }
   section#projects {
@@ -180,7 +182,8 @@ div.header-bar {
 div#flex-graph-container {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-bottom: 5vmin; }
   div#flex-graph-container div.bar-container {
     text-align: left;
     flex: 1;
@@ -477,7 +480,6 @@ div.home-container {
     border: 3px solid #fff;
     width: 70px;
     height: 70px;
-    margin-top: 25%;
     border-radius: 100%; }
     div.home-container div.down-arrow-container:hover {
       cursor: pointer; }

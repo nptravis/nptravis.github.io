@@ -80,7 +80,7 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 		}
 
 		if(!isMobile){
-			if(pos >= windowHeight/1.5 + 150 && $("#my-picture-container").css('opacity') == 0){
+			if(pos >= windowHeight + 100 && $("#my-picture-container").css('opacity') == 0){
 
 					scrollAnimations.showPictureAndGraph($("#my-picture-container"), $('#flex-graph-container'))
 					scrollAnimations.growGraph($('.progress-bar'))
@@ -197,6 +197,14 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 	$("#home-button").click(function() {
 		document.getElementById("home").scrollIntoView({ behavior: "smooth" });
 	});
+
+	setInterval(function(){ 
+		$(".down-arrow-container").effect(
+				"shake",
+				{ direction: "up", times: 2, distance: 10 },
+				1000
+			);
+	}, 2000);
 
 	$("#home-button").hover(
 		function() {
