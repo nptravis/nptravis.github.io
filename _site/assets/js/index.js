@@ -135,26 +135,31 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 	});
 
 	// navbar listeners ////////////////////////////////////////////////////
+	function scrollTo(elementId, behavior){
+		document.getElementById(elementId).scrollIntoView({ behavior: behavior})
+	}
+	$(".scroll-to").click(function(e){
+		scrollTo(e.target.dataset.id, 'smooth')
+	})
+	// $("#About").click(function() {
+	// 	document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+	// });
 
-	$("#About").click(function() {
-		document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-	});
+	// $("#Home").click(function() {
+	// 	document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+	// });
 
-	$("#Home").click(function() {
-		document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-	});
+	// $("#Projects").click(function() {
+	// 	document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+	// });
 
-	$("#Projects").click(function() {
-		document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-	});
+	// $("#Blog").click(function() {
+	// 	document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
+	// });
 
-	$("#Blog").click(function() {
-		document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
-	});
-
-	$("#Contact").click(function() {
-		document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-	});
+	// $("#Contact").click(function() {
+	// 	document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+	// });
 
 	$(".project-box").hover(
 		function() {

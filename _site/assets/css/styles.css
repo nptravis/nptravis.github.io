@@ -1,7 +1,7 @@
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
 /* RGB */
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap");
 html,
 body {
   height: 100%;
@@ -16,7 +16,7 @@ h3,
 h4 {
   padding: 0;
   margin: 0;
-  font-family: "Comfortaa", cursive; }
+  font-family: "Roboto", sans-serif; }
 
 h1 {
   font-size: 4em; }
@@ -24,7 +24,7 @@ h1 {
 span,
 p,
 a {
-  font-family: "Lato", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 code {
   overflow: auto; }
@@ -60,6 +60,10 @@ nav {
   top: 0;
   z-index: 1; }
 
+.scroll-to:hover {
+  cursor: pointer;
+  color: #04c2c9; }
+
 section {
   min-height: 90vh;
   width: 100%;
@@ -81,7 +85,7 @@ section {
     background-color: #262f38; }
 
 .blue-text {
-  color: #04c2c9; }
+  color: #00a1a7; }
 
 button.big-button {
   background-color: transparent;

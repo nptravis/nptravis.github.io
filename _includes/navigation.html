@@ -1,6 +1,6 @@
 <nav id="navbar">
 	{% for item in site.data.navigation %}
-	<a id="{{ item.name }}">
+	<a id="{{ item.name }}" data-id="{{ item.name | downcase }}" class="scroll-to">
 		{{ item.name | upcase }}
 	</a>
 	{% endfor %}

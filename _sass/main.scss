@@ -1,5 +1,6 @@
 @import "./palette.scss";
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Lato&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 
 html,
 body {
@@ -17,7 +18,7 @@ h4 {
 	padding: 0;
 	margin: 0;
 
-	font-family: "Comfortaa", cursive;
+	font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -27,7 +28,7 @@ h1 {
 span,
 p,
 a {
-	font-family: "Lato", sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 code {
@@ -76,6 +77,13 @@ nav {
 	z-index: 1;
 }
 
+.scroll-to{
+	&:hover{
+		cursor: pointer;
+		color: $light-blue;
+	}
+}
+
 section {
 	min-height: 90vh;
 	width: 100%;
@@ -115,8 +123,9 @@ section {
 }
 
 .blue-text {
-	color: $light-blue;
+	color: $aqua;
 }
+
 button.big-button {
 	background-color: transparent;
 	border: 3px solid white;
