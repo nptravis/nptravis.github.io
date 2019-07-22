@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "My Rails Project"
+title:      "Rails Monolithic App"
 date:       2018-05-29 12:44:11 +0000
 permalink:  my_rails_project
 excerpt_separator: <!--more-->
