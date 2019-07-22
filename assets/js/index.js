@@ -65,6 +65,7 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 		// END Navbar highlighting /////////////////////////////////
 
 		// BEGIN Scroll Animations /////////////////////////////////////
+		
 		if(!isMobile){
 			if(pos >= $("#about").offset().top - windowHeight/1.5 ){
 				if($("#about-header").css('opacity') == 0){
@@ -197,14 +198,6 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 	$("#home-button").click(function() {
 		document.getElementById("home").scrollIntoView({ behavior: "smooth" });
 	});
-
-	setInterval(function(){ 
-		$(".down-arrow-container").effect(
-				"shake",
-				{ direction: "up", times: 2, distance: 10 },
-				1000
-			);
-	}, 2000);
 
 	$("#home-button").hover(
 		function() {

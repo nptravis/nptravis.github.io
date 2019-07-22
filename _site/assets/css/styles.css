@@ -249,7 +249,7 @@ div.projects-container {
       font-style: italic; }
     div.projects-container div.project-box img.project-image {
       width: 100%;
-      height: auto; }
+      height: 100%; }
     div.projects-container div.project-box a.button-wrapper {
       color: #262f38;
       border: 3px solid #e31b6d;
@@ -502,14 +502,19 @@ div.about-container {
 
 div.flex {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: row;
+  justify-content: space-between; }
   div.flex div.flex-quad {
     flex: 1;
-    padding: 5px; }
+    padding: 5px;
+    display: flex;
+    justify-content: space-between; }
     div.flex div.flex-quad div.icon-container {
+      flex: 1;
       display: flex;
       align-items: center;
       z-index: 0;
+      color: #fff;
       margin: 10px auto;
       overflow: visible;
       clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
@@ -517,6 +522,12 @@ div.flex {
       background-color: #00a1a7;
       width: 100px;
       height: 100px; }
+      div.flex div.flex-quad div.icon-container img {
+        line-height: 100px;
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+        color: #fff; }
 
 div.flex-container {
   display: flex;
@@ -814,6 +825,9 @@ div.highlight {
 /* Literal.Number.Integer.Long */
 @media screen and (max-width: 992px) {
   div.flex-container {
+    flex-direction: column; }
+
+  div.flex-quad {
     flex-direction: column; }
 
   div.projects-container {

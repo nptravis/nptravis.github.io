@@ -21,15 +21,20 @@ div.about-container {
 
 div.flex {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
 
 	div.flex-quad {
 		flex: 1;
 		padding: 5px;
+		display: flex;
+		justify-content: space-between;
 		div.icon-container {
+			flex: 1;
 			display: flex;
 			align-items: center;
 			z-index: 0;
+			color: $white;
 
 			margin: 10px auto;
 
@@ -48,6 +53,14 @@ div.flex {
 			background-color: $aqua;
 			width: 100px;
 			height: 100px;
+
+			img {
+				line-height: 100px;
+				margin: 0 auto;
+				width: 70px;
+				height: 70px;
+				color: $white;
+			}
 
 		}
 		.icon-text {
