@@ -39,14 +39,14 @@
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Creating a CLI Gem Application" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real." />
-<meta property="og:description" content="The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real." />
+<meta name="description" content="I started with this crucial link: right here. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:" />
+<meta property="og:description" content="I started with this crucial link: right here. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:" />
 <link rel="canonical" href="http://localhost:4000/creating_the_cli_gem_application" />
 <meta property="og:url" content="http://localhost:4000/creating_the_cli_gem_application" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-16T15:02:29+01:00" />
 <script type="application/ld+json">
-{"description":"The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.","@type":"BlogPosting","url":"http://localhost:4000/creating_the_cli_gem_application","headline":"Creating a CLI Gem Application","dateModified":"2018-02-16T15:02:29+01:00","datePublished":"2018-02-16T15:02:29+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/creating_the_cli_gem_application"},"@context":"https://schema.org"}</script>
+{"description":"I started with this crucial link: right here. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:","@type":"BlogPosting","url":"http://localhost:4000/creating_the_cli_gem_application","headline":"Creating a CLI Gem Application","dateModified":"2018-02-16T15:02:29+01:00","datePublished":"2018-02-16T15:02:29+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/creating_the_cli_gem_application"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	</head>
@@ -77,14 +77,12 @@
 		
 	</p>
 	<div class="post-content">
-		<p>The Ruby CLI gem lab was a bit daunting at first. Create an executable CLI application, turn it into a gem, then… publish? Wait…like other people are going to see my chicken scratch code?? It felt like things were about to get real.</p>
-
-<p>I started with this crucial link: <a href="http://bundler.io/v1.12/guides/creating_gem.html">right here</a>. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:</p>
+		<p>I started with this crucial link: <a href="http://bundler.io/v1.12/guides/creating_gem.html">right here</a>. It actually begins so simply (just have to have bundler installed.) To start a gem, just type into your terminal:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle gem my_first_gem
 </code></pre></div></div>
 
-<p>Now get ready for magic time. CD to your newly created folder and check out the goods. It creates an entire file structure for you, with a gemspec file, an rspec file, a license, version control, even a bin console environment! COOL!! Now all you have to do is…write your entire code for your project, no biggie.</p>
+<p>Now get ready for magic time. CD to your newly created folder and check out the goods. It creates an entire file structure for you, with a gemspec file, an rspec file, a license, version control, even a bin console environment! Now all you have to do is…write your project, no biggie.</p>
 
 <p>I decided to create a app that scrapes LonelyPlanet for the top 10 travel destinations for 2018. I used the Nokogiri gem for the task. I initially had some trouble scraping their site, and learned a crucial lesson, <em>don’t try to scrape elements that are rendered via javascript or react!</em> The elements aren’t loaded until after the scrape is finished, so only returned nil. That only took me about 3 ½ hours of head scratching to figure out. Here is an example of one of my scrape methods:</p>
 

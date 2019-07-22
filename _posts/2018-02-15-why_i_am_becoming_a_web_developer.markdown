@@ -7,9 +7,7 @@ excerpt_separator: <!--more-->
 ---
 
 
-   It’s pretty simple, I enjoy it. I enjoy the problem solving, the ability to build stuff, and the vibe of the communities that surround it. And coffee...I really enjoy coffee, so that helps.
-	 
-	 <!--more-->
+   It’s pretty simple, I enjoy it. I enjoy the problem solving, the ability to build stuff, and the vibe of the communities that surround it. And coffee...I really enjoy coffee, so that helps.<!--more-->
 
    I worked as a professional musician in NYC for years. Played all over the area, did some touring, and thought to myself, what other skills could I hone during the day and while on the road? So, I started some coding tutorials online, initially HTML, CSS, and then some Javascript, Python, even a bit of C. I started to realize, I actually enjoy doing this. (My story is not that uncommon, a lot of people have found music and coding to utilize similar neurological skills...hmm, next blog post maybe?) 
 	 
