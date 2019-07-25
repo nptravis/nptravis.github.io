@@ -18,6 +18,9 @@ h4 {
   margin: 0;
   font-family: "Roboto", sans-serif; }
 
+h1 {
+  font-size: 3em; }
+
 span,
 p,
 a {
@@ -393,13 +396,13 @@ div.contact-container {
   position: relative; }
   div.contact-container p.small-text {
     color: #04c2c9; }
-  div.contact-container div.contact-form-container form#contact-form {
+  div.contact-container div.contact-form-container form {
     display: flex;
     flex-direction: column;
     width: 40%;
     margin: 0 auto; }
-    div.contact-container div.contact-form-container form#contact-form input[type="text"],
-    div.contact-container div.contact-form-container form#contact-form textarea {
+    div.contact-container div.contact-form-container form input[type="text"],
+    div.contact-container div.contact-form-container form textarea {
       color: #fff;
       flex: 1;
       border: none;
@@ -408,13 +411,13 @@ div.contact-container {
       background-color: #1b242f;
       padding: 5px;
       font-size: 1em; }
-    div.contact-container div.contact-form-container form#contact-form input[type="text"] {
+    div.contact-container div.contact-form-container form input[type="text"] {
       min-height: 40px;
       margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form#contact-form textarea {
+    div.contact-container div.contact-form-container form textarea {
       min-height: 200px;
       margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form#contact-form input[type="submit"] {
+    div.contact-container div.contact-form-container form input[type="submit"] {
       background-color: transparent;
       border: 3px solid #fff;
       color: #fff;
@@ -422,7 +425,7 @@ div.contact-container {
       width: 33%;
       font-size: 1em;
       margin-left: 67%; }
-      div.contact-container div.contact-form-container form#contact-form input[type="submit"]:hover {
+      div.contact-container div.contact-form-container form input[type="submit"]:hover {
         transition: background-color 1s ease, border-color 1s ease;
         background-color: #04c2c9;
         border-color: #04c2c9;
@@ -569,50 +572,6 @@ div#post-container {
 div.highlight {
   padding: 10px; }
 
-@media screen and (max-width: 992px) {
-  div.flex-container {
-    flex-direction: column; }
-
-  div.flex-quad {
-    flex-direction: column; }
-
-  div.projects-container {
-    flex-direction: column; } }
-@media screen and (max-width: 1200px) {
-  div.blog-container div.blog-section-flex-container {
-    flex-wrap: wrap; }
-    div.blog-container div.blog-section-flex-container div.post-box-container {
-      width: 300px;
-      margin: 20px; } }
-@media screen and (max-width: 865px) {
-  div.blog-container div.blog-section-flex-container div.post-box-container {
-    margin: 10px; } }
-@media screen and (max-width: 600px) {
-  div.blog-container div.blog-section-flex-container div.post-box-container {
-    margin: 10px;
-    width: 100%; }
-
-  #navbar {
-    flex-direction: column; }
-    #navbar .navbar-link {
-      display: none;
-      width: 100%;
-      background-color: #262f38;
-      padding: 10px 0; }
-      #navbar .navbar-link:first-child {
-        padding-top: 20px;
-        margin-top: 53px; }
-    #navbar a.hamburger {
-      line-height: 50px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      vertical-align: middle;
-      display: inline-block; } }
-@media screen and (max-width: 400px) {
-  div.blog-container div.blog-section-flex-container div.post-box-container {
-    margin: 10px;
-    width: 100%; } }
 .highlight .hll {
   background-color: #303030; }
 
@@ -875,3 +834,50 @@ div.highlight {
   color: #d28445; }
 
 /* Literal.Number.Integer.Long */
+@media screen and (max-width: 992px) {
+  div.flex-container {
+    flex-direction: column; }
+
+  div.flex-quad {
+    flex-direction: column; }
+
+  div.projects-container {
+    flex-direction: column; } }
+@media screen and (max-width: 1200px) {
+  div.blog-container div.blog-section-flex-container {
+    flex-wrap: wrap; }
+    div.blog-container div.blog-section-flex-container div.post-box-container {
+      width: 300px;
+      margin: 20px; } }
+@media screen and (max-width: 865px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px; } }
+@media screen and (max-width: 600px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px;
+    width: 100%; }
+
+  form#contact-form {
+    width: 90%; }
+
+  #navbar {
+    flex-direction: column; }
+    #navbar .navbar-link {
+      display: none;
+      width: 100%;
+      background-color: #262f38;
+      padding: 10px 0; }
+      #navbar .navbar-link:first-child {
+        padding-top: 20px;
+        margin-top: 53px; }
+    #navbar a.hamburger {
+      line-height: 50px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      vertical-align: middle;
+      display: inline-block; } }
+@media screen and (max-width: 400px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px;
+    width: 100%; } }
