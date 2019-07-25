@@ -1,7 +1,8 @@
 <nav id="navbar">
 	{% for item in site.data.navigation %}
-	<a id="{{ item.name }}" data-id="{{ item.name | downcase }}" class="scroll-to">
+	<a id="{{ item.name }}" data-id="{{ item.name | downcase }}" class="scroll-to navbar-link">
 		{{ item.name | upcase }}
 	</a>
 	{% endfor %}
+	<a class="hidden hamburger">&#9776;</a>
 </nav>

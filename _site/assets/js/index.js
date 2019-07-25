@@ -27,21 +27,21 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 		var scrollBottom = pos + $(window).height();
 
 		// Navbar Positioning ///////////////////////////////////
-		if(!isMobile){
-			if (pos > navPos + navHeight && lastPos < pos) {
-				if (!$("nav").hasClass("fixed")) {
-					scrollAnimations.navFixAndGrow()
-				}
+		
+		if (pos > navPos + navHeight && lastPos < pos) {
+			if (!$("nav").hasClass("fixed")) {
+				scrollAnimations.navFixAndGrow()
 			}
 		}
+	
 
-		if(!isMobile){
-			if (pos < navPos && lastPos > pos) {
-				if ($("nav").hasClass("fixed")) {
-					scrollAnimations.navUnFix()
-				}
+	
+		if (pos < navPos && lastPos > pos) {
+			if ($("nav").hasClass("fixed")) {
+				scrollAnimations.navUnFix()
 			}
 		}
+		
 
 		// BEGIN Navbar Highlighting //////////////////////////
 		if (pos >= $("#home").offset().top) {
@@ -203,6 +203,16 @@ define(["jquery", "jqueryui", "jquerymodal", 'scrollAnimations', 'slick'], funct
 	$("#home-button").click(function() {
 		document.getElementById("home").scrollIntoView({ behavior: "smooth" });
 	});
+
+	if(isMobile){
+		$(".hamburger").click(function(){
+			$(".navbar-link").toggle()
+		})
+
+		$(".navbar-link").click(function(){
+			$(".navbar-link").toggle()
+		})
+	}
 
 	$("#home-button").hover(
 		function() {
