@@ -854,4 +854,7 @@ div.highlight {
 @media screen and (max-width: 350px) {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px;
-    width: 100%; } }
+    width: 100%; }
+
+  div.down-arrow-container {
+    background-color: red; } }

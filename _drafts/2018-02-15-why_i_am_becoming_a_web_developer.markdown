@@ -1,8 +1,8 @@
 ---
 layout: post
-title:      "Why I am Becoming a Web Developer"
+title:      "Why I Love Being a Web Developer"
 date:       2018-02-15 08:12:05 -0500
-permalink:  why_i_am_becoming_a_web_developer
+permalink:  why_i_love_being_a_web_developer
 excerpt_separator: <!--more-->
 ---
 

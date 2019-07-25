@@ -51,6 +51,10 @@
 			}
 		}
 	}
+
+	div.home-container {
+		
+	}
 }
 
 @media screen and (max-width: 350px) {
@@ -66,5 +70,9 @@
 				// }
 			}
 		}
+	}
+
+	div.down-arrow-container {
+		background-color: red;
 	}
 }
