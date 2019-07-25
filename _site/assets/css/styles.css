@@ -391,50 +391,50 @@ div#all-posts-container {
 /* HSL */
 /* RGB */
 div.contact-container {
-  height: 100vh;
   color: #fff;
-  position: relative; }
+  height: 100%; }
   div.contact-container p.small-text {
     color: #04c2c9; }
-  div.contact-container div.contact-form-container form {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    margin: 0 auto; }
-    div.contact-container div.contact-form-container form input[type="text"],
-    div.contact-container div.contact-form-container form textarea {
-      color: #fff;
-      flex: 1;
-      border: none;
-      padding: 0;
-      margin: 0;
-      background-color: #1b242f;
-      padding: 5px;
-      font-size: 1em; }
-    div.contact-container div.contact-form-container form input[type="text"] {
-      min-height: 40px;
-      margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form textarea {
-      min-height: 200px;
-      margin-bottom: 3px; }
-    div.contact-container div.contact-form-container form input[type="submit"] {
-      background-color: transparent;
-      border: 3px solid #fff;
-      color: #fff;
-      height: 40px;
-      width: 33%;
-      font-size: 1em;
-      margin-left: 67%; }
-      div.contact-container div.contact-form-container form input[type="submit"]:hover {
-        transition: background-color 1s ease, border-color 1s ease;
-        background-color: #04c2c9;
-        border-color: #04c2c9;
-        cursor: pointer; }
+  div.contact-container div.contact-form-container {
+    height: 90%;
+    margin-bottom: 50px; }
+    div.contact-container div.contact-form-container form {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin: 0 auto; }
+      div.contact-container div.contact-form-container form input[type="text"],
+      div.contact-container div.contact-form-container form textarea {
+        color: #fff;
+        flex: 1;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: #1b242f;
+        padding: 5px;
+        font-size: 1em; }
+      div.contact-container div.contact-form-container form input[type="text"] {
+        min-height: 40px;
+        margin-bottom: 3px; }
+      div.contact-container div.contact-form-container form textarea {
+        min-height: 200px;
+        margin-bottom: 3px; }
+      div.contact-container div.contact-form-container form input[type="submit"] {
+        background-color: transparent;
+        border: 3px solid #fff;
+        color: #fff;
+        height: 40px;
+        width: 33%;
+        font-size: 1em;
+        margin-left: 67%; }
+        div.contact-container div.contact-form-container form input[type="submit"]:hover {
+          transition: background-color 1s ease, border-color 1s ease;
+          background-color: #04c2c9;
+          border-color: #04c2c9;
+          cursor: pointer; }
 
 div.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 20%;
   width: 100%;
   padding-top: 30px;
   background-color: #1b242f; }
@@ -452,14 +452,14 @@ div.footer {
       height: auto; }
     div.footer div#home-button:hover {
       cursor: pointer; }
-  div.footer div.social-links {
+  div.footer .social-links {
     width: 40%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
-    div.footer div.social-links div.social-icon-container a {
+    div.footer .social-links div.social-icon-container a {
       color: grey; }
-      div.footer div.social-links div.social-icon-container a:hover {
+      div.footer .social-links div.social-icon-container a:hover {
         transition: color 1s ease;
         color: #04c2c9;
         cursor: pointer; }
@@ -479,24 +479,22 @@ div.home-container {
   text-align: center;
   overflow: hidden; }
   div.home-container div.home-title {
-    margin-top: calc(50vh - 140px);
-    line-height: 70px;
-    min-height: 140px;
-    color: #f7f7f7; }
+    color: #f7f7f7;
+    margin: 25% auto; }
     div.home-container div.home-title span {
       color: #e31b6d; }
-  div.home-container div.down-arrow-container {
-    margin: 0 auto;
-    color: #e31b6d;
-    background-color: transparent;
-    border: 3px solid #fff;
-    width: 70px;
-    height: 70px;
-    border-radius: 100%; }
-    div.home-container div.down-arrow-container:hover {
-      cursor: pointer; }
-    div.home-container div.down-arrow-container i {
-      line-height: 70px; }
+    div.home-container div.home-title div.down-arrow-container {
+      margin: 0 auto;
+      color: #e31b6d;
+      background-color: transparent;
+      border: 3px solid #fff;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%; }
+      div.home-container div.home-title div.down-arrow-container:hover {
+        cursor: pointer; }
+      div.home-container div.home-title div.down-arrow-container i {
+        line-height: 70px; }
 
 img#myPicture {
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
@@ -858,6 +856,9 @@ div.highlight {
     width: 100%; }
 
   form#contact-form {
+    width: 90%; }
+
+  div.footer div.social-links {
     width: 90%; }
 
   #navbar {

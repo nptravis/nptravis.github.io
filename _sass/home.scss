@@ -8,37 +8,33 @@ div.home-container {
 	overflow: hidden;
 
 	div.home-title {
-		margin-top: calc(50vh - 140px);
-		line-height: 70px;
-		min-height: 140px;
 		color: $light-grey;
+		margin: 25% auto;
 
 		span {
 			color: $red;
 		}
-	}
 
-	div.down-arrow-container {
-		margin: 0 auto;
-		color: $red;
-		background-color: transparent;
-		border: 3px solid $white;
-		width: 70px;
-		height: 70px;
-		
-		border-radius: 100%;
-		
+		div.down-arrow-container {
+			margin: 0 auto;
+			color: $red;
+			background-color: transparent;
+			border: 3px solid $white;
+			width: 70px;
+			height: 70px;
+			
+			border-radius: 100%;
+			
 
-		&:hover {
-			cursor: pointer;
+			&:hover {
+				cursor: pointer;
+			}
+
+			i {
+				line-height: 70px;
+			}
 		}
-
-		i {
-			line-height: 70px;
-		}
 	}
-	
-	
 }
 
 
