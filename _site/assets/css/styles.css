@@ -18,9 +18,6 @@ h4 {
   margin: 0;
   font-family: "Roboto", sans-serif; }
 
-h1 {
-  font-size: 4em; }
-
 span,
 p,
 a {
@@ -591,6 +588,10 @@ div.highlight {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px; } }
 @media screen and (max-width: 600px) {
+  div.blog-container div.blog-section-flex-container div.post-box-container {
+    margin: 10px;
+    width: 100%; }
+
   #navbar {
     flex-direction: column; }
     #navbar .navbar-link {
@@ -611,10 +612,7 @@ div.highlight {
 @media screen and (max-width: 400px) {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px;
-    width: 100%; }
-
-  div.down-arrow-container {
-    background-color: red; } }
+    width: 100%; } }
 .highlight .hll {
   background-color: #303030; }
 
