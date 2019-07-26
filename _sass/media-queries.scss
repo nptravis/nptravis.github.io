@@ -5,8 +5,14 @@
 		flex-direction: column;
 	}
 
-	div.flex-quad {
-		flex-direction: column;
+	div.icons-container {
+		flex-flow: row wrap;
+
+		div.square {
+			flex-basis: 40%;
+		}
+
+		
 	}
 
 	div.projects-container {

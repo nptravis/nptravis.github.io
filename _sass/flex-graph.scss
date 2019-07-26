@@ -19,6 +19,7 @@ div#flex-graph-container {
 			text-align: center;
 			line-height: 30px;
 			background-color: $light-blue;
+			min-width: 100px;
 		}
 		div.progress {
 			flex: 8;

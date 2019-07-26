@@ -209,7 +209,8 @@ div#flex-graph-container {
       color: #fff;
       text-align: center;
       line-height: 30px;
-      background-color: #04c2c9; }
+      background-color: #04c2c9;
+      min-width: 100px; }
     div#flex-graph-container div.bar-container div.progress {
       flex: 8;
       background-color: grey; }
@@ -507,37 +508,34 @@ div.about-container {
   margin: 0 auto;
   text-align: center; }
 
-div.flex {
+.icons-container {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between; }
-  div.flex div.flex-quad {
-    flex: 1;
-    padding: 5px;
+  .icons-container .square {
+    flex: 0 1 20%; }
+  .icons-container .icon-container {
     display: flex;
-    justify-content: space-between;
-    height: 50%;
-    width: 50%; }
-    div.flex div.flex-quad div.icon-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      z-index: 0;
-      color: #fff;
-      margin: 10px auto;
-      overflow: visible;
-      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-      -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-      text-align: center;
-      background-color: #00a1a7;
-      width: 100px;
-      height: 100px; }
-      div.flex div.flex-quad div.icon-container img {
-        line-height: 100px;
-        margin: 0 auto;
-        width: 70px;
-        height: 70px;
-        color: #fff; }
+    align-items: center;
+    z-index: 0;
+    color: #fff;
+    margin: 10px auto;
+    overflow: visible;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    text-align: center;
+    background-color: #00a1a7;
+    width: 100px;
+    height: 100px; }
+    .icons-container .icon-container img {
+      line-height: 100px;
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      color: #fff; }
+  .icons-container .icon-text {
+    padding: 5px; }
 
 div.flex-container {
   display: flex;
@@ -548,6 +546,8 @@ div.flex-container {
     padding: 5px;
     flex: 1;
     min-width: 30%; }
+    div.flex-container div#my-picture-container p {
+      padding: 5px; }
   div.flex-container div.flex-graph-container {
     flex: 1; }
 
@@ -841,8 +841,10 @@ div.highlight {
   div.flex-container {
     flex-direction: column; }
 
-  div.flex-quad {
-    flex-direction: column; }
+  div.icons-container {
+    flex-flow: row wrap; }
+    div.icons-container div.square {
+      flex-basis: 40%; }
 
   div.projects-container {
     flex-direction: column; } }
