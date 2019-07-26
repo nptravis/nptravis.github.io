@@ -1,12 +1,13 @@
 @import "./palette.scss";
 
 div#post-container {
-	width: 80%;
+	width: 80vw;
 	margin: 20px auto;
 	text-align: center;
 	padding: 20px;
 	border-radius: 10px;
 	background-color: $light-grey;
+	overflow: hidden;
 
 	h1.post-title {
 	}
@@ -20,8 +21,10 @@ div#post-container {
 	}
 
 	img.post-image {
-		max-height: 400px;
+		width: 80%;
 	}
+
+	pre { white-space: pre; overflow: auto; }
 }
 div.highlight {
 	padding: 10px;

@@ -554,18 +554,22 @@ div.flex-container {
 /* HSL */
 /* RGB */
 div#post-container {
-  width: 80%;
+  width: 80vw;
   margin: 20px auto;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  overflow: hidden; }
   div#post-container p.post-date {
     color: #e31b6d; }
   div#post-container div.post-content {
     text-align: left; }
   div#post-container img.post-image {
-    max-height: 400px; }
+    width: 80%; }
+  div#post-container pre {
+    white-space: pre;
+    overflow: auto; }
 
 div.highlight {
   padding: 10px; }
