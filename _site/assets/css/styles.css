@@ -227,22 +227,21 @@ div#flex-graph-container {
 /* Coolors Exported Palette - coolors.co/ddb5ba-b3b492-f2eaea-c78283-6f686d */
 /* HSL */
 /* RGB */
-div.projects-container {
+.projects-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
   margin: 0 auto; }
-  div.projects-container div.project-box {
-    margin: 10px;
+  .projects-container div.project-box {
     flex: 1;
     position: relative;
     min-width: 300px;
     background-color: #f7f7f7; }
-    div.projects-container div.project-box.border {
+    .projects-container div.project-box.border {
       border: 4px solid #e31b6d; }
-    div.projects-container div.project-box div.project-text-container {
+    .projects-container div.project-box div.project-text-container {
       position: absolute;
       margin: 0 auto;
       top: 0;
@@ -251,29 +250,29 @@ div.projects-container {
       margin-left: auto;
       margin-right: auto;
       opacity: 0; }
-    div.projects-container div.project-box h2.project-title {
+    .projects-container div.project-box h2.project-title {
       font-style: bold; }
-    div.projects-container div.project-box span.small-text {
+    .projects-container div.project-box span.small-text {
       color: #e31b6d;
       font-style: italic; }
-    div.projects-container div.project-box img.project-image {
+    .projects-container div.project-box img.project-image {
       width: 100%;
       height: 100%; }
-    div.projects-container div.project-box a.button-wrapper {
+    .projects-container div.project-box a.button-wrapper {
       color: #262f38;
       border: 3px solid #e31b6d;
       position: absolute;
       bottom: 0;
       opacity: 0;
       left: calc(50% - 16.5%); }
-      div.projects-container div.project-box a.button-wrapper span {
+      .projects-container div.project-box a.button-wrapper span {
         color: #262f38; }
-      div.projects-container div.project-box a.button-wrapper:hover {
+      .projects-container div.project-box a.button-wrapper:hover {
         cursor: pointer;
         transition: background-color 0.5s ease, color 0.5s ease;
         color: #fff;
         background-color: #e31b6d; }
-        div.projects-container div.project-box a.button-wrapper:hover span {
+        .projects-container div.project-box a.button-wrapper:hover span {
           transition: color 0.5s ease;
           color: #fff; }
 
@@ -285,31 +284,31 @@ a.button-wrapper {
   a.button-wrapper span {
     line-height: 30px; }
 
-div.modal {
+.modal {
   text-align: left;
   min-width: 80vw; }
-  div.modal div.carousel-container .slick-prev:before {
+  .modal div.carousel-container .slick-prev:before {
     color: grey; }
-  div.modal div.carousel-container .slick-next:before {
+  .modal div.carousel-container .slick-next:before {
     color: grey; }
-  div.modal div.carousel-container img.carousel-image {
+  .modal div.carousel-container img.carousel-image {
     width: 50vw;
     border: 3px solid grey;
     margin-right: 10px; }
-  div.modal span.project-category {
+  .modal span.project-category {
     color: grey; }
-  div.modal a.button-wrapper {
+  .modal a.button-wrapper {
     background-color: #e31b6d;
     color: #fff;
     padding: 10px; }
-    div.modal a.button-wrapper span {
+    .modal a.button-wrapper span {
       color: #fff; }
-    div.modal a.button-wrapper:hover {
+    .modal a.button-wrapper:hover {
       background-color: #fff;
       color: #e31b6d;
       transition: background-color 0.5s ease; }
-      div.modal a.button-wrapper:hover span,
-      div.modal a.button-wrapper:hover i {
+      .modal a.button-wrapper:hover span,
+      .modal a.button-wrapper:hover i {
         color: #e31b6d;
         transition: color 0.5s ease; }
 
@@ -402,6 +401,7 @@ div.contact-container {
       display: flex;
       flex-direction: column;
       width: 40%;
+      min-width: 300px;
       margin: 0 auto; }
       div.contact-container div.contact-form-container form input[type="text"],
       div.contact-container div.contact-form-container form textarea {
@@ -854,6 +854,11 @@ div.highlight {
   div.blog-container div.blog-section-flex-container div.post-box-container {
     margin: 10px;
     width: 100%; }
+
+  div.projects-container {
+    min-width: 100vw; }
+    div.projects-container div.modal {
+      min-width: 100vw; }
 
   form#contact-form {
     width: 90%; }

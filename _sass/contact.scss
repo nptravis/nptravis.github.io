@@ -16,6 +16,7 @@ div.contact-container {
 			display: flex;
 			flex-direction: column;
 			width: 40%;
+			min-width: 300px;
 			margin: 0 auto;
 			input[type="text"],
 			textarea {

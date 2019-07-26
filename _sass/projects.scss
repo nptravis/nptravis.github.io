@@ -1,6 +1,6 @@
 @import "./palette.scss";
 
-div.projects-container {
+.projects-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -9,7 +9,6 @@ div.projects-container {
 	margin: 0 auto;
 
 	div.project-box {
-		margin: 10px;
 		flex: 1;
 		position: relative;
 		min-width: 300px;
@@ -81,7 +80,7 @@ a.button-wrapper {
 	}
 }
 
-div.modal {
+.modal {
 	text-align: left;
 	min-width: 80vw;
 	div.carousel-container {

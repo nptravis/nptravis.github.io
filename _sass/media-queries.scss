@@ -56,6 +56,14 @@
 		}
 	}
 
+	div.projects-container {
+		min-width: 100vw;
+		div.modal {
+			min-width: 100vw;
+		}
+	}
+
+
 	form#contact-form {
 		width: 90%;
 	}
