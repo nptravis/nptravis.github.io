@@ -527,6 +527,7 @@ div.flex {
       margin: 10px auto;
       overflow: visible;
       clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
       text-align: center;
       background-color: #00a1a7;
       width: 100px;
