@@ -1,6 +1,6 @@
 @import "./palette.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap");
 
 html,
 body {
@@ -69,8 +69,6 @@ nav {
 	}
 }
 
-
-
 .hidden {
 	opacity: 0;
 }
@@ -85,8 +83,8 @@ nav {
 	z-index: 1;
 }
 
-.scroll-to{
-	&:hover{
+.scroll-to {
+	&:hover {
 		cursor: pointer;
 	}
 }
@@ -97,7 +95,6 @@ section {
 	text-align: center;
 	overflow: hidden;
 	padding-top: 10vh;
-
 
 	&#home {
 		// background-image: url("/assets/images/stars.jpg");
@@ -114,18 +111,16 @@ section {
 
 	&#projects {
 		background-color: $light-grey;
-		
 	}
 
 	&#blog {
 		background-color: $white;
-		
 	}
 
 	&#contact {
 		color: $white;
 		background-color: $black;
-		
+		min-height: 80vh;
 	}
 }
 
@@ -153,7 +148,7 @@ div.header-bar {
 	background-color: $black;
 	width: 100px;
 
-	&#contact-header-bar{
+	&#contact-header-bar {
 		background-color: $white;
 	}
 }
